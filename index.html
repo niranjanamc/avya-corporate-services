@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Avya Corporate Services | Corporate Gifting, Print Media & Domestic Travel Partner</title>
+  <meta name="description" content="Avya Corporate Services is Bengaluru's premier corporate gifting, full-spectrum print media, and domestic corporate travel partner. Trusted vendor for IT/ITeS and MNC enterprises across India.">
+  <meta name="keywords" content="Corporate Gifting Bengaluru, Avya Corporate Services, Print Media Services, Corporate Domestic Travel, Homestays for Corporate, IT ITeS Vendor, Employee Onboarding Kits, Diwali Corporate Gifts">
+  <meta name="author" content="Avya Corporate Services">
+
+  <!-- OpenGraph / Social Metadata -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://avyaservices.in/">
+  <meta property="og:title" content="Avya Corporate Services | Premier MNC Vendor Partner">
+  <meta property="og:description" content="From Brand Identity to Branded Gifts, Print Media, and Corporate Travel Stays. All Under One Roof.">
+  <meta property="og:image" content="assets/logo.svg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+
+  <!-- Google Fonts Preconnect & Styles -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/chatbot.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="header">
+    <div class="container nav-container">
+      <a href="#" class="brand-logo-link" aria-label="Avya Corporate Services Home">
+        <img src="assets/logo.svg" alt="Avya Corporate Services Logo" class="brand-logo-img">
+      </a>
+
+      <!-- Desktop Nav Menu -->
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#mnc-showcase" class="nav-link">MNC Vendor Hub</a></li>
+        <li><a href="#print-media" class="nav-link">Print Media</a></li>
+        <li><a href="#corporate-travel" class="nav-link">Travel & Retreats</a></li>
+        <li><a href="#solutions" class="nav-link">Solutions</a></li>
+        <li><a href="#process" class="nav-link">Process</a></li>
+        <li><a href="#faqs" class="nav-link">FAQs</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <!-- Nav Actions -->
+      <div class="nav-actions">
+        <!-- Theme Toggle Button -->
+        <button class="theme-toggle-btn" onclick="toggleTheme()" aria-label="Toggle Dark/Light Mode">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+          </svg>
+        </button>
+
+        <!-- Get a Quote CTA -->
+        <a href="#contact" class="btn btn-gold btn-sm d-none-sm">Get a Quote</a>
+
+        <!-- Mobile Drawer Hamburger Toggle -->
+        <button class="mobile-toggle-btn" id="mobileNavToggle" aria-label="Toggle Mobile Navigation">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container hero-content">
+      <div class="hero-text">
+        <div class="hero-badge-pill">
+          <span class="pulse-dot"></span>
+          <span>Bengaluru's Brand Execution & MNC Vendor Partner</span>
+        </div>
+        <h1 class="hero-headline">
+          From Brand Identity to Branded Gifts.<br>
+          <span class="text-gold-gradient">All Under One Roof.</span>
+        </h1>
+        <p class="hero-description">
+          Design, print, and deliver — corporate gifts, branded merchandise, custom printing, and recognition programs for startups and enterprises across Bangalore and India. Now expanding with full-spectrum <strong>Print Media</strong> and curated <strong>Corporate Domestic Travel</strong>.
+        </p>
+
+        <div class="hero-cta-group">
+          <a href="#services" class="btn btn-gold btn-lg">Explore Services</a>
+          <button class="btn btn-outline btn-lg" onclick="openAvyaChat()">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            Consult AI Concierge
+          </button>
+        </div>
+
+        <div class="hero-trust-row">
+          <div class="trust-item">
+            <div class="trust-icon">✦</div>
+            <span>Registered MNC Vendor</span>
+          </div>
+          <div class="trust-item">
+            <div class="trust-icon">✦</div>
+            <span>IT / ITeS Preferred Partner</span>
+          </div>
+          <div class="trust-item">
+            <div class="trust-icon">✦</div>
+            <span>Pan-India Doorstep Fulfilment</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Visual Card Stack -->
+      <div class="hero-visual">
+        <div class="hero-card-stack">
+          <div class="hero-preview-header">
+            <div>
+              <span class="hero-preview-badge">Corporate Gifting & Hospitality</span>
+              <h3 style="font-size: 1.125rem; font-weight: 700; margin-top: 6px; color: var(--text-primary);">Avya Corporate Dossier</h3>
+            </div>
+            <div class="badge badge-enterprise">Enterprise SLA</div>
+          </div>
+
+          <div class="hero-services-mini-grid">
+            <div class="mini-service-box">
+              <span style="font-size: 1.5rem;">🎁</span>
+              <h4>Corporate Gifting</h4>
+              <p>Welcome kits & festive hampers</p>
+            </div>
+            <div class="mini-service-box">
+              <span style="font-size: 1.5rem;">🖨️</span>
+              <h4>Print Media</h4>
+              <p>Stationery, packaging & signage</p>
+            </div>
+            <div class="mini-service-box">
+              <span style="font-size: 1.5rem;">✈️</span>
+              <h4>Corporate Travel</h4>
+              <p>Homestays, offsites & bookings</p>
+            </div>
+            <div class="mini-service-box">
+              <span style="font-size: 1.5rem;">🏆</span>
+              <h4>Rewards & Recognition</h4>
+              <p>Crystal trophies & milestone awards</p>
+            </div>
+          </div>
+
+          <div class="hero-stats-bar">
+            <div class="stat-item">
+              <h3 data-counter="98%">98%</h3>
+              <p>Satisfaction</p>
+            </div>
+            <div class="stat-item">
+              <h3 data-counter="12,000+">12,000+</h3>
+              <p>Deliveries</p>
+            </div>
+            <div class="stat-item">
+              <h3 data-counter="150+">150+</h3>
+              <p>MNC Clients</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MNC Vendor & Industry Credibility Showcase -->
+  <section class="mnc-banner" id="mnc-showcase">
+    <div class="container">
+      <div class="mnc-header">
+        <span class="section-label">Enterprise Credentials</span>
+        <h2 class="section-title">Trusted Vendor for IT / ITeS Enterprises & Multinational Corporations</h2>
+        <p class="section-subtitle">
+          Seamless procurement with GST invoicing, Master Service Agreements (MSAs), Ariba & Coupa vendor integration, and strict NDA-backed data security for multi-campus tech leaders.
+        </p>
+      </div>
+
+      <div class="mnc-grid">
+        <div class="mnc-item">
+          <span class="mnc-icon">🏢</span>
+          <span>Global Software & IT Giants</span>
+        </div>
+        <div class="mnc-item">
+          <span class="mnc-icon">☁️</span>
+          <span>Cloud & SaaS Platforms</span>
+        </div>
+        <div class="mnc-item">
+          <span class="mnc-icon">💳</span>
+          <span>FinTech & Banking MNCs</span>
+        </div>
+        <div class="mnc-item">
+          <span class="mnc-icon">🔬</span>
+          <span>Biotech & HealthTech Enterprises</span>
+        </div>
+        <div class="mnc-item">
+          <span class="mnc-icon">📦</span>
+          <span>Doorstep Pan-India Fulfilment</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Signature Services Grid -->
+  <section class="section" id="services">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-label">Explore Our Offerings</span>
+        <h2 class="section-title">Tailored Solutions for Every Need</h2>
+        <p class="section-subtitle">
+          Discover how our bespoke services elevate corporate gifting, brand execution, and business hospitality across India.
+        </p>
+      </div>
+
+      <div class="services-grid">
+        <!-- Service 1: Corporate Gifting & Swag -->
+        <div class="card card-gold-accent service-card">
+          <div class="service-card-header">
+            <div class="service-icon-box">🎁</div>
+            <span class="badge badge-gold">Main Business Source</span>
+          </div>
+          <h3 class="service-card-title">Corporate Gifting & Swag</h3>
+          <p class="service-card-desc">
+            End-to-end bespoke gifting solutions tailored to reflect your company's uniqueness and brand prestige. From welcome boxes to luxury executive hampers.
+          </p>
+          <ul class="service-features-list">
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Premium Employee Onboarding & Welcome Kits</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Diwali, Festive & New Year Curated Hampers</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Top-brand Electronics & Smart Tech Accessories</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Eco-friendly, Sustainable & Bamboo Collections</li>
+          </ul>
+          <button class="btn btn-outline-gold btn-sm" onclick="openAvyaChat('Corporate Gifting')">Request Gifting Proposal</button>
+        </div>
+
+        <!-- Service 2: Print Media Services -->
+        <div class="card card-gold-accent service-card" id="print-media">
+          <div class="service-card-header">
+            <div class="service-icon-box">🖨️</div>
+            <span class="badge badge-gold">Full-Spectrum Print</span>
+          </div>
+          <h3 class="service-card-title">Print Media Services</h3>
+          <p class="service-card-desc">
+            Comprehensive corporate print solutions handling any print media requirement your company demands, from luxury stationery to high-impact signage.
+          </p>
+          <ul class="service-features-list">
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Corporate Stationery: Cards, Letterheads, Folders</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Marketing Brochures, Annual Reports & Product Catalogs</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Custom Packaging, Rigid Gift Boxes & Die-Cut Sleeves</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Large Format Rollup Standees & Trade Show Banners</li>
+          </ul>
+          <button class="btn btn-outline-gold btn-sm" onclick="openAvyaChat('Print Media Services')">Request Print Media Quote</button>
+        </div>
+
+        <!-- Service 3: Corporate Domestic Travel -->
+        <div class="card card-gold-accent service-card" id="corporate-travel">
+          <div class="service-card-header">
+            <div class="service-icon-box">✈️</div>
+            <span class="badge badge-gold">Domestic Hospitality</span>
+          </div>
+          <h3 class="service-card-title">Corporate Domestic Travel & Hospitality</h3>
+          <p class="service-card-desc">
+            Tailored domestic corporate hospitality, curated executive homestays, team retreats, and verified business hotel bookings across key Indian business hubs.
+          </p>
+          <ul class="service-features-list">
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Curated Homestays & Villas (Coorg, Chikmagalur, Wayanad, Goa, Ooty)</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Complete Corporate Event Planning & Offsite Coordination</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Business Hotel Bookings at Negotiated Corporate Rates</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Single-Window Corporate Billing & GST Compliance</li>
+          </ul>
+          <button class="btn btn-outline-gold btn-sm" onclick="openAvyaChat('Corporate Travel')">Book Corporate Retreat</button>
+        </div>
+
+        <!-- Service 4: Rewards & Recognition -->
+        <div class="card card-gold-accent service-card">
+          <div class="service-card-header">
+            <div class="service-icon-box">🏆</div>
+            <span class="badge badge-gold">Culture & Engagement</span>
+          </div>
+          <h3 class="service-card-title">Rewards & Recognition Programs</h3>
+          <p class="service-card-desc">
+            Design impactful recognition programs to boost employee morale, celebrate tenure milestones, and honor outstanding leadership achievements.
+          </p>
+          <ul class="service-features-list">
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Optical Crystal & Sculptured Metal Trophies</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Annual Day & Town Hall Awards Sets</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Long Service Tenure Commemorative Gifts</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Custom Velvet Cases & Premium Presentation Boxes</li>
+          </ul>
+          <button class="btn btn-outline-gold btn-sm" onclick="openAvyaChat('Rewards & Recognition')">Explore R&R Catalog</button>
+        </div>
+
+        <!-- Service 5: Brand & Design Services -->
+        <div class="card card-gold-accent service-card">
+          <div class="service-card-header">
+            <div class="service-icon-box">🎨</div>
+            <span class="badge badge-gold">Design Alignment</span>
+          </div>
+          <h3 class="service-card-title">Brand & Design Services</h3>
+          <p class="service-card-desc">
+            Ensure every gift and print asset aligns seamlessly with your corporate identity, Pantone guidelines, and brand architecture.
+          </p>
+          <ul class="service-features-list">
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Precision Pantone Color Matching (PMS)</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> 3D Product & Merchandise Visual Mockups</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Packaging Dieline Engineering</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Corporate Style Guide & Swag Guidelines</li>
+          </ul>
+          <button class="btn btn-outline-gold btn-sm" onclick="openAvyaChat('Brand & Design Services')">Consult Design Studio</button>
+        </div>
+
+        <!-- Service 6: Event Branding & Signage -->
+        <div class="card card-gold-accent service-card">
+          <div class="service-card-header">
+            <div class="service-icon-box">🎪</div>
+            <span class="badge badge-gold">Experiential Impact</span>
+          </div>
+          <h3 class="service-card-title">Event Branding & Signage</h3>
+          <p class="service-card-desc">
+            Transform conferences, annual days, and trade show stalls into memorable physical brand experiences with turnkey spatial fabrication.
+          </p>
+          <ul class="service-features-list">
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Conference Delegate Welcome Kits & Lanyards</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Trade Show Exhibition Booth Fabrication</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Backdrop Displays, LED Signage & Banners</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> On-Site Setup & Logistics in Bengaluru & Metros</li>
+          </ul>
+          <button class="btn btn-outline-gold btn-sm" onclick="openAvyaChat('Event Branding')">Plan Event Setup</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Turnkey Solutions Section -->
+  <section class="section section-alt" id="solutions">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-label">Turnkey Corporate Programs</span>
+        <h2 class="section-title">Specialized Corporate Solutions</h2>
+        <p class="section-subtitle">
+          Pre-engineered packages designed for rapid enterprise deployment across HR, Marketing, Procurement, and Admin departments.
+        </p>
+      </div>
+
+      <div class="solutions-grid">
+        <div class="solution-card">
+          <div class="badge badge-gold">HR & Onboarding</div>
+          <h3>Employee Onboarding Kits</h3>
+          <p>Delight new hires on Day 1 with custom branded tech backpacks, notebooks, stainless tumblers, hoodies, and welcome cards.</p>
+        </div>
+
+        <div class="solution-card">
+          <div class="badge badge-gold">Festive Gifting</div>
+          <h3>Diwali & Holiday Hampers</h3>
+          <p>Thoughtfully curated hampers blending artisanal gourmet delicacies, smart gadgets, and festive brass/silver keepsakes.</p>
+        </div>
+
+        <div class="solution-card">
+          <div class="badge badge-gold">Milestone Events</div>
+          <h3>Awards, Trophies & Annual Day</h3>
+          <p>Custom-crafted optical crystal awards, metal medals, presenter folders, and commemorative souvenirs for stellar achievers.</p>
+        </div>
+
+        <div class="solution-card">
+          <div class="badge badge-gold">Brand Identity</div>
+          <h3>Startup Brand Kits</h3>
+          <p>Everything an emerging company needs: professional business cards, apparel, laptop stickers, mugs, and corporate letterheads.</p>
+        </div>
+
+        <div class="solution-card">
+          <div class="badge badge-gold">Domestic Travel</div>
+          <h3>Corporate Homestays & Retreats</h3>
+          <p>Hand-picked domestic private villas and homestays equipped for team workations, hackathons, and high-impact offsite retreats.</p>
+        </div>
+
+        <div class="solution-card">
+          <div class="badge badge-gold">Conferences</div>
+          <h3>Trade Show & Event Collateral</h3>
+          <p>High-impact pop-up displays, delegate folders, promotional merchandise, and product brochures delivered direct to the venue.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4-Step Streamlined Process -->
+  <section class="section" id="process">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-label">Effortless Execution</span>
+        <h2 class="section-title">Our Streamlined 4-Step Process</h2>
+        <p class="section-subtitle">
+          Discover how Avya Corporate Services simplifies corporate gifting and brand execution with a personalized, SLA-backed workflow.
+        </p>
+      </div>
+
+      <div class="process-grid">
+        <div class="process-card card-gold-accent">
+          <div class="process-step-number">01</div>
+          <h3>Step 1: Consult</h3>
+          <p>We begin with a detailed consultation to understand your timeline, headcount, brand aesthetics, and budgetary targets.</p>
+        </div>
+
+        <div class="process-card card-gold-accent">
+          <div class="process-step-number">02</div>
+          <h3>Step 2: Propose</h3>
+          <p>Receive a personalized proposal with interactive 3D mockups, material specs, sample options, and transparent tiered pricing.</p>
+        </div>
+
+        <div class="process-card card-gold-accent">
+          <div class="process-step-number">03</div>
+          <h3>Step 3: Design & Print</h3>
+          <p>We customize the manufacturing with precise Pantone matching, quality auditing, and bespoke packaging for zero-defect results.</p>
+        </div>
+
+        <div class="process-card card-gold-accent">
+          <div class="process-step-number">04</div>
+          <h3>Step 4: Deliver</h3>
+          <p>Efficient delivery ensures your gifts arrive on time—whether bulk consolidated to IT campuses or direct to employee doorsteps.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-label">Client Trust</span>
+        <h2 class="section-title">What Our Enterprise Partners Say</h2>
+        <p class="section-subtitle">
+          Hear from HR leaders, event coordinators, and procurement directors who rely on Avya Corporate Services for flawless execution.
+        </p>
+      </div>
+
+      <div class="testimonials-grid">
+        <div class="card testimonial-card">
+          <p class="testimonial-text">
+            "Avya Corporate Services' timely deliveries and budget-friendly options have consistently impressed our team and boosted employee satisfaction across our Bangalore and Hyderabad centers."
+          </p>
+          <div class="testimonial-author">
+            <div class="author-avatar">E</div>
+            <div class="author-info">
+              <h4>Emily R.</h4>
+              <p>HR Manager, Global Tech Solutions</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card testimonial-card">
+          <p class="testimonial-text">
+            "Managing our annual retreat in Coorg and our conference print media through a single vendor was exceptional. The homestay was pristine and the materials were stunning."
+          </p>
+          <div class="testimonial-author">
+            <div class="author-avatar">J</div>
+            <div class="author-info">
+              <h4>Jack S.</h4>
+              <p>Event Coordinator, Creative Events Co.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card testimonial-card">
+          <p class="testimonial-text">
+            "I'm amazed by the creativity and precision of the bespoke onboarding gifts Avya provides. Our team loves the personal touch and luxury packaging."
+          </p>
+          <div class="testimonial-author">
+            <div class="author-avatar">S</div>
+            <div class="author-info">
+              <h4>Sarah M.</h4>
+              <p>People & Culture Lead, Boutique Enterprises</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Frequently Asked Questions -->
+  <section class="section" id="faqs">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-label">Your Queries Answered</span>
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <p class="section-subtitle">
+          Clear answers regarding vendor onboarding, minimum order quantities, delivery timelines, and corporate SLAs.
+        </p>
+      </div>
+
+      <div class="faq-list">
+        <div class="faq-item active">
+          <button class="faq-question">
+            <span>How does Avya handle vendor onboarding for MNCs and IT/ITeS companies?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>We are a fully compliant, GST-registered enterprise with MSME certification and ISO standards. We regularly onboard through enterprise procurement systems like SAP Ariba, Coupa, and standard purchase order (PO) workflows, backed by formal Master Service Agreements (MSAs) and strict non-disclosure agreements.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>What is your primary business focus?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Corporate gifting is our flagship business. We specialize in welcome kits, festive hampers, executive tech merchandise, and recognition awards for startups and multinational corporations.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>What print media services do you provide?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>We cover all print media services required by an enterprise: business stationery, premium brochures, annual reports, rigid gift packaging boxes, rollup standees, backdrop banners, vinyl prints, and acrylic signage with specialty UV, embossing, and gold foiling finishes.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>What corporate travel services do you handle?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Our travel solutions are restricted to corporate domestic services within India: curated executive homestays, team offsites, corporate event planning, and business hotel bookings with negotiated enterprise rates across major hubs and scenic retreat destinations.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Do you offer direct-to-employee doorstep delivery across India?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Yes. Beyond bulk campus deliveries, we manage secure individual doorstep delivery to remote and hybrid employees across Tier-1, Tier-2, and Tier-3 cities in India with real-time tracking.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>How can I get started or request sample boxes?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>You can interact directly with our AI Concierge on this website, submit the RFP form below, or email contacts@avyaservices.in. We will arrange digital visual mockups and physical sample review kits.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact & Request a Quote Section -->
+  <section class="section section-alt" id="contact">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div>
+            <span class="section-label">Connect With Us</span>
+            <h2 class="section-title">Request a Custom Proposal</h2>
+            <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 24px;">
+              Partner with Avya Corporate Services for your next corporate gifting campaign, print media rollout, or corporate domestic retreat.
+            </p>
+          </div>
+
+          <div class="contact-info-card">
+            <div class="contact-info-icon">📍</div>
+            <div class="contact-info-text">
+              <h4>Headquarters</h4>
+              <p>No. 208, Venkatapura, 8th Cross, Koramangala 1st Block, Bengaluru, Karnataka 560034, India</p>
+            </div>
+          </div>
+
+          <div class="contact-info-card">
+            <div class="contact-info-icon">✉️</div>
+            <div class="contact-info-text">
+              <h4>Inquiries & RFP Submissions</h4>
+              <a href="mailto:contacts@avyaservices.in">contacts@avyaservices.in</a>
+            </div>
+          </div>
+
+          <div class="contact-info-card">
+            <div class="contact-info-icon">🌐</div>
+            <div class="contact-info-text">
+              <h4>Corporate Domains</h4>
+              <p>avyaservices.in | avyaservices.co.in</p>
+            </div>
+          </div>
+
+          <div class="contact-info-card">
+            <div class="contact-info-icon">⚡</div>
+            <div class="contact-info-text">
+              <h4>Direct AI Assistance</h4>
+              <p>Click the floating AI Concierge icon at bottom right for 24/7 guided lead capture and instant proposal generation.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form Container -->
+        <div class="contact-form-container">
+          <h3 class="font-display" style="font-size: 1.5rem; margin-bottom: 8px;">Corporate Inquiry Form</h3>
+          <p style="font-size: 0.875rem; color: var(--text-secondary); margin-bottom: 24px;">
+            Submitted requirements are routed directly to <strong>contacts@avyaservices.in</strong>.
+          </p>
+
+          <form id="contactForm">
+            <div class="form-grid">
+              <div>
+                <label class="form-label" for="fullName">Full Name *</label>
+                <input type="text" id="fullName" class="form-input" required placeholder="e.g. Priya Sharma">
+              </div>
+
+              <div>
+                <label class="form-label" for="companyName">Company Name *</label>
+                <input type="text" id="companyName" class="form-input" required placeholder="e.g. TechCorp India Pvt Ltd">
+              </div>
+
+              <div>
+                <label class="form-label" for="workEmail">Work Email *</label>
+                <input type="email" id="workEmail" class="form-input" required placeholder="e.g. priya@techcorp.com">
+              </div>
+
+              <div>
+                <label class="form-label" for="phoneNumber">Contact Phone *</label>
+                <input type="tel" id="phoneNumber" class="form-input" required placeholder="+91 98765 43210">
+              </div>
+
+              <div>
+                <label class="form-label" for="serviceInterest">Service Pillar *</label>
+                <select id="serviceInterest" class="form-select" required>
+                  <option value="" disabled selected>Select primary service</option>
+                  <option value="Corporate Gifting & Swag">Corporate Gifting & Swag (Main Business)</option>
+                  <option value="Print Media Services">Print Media Services (All Corporate Requirements)</option>
+                  <option value="Corporate Domestic Travel">Corporate Domestic Travel & Homestays</option>
+                  <option value="Rewards & Recognition">Rewards & Recognition Programs</option>
+                  <option value="Employee Onboarding Kits">Employee Onboarding & Welcome Kits</option>
+                  <option value="Multiple / Turnkey RFP">Multiple Services / Turnkey RFP</option>
+                </select>
+              </div>
+
+              <div>
+                <label class="form-label" for="orderVolume">Estimated Volume / Scope</label>
+                <select id="orderVolume" class="form-select">
+                  <option value="50 - 150 units">50 - 150 units / people</option>
+                  <option value="150 - 500 units">150 - 500 units / people</option>
+                  <option value="500 - 2,000 units">500 - 2,000 units / people</option>
+                  <option value="2,000+ Enterprise">2,000+ Enterprise bulk</option>
+                </select>
+              </div>
+
+              <div class="form-group-full">
+                <label class="form-label" for="projectDetails">Project Requirements & Timeline</label>
+                <textarea id="projectDetails" class="form-textarea" placeholder="Describe your requirement, preferred items, branding specs, delivery cities, or expected delivery date..."></textarea>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-gold btn-lg" style="width: 100%;">
+              Submit RFP to contacts@avyaservices.in
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="assets/logo.svg" alt="Avya Corporate Services" class="brand-logo-img" style="height: 52px;">
+          <p>
+            Premier brand execution, corporate gifting, print media, and domestic travel partner for IT/ITeS and MNC enterprises across India.
+          </p>
+          <div class="badge badge-enterprise">ISO 9001 • GST Compliant • MSME Registered</div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul class="footer-links">
+            <li><a href="#services">Corporate Gifting & Swag</a></li>
+            <li><a href="#print-media">Print Media Services</a></li>
+            <li><a href="#corporate-travel">Corporate Domestic Travel</a></li>
+            <li><a href="#services">Rewards & Recognition</a></li>
+            <li><a href="#services">Brand & Design Services</a></li>
+            <li><a href="#services">Event Branding & Signage</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Solutions</h4>
+          <ul class="footer-links">
+            <li><a href="#solutions">Employee Onboarding Kits</a></li>
+            <li><a href="#solutions">Diwali Corporate Gifts</a></li>
+            <li><a href="#solutions">Executive Homestays & Retreats</a></li>
+            <li><a href="#solutions">Annual Day & Milestone Awards</a></li>
+            <li><a href="#solutions">Startup Brand Kits</a></li>
+            <li><a href="#solutions">Conference Collateral</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Corporate Desk</h4>
+          <p style="font-size: 0.875rem; color: var(--text-secondary); margin-bottom: 12px;">
+            Inquiries: <a href="mailto:contacts@avyaservices.in" style="color: var(--gold-500); text-decoration: none;">contacts@avyaservices.in</a>
+          </p>
+          <p style="font-size: 0.8125rem; color: var(--text-muted); line-height: 1.6;">
+            No. 208, Venkatapura, 8th Cross, Koramangala 1st Block, Bengaluru - 560034, Karnataka, India
+          </p>
+          <div style="margin-top: 16px;">
+            <button class="btn btn-outline-gold btn-sm" onclick="openAvyaChat()">Launch AI Concierge</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          © 2026 Avya Corporate Services (formerly Designz). All rights reserved. Registered domains: avyaservices.in | avyaservices.co.in
+        </div>
+        <div style="display: flex; gap: 20px;">
+          <a href="#" style="color: var(--text-muted); text-decoration: none;">Privacy Policy</a>
+          <a href="#" style="color: var(--text-muted); text-decoration: none;">Terms of Vendor Engagement</a>
+          <a href="#" style="color: var(--text-muted); text-decoration: none;">GST Compliance</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/theme.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/chatbot.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+# System files
+.DS_Store
+Thumbs.db
+
+# Dependencies (if node/npm is used)
+node_modules/
+package-lock.json
+
+# Local environment & secrets
+.env
+.env.local
+*.log
+
+# Build / cache outputs
+dist/
+build/
+.cache/

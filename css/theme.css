@@ -1,0 +1,136 @@
+/* ===================================================================
+   Avya Corporate Services - Theme Design Tokens
+   Matching Brand Logo: Warm Champagne Gold, Deep Obsidian, Crisp Ivory
+   =================================================================== */
+
+:root {
+  /* Brand Luxury Palette */
+  --gold-50: #FAF5E8;
+  --gold-100: #F3E7C8;
+  --gold-200: #E6CE93;
+  --gold-300: #D8B55E;
+  --gold-400: #CCA03E;
+  --gold-500: #C5A059; /* Core Brand Gold from Logo */
+  --gold-600: #A88237;
+  --gold-700: #886524;
+  --gold-800: #654A18;
+  --gold-900: #42300D;
+
+  --gold-gradient: linear-gradient(135deg, #F0D999 0%, #C5A059 45%, #9E7B35 100%);
+  --gold-gradient-subtle: linear-gradient(135deg, rgba(197, 160, 89, 0.14) 0%, rgba(197, 160, 89, 0.03) 100%);
+  --gold-glow: 0 0 35px rgba(197, 160, 89, 0.22);
+  --gold-border-glow: 0 0 0 1px rgba(197, 160, 89, 0.4), 0 8px 24px -4px rgba(197, 160, 89, 0.25);
+
+  /* Typography */
+  --font-display: 'Cinzel', 'Playfair Display', Georgia, serif;
+  --font-body: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Layout */
+  --max-width: 1280px;
+  --header-height: 84px;
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 22px;
+  --radius-xl: 32px;
+  --radius-full: 9999px;
+
+  /* Animations */
+  --transition-fast: 180ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-base: 280ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-smooth: 400ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Light Theme (Default or explicit [data-theme="light"]) */
+:root,
+[data-theme="light"] {
+  --bg-primary: #FFFFFF;
+  --bg-secondary: #F8F9FB;
+  --bg-tertiary: #EEF0F5;
+  --bg-surface: #FFFFFF;
+  --bg-surface-elevated: #FFFFFF;
+  --bg-surface-glass: rgba(255, 255, 255, 0.85);
+
+  --text-primary: #0F172A;
+  --text-secondary: #334155;
+  --text-muted: #64748B;
+  --text-inverse: #FFFFFF;
+
+  --border-subtle: #E2E8F0;
+  --border-medium: #CBD5E1;
+  --border-accent: rgba(197, 160, 89, 0.45);
+
+  --card-bg: #FFFFFF;
+  --card-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.06), 0 2px 6px -1px rgba(15, 23, 42, 0.04);
+  --card-shadow-hover: 0 20px 40px -10px rgba(197, 160, 89, 0.18), 0 8px 16px -4px rgba(15, 23, 42, 0.06);
+
+  --nav-bg: rgba(255, 255, 255, 0.92);
+  --badge-bg: rgba(197, 160, 89, 0.12);
+  --badge-text: #886524;
+
+  --input-bg: #F8F9FA;
+  --input-border: #E2E8F0;
+
+  --logo-text: #111111;
+  --logo-edge: #111111;
+}
+
+/* Dark Theme (explicit [data-theme="dark"] or auto media query) */
+[data-theme="dark"] {
+  --bg-primary: #0B0C10;
+  --bg-secondary: #111319;
+  --bg-tertiary: #181B24;
+  --bg-surface: #151821;
+  --bg-surface-elevated: #1D212E;
+  --bg-surface-glass: rgba(17, 19, 25, 0.88);
+
+  --text-primary: #F8FAFC;
+  --text-secondary: #CBD5E1;
+  --text-muted: #8E9BAE;
+  --text-inverse: #0B0C10;
+
+  --border-subtle: #242938;
+  --border-medium: #333B4F;
+  --border-accent: rgba(216, 181, 94, 0.38);
+
+  --card-bg: #151821;
+  --card-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.55);
+  --card-shadow-hover: 0 22px 45px -8px rgba(197, 160, 89, 0.28), 0 0 20px rgba(197, 160, 89, 0.12);
+
+  --nav-bg: rgba(11, 12, 16, 0.92);
+  --badge-bg: rgba(197, 160, 89, 0.18);
+  --badge-text: #E6CE93;
+
+  --input-bg: #171A24;
+  --input-border: #2C3244;
+
+  --logo-text: #F8FAFC;
+  --logo-edge: #F8FAFC;
+}
+
+/* Base Body Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
+  transition: background-color var(--transition-base), color var(--transition-base);
+  overflow-x: hidden;
+}
+
+::selection {
+  background: rgba(197, 160, 89, 0.3);
+  color: var(--gold-500);
+}

@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 420" width="100%" height="100%" fill="none">
+  <defs>
+    <linearGradient id="avyaGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E2C275"/>
+      <stop offset="50%" stop-color="#C5A059"/>
+      <stop offset="100%" stop-color="#A57F36"/>
+    </linearGradient>
+    <filter id="goldGlow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#C5A059" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <!-- Geometric Architectural Gold Frame -->
+  <!-- Top and right frame segment -->
+  <path d="M 320 60 L 640 60 L 640 380 L 320 380 L 320 345" 
+        stroke="url(#avyaGold)" 
+        stroke-width="12" 
+        stroke-linecap="square" 
+        stroke-linejoin="miter" 
+        fill="none" />
+  
+  <!-- Right edge accent bevel / shadow -->
+  <path d="M 648 64 L 658 64 L 658 384 L 648 384 Z" 
+        fill="var(--logo-edge, #111111)" />
+
+  <!-- Brand Title: AVYA -->
+  <g id="avya-wordmark" font-family="'Cinzel', 'Playfair Display', 'Didot', 'Bodoni MT', 'Georgia', serif" font-weight="700" font-size="190" letter-spacing="12">
+    <!-- First 'A' in Black/Adaptive -->
+    <text x="20" y="270" fill="var(--logo-text, #111111)">A</text>
+    <!-- 'V' in Gold -->
+    <text x="165" y="270" fill="url(#avyaGold)">V</text>
+    <!-- 'Y' in Black/Adaptive -->
+    <text x="315" y="270" fill="var(--logo-text, #111111)">Y</text>
+    <!-- Second 'A' in Gold -->
+    <text x="465" y="270" fill="url(#avyaGold)">A</text>
+  </g>
+
+  <!-- Subtitle: CORPORATE SERVICES -->
+  <text x="340" y="318" 
+        text-anchor="middle" 
+        font-family="'Montserrat', 'Plus Jakarta Sans', 'Inter', -apple-system, sans-serif" 
+        font-size="28" 
+        font-weight="700" 
+        letter-spacing="10" 
+        fill="var(--logo-text, #111111)">CORPORATE SERVICES</text>
+</svg>
