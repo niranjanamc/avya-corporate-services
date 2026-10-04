@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="100%" height="100%" fill="none">
+  <defs>
+    <linearGradient id="goldE1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F3D899"/>
+      <stop offset="50%" stop-color="#C5A059"/>
+      <stop offset="100%" stop-color="#9E7B35"/>
+    </linearGradient>
+    <radialGradient id="discE1" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#C5A059" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#0B0C10" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="120" height="120" rx="24" fill="#0E1017"/>
+  <rect width="120" height="120" rx="24" fill="url(#discE1)"/>
+  <rect x="1" y="1" width="118" height="118" rx="23" stroke="#252A38" stroke-width="1.5"/>
+  <path d="M 52 18 L 102 18 L 102 102 L 52 102 L 52 92" stroke="url(#goldE1)" stroke-width="3.5" fill="none" stroke-linecap="square"/>
+  <path d="M 104 20 L 107 20 L 107 104 L 104 104 Z" fill="#111111"/>
+
+  <!-- Global Tech Summit Keynote Stage & Podium -->
+  <rect x="28" y="38" width="56" height="34" rx="4" fill="#161924" stroke="url(#goldE1)" stroke-width="2"/>
+  <line x1="36" y1="48" x2="76" y2="48" stroke="url(#goldE1)" stroke-width="1.5"/>
+  <circle cx="56" cy="56" r="4" fill="url(#goldE1)"/>
+
+  <!-- Speaker Podium on Stage -->
+  <polygon points="48 72 64 72 62 88 50 88" fill="#202434" stroke="url(#goldE1)" stroke-width="1.5"/>
+  <line x1="20" y1="88" x2="92" y2="88" stroke="url(#goldE1)" stroke-width="2.5"/>
+</svg>

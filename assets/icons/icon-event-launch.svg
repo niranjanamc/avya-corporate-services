@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="100%" height="100%" fill="none">
+  <defs>
+    <linearGradient id="goldE4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F3D899"/>
+      <stop offset="50%" stop-color="#C5A059"/>
+      <stop offset="100%" stop-color="#9E7B35"/>
+    </linearGradient>
+    <radialGradient id="discE4" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#C5A059" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#0B0C10" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="120" height="120" rx="24" fill="#0E1017"/>
+  <rect width="120" height="120" rx="24" fill="url(#discE4)"/>
+  <rect x="1" y="1" width="118" height="118" rx="23" stroke="#252A38" stroke-width="1.5"/>
+  <path d="M 52 18 L 102 18 L 102 102 L 52 102 L 52 92" stroke="url(#goldE4)" stroke-width="3.5" fill="none" stroke-linecap="square"/>
+  <path d="M 104 20 L 107 20 L 107 104 L 104 104 Z" fill="#111111"/>
+
+  <!-- Product Launch Unveiling Pedestal & Spotlights -->
+  <polygon points="34 84 78 84 84 94 28 94" fill="#161924" stroke="url(#goldE4)" stroke-width="2"/>
+  <rect x="42" y="60" width="28" height="24" rx="3" fill="#1C2132" stroke="url(#goldE4)" stroke-width="2"/>
+  
+  <!-- Floating New Product Sphere with Aura -->
+  <circle cx="56" cy="46" r="10" fill="url(#goldE4)"/>
+  <!-- Spotlights Cones -->
+  <polygon points="26 30 46 60 36 64" fill="url(#goldE4)" opacity="0.3"/>
+  <polygon points="86 30 66 60 76 64" fill="url(#goldE4)" opacity="0.3"/>
+</svg>

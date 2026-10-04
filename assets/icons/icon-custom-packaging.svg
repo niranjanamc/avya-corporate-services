@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="100%" height="100%" fill="none">
+  <defs>
+    <linearGradient id="goldPkg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F3D899"/>
+      <stop offset="50%" stop-color="#C5A059"/>
+      <stop offset="100%" stop-color="#9E7B35"/>
+    </linearGradient>
+    <radialGradient id="discPkg" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#C5A059" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#0B0C10" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="120" height="120" rx="24" fill="#0E1017"/>
+  <rect width="120" height="120" rx="24" fill="url(#discPkg)"/>
+  <rect x="1" y="1" width="118" height="118" rx="23" stroke="#252A38" stroke-width="1.5"/>
+
+  <!-- Architectural Gold Frame -->
+  <path d="M 52 18 L 102 18 L 102 102 L 52 102 L 52 92" stroke="url(#goldPkg)" stroke-width="3.5" fill="none" stroke-linecap="square"/>
+  <path d="M 104 20 L 107 20 L 107 104 L 104 104 Z" fill="#111111"/>
+
+  <!-- 3D Isometric Rigid Packaging Box & Sliding Sleeve -->
+  <!-- Inner Drawer Tray -->
+  <polygon points="40 44 74 30 94 42 60 56" fill="#141722" stroke="url(#goldPkg)" stroke-width="2"/>
+  <polygon points="40 44 60 56 60 84 40 72" fill="#1B1F2D" stroke="url(#goldPkg)" stroke-width="2"/>
+  <polygon points="60 56 94 42 94 70 60 84" fill="#12141D" stroke="url(#goldPkg)" stroke-width="2"/>
+
+  <!-- Sliding Outer Sleeve with Custom Embossed Window -->
+  <polygon points="26 54 58 40 78 52 46 66" fill="#1D2232" stroke="url(#goldPkg)" stroke-width="2.5"/>
+  <polygon points="26 54 46 66 46 94 26 82" fill="#252A3D" stroke="url(#goldPkg)" stroke-width="2.5"/>
+  <polygon points="46 66 78 52 78 80 46 94" fill="#191C28" stroke="url(#goldPkg)" stroke-width="2.5"/>
+
+  <!-- Gold Foil Logo Stamp on Sleeve Front -->
+  <circle cx="62" cy="66" r="6" stroke="url(#goldPkg)" stroke-width="1.5" fill="none"/>
+  <polygon points="62 62 65 68 59 68" fill="url(#goldPkg)"/>
+
+  <!-- Ribbon Pull Tab -->
+  <path d="M 60 84 L 60 92 L 68 89 L 68 81" fill="url(#goldPkg)"/>
+  
+  <!-- Packaging Die-cut Sparkles -->
+  <circle cx="86" cy="34" r="2.5" fill="url(#goldPkg)"/>
+  <circle cx="28" cy="40" r="2" fill="url(#goldPkg)"/>
+</svg>

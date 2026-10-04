@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="100%" height="100%" fill="none">
+  <defs>
+    <linearGradient id="goldB3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F3D899"/>
+      <stop offset="50%" stop-color="#C5A059"/>
+      <stop offset="100%" stop-color="#9E7B35"/>
+    </linearGradient>
+    <radialGradient id="discB3" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#C5A059" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#0B0C10" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="120" height="120" rx="24" fill="#0E1017"/>
+  <rect width="120" height="120" rx="24" fill="url(#discB3)"/>
+  <rect x="1" y="1" width="118" height="118" rx="23" stroke="#252A38" stroke-width="1.5"/>
+  <path d="M 52 18 L 102 18 L 102 102 L 52 102 L 52 92" stroke="url(#goldB3)" stroke-width="3.5" fill="none" stroke-linecap="square"/>
+  <path d="M 104 20 L 107 20 L 107 104 L 104 104 Z" fill="#111111"/>
+
+  <!-- Packaging CAD Flat Dieline -->
+  <rect x="36" y="38" width="40" height="46" fill="#141724" stroke="url(#goldB3)" stroke-width="2"/>
+  <!-- Dieline Tabs & Fold Lines (dashed) -->
+  <rect x="22" y="44" width="14" height="34" fill="#1A1E2E" stroke="url(#goldB3)" stroke-width="1.5" stroke-dasharray="3 2"/>
+  <rect x="76" y="44" width="14" height="34" fill="#1A1E2E" stroke="url(#goldB3)" stroke-width="1.5" stroke-dasharray="3 2"/>
+  <polygon points="36 38 46 28 66 28 76 38" fill="#1A1E2E" stroke="url(#goldB3)" stroke-width="1.5"/>
+  <polygon points="36 84 46 94 66 94 76 84" fill="#1A1E2E" stroke="url(#goldB3)" stroke-width="1.5"/>
+</svg>
