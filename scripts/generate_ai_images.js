@@ -29,8 +29,13 @@ if (!fs.existsSync(IMAGES_DIR)) {
   fs.mkdirSync(IMAGES_DIR, { recursive: true });
 }
 
-// 6 Master Production Prompts for Full HD Photorealistic Imagery
+// Master Production Prompts for Full HD Photorealistic Imagery
 const heroPrompts = [
+  {
+    service: 'home',
+    outputFile: 'hero-home.jpg',
+    prompt: "A cinematic, photorealistic Full HD commercial photograph of an elite, contemporary corporate enterprise headquarters campus at sunset in Bengaluru. Modern glass-and-steel architectural pavilion with warm champagne-gold ambient interior lighting glowing through floor-to-ceiling windows. In the foreground, sleek landscaped executive walkways with subtle water reflection features and warm pathway illumination. In the distance, silhouettes of high-tech corporate business towers against a twilight sky with subtle golden and deep navy atmospheric tones. 8k resolution, ultra-detailed architectural photography, prestigious multinational corporate atmosphere, no cartoon elements."
+  },
   {
     service: 'corporate-gifting',
     outputFile: 'hero-corporate-gifting.jpg',
