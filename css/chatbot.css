@@ -303,38 +303,3 @@
   text-align: center;
   margin-top: 8px;
 }
-
-/* Settings Modal */
-.api-key-modal {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: var(--bg-surface-elevated);
-  z-index: 1010;
-  padding: 28px 24px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  transform: translateY(100%);
-  transition: transform var(--transition-smooth);
-}
-
-.api-key-modal.open {
-  transform: translateY(0);
-}
-
-.api-key-modal h3 {
-  font-family: var(--font-display);
-  font-size: 1.25rem;
-  color: var(--text-primary);
-  margin-bottom: 8px;
-}
-
-.api-key-modal p {
-  font-size: 0.875rem;
-  color: var(--text-secondary);
-  line-height: 1.5;
-  margin-bottom: 20px;
-}

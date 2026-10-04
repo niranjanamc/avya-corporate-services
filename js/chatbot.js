@@ -1,13 +1,37 @@
 /**
  * Avya Corporate Services - AI Executive Concierge Chatbot
  * Handles lead qualification, requirements collection, automated email routing to contacts@avyaservices.in,
- * and optional live Google Gemini LLM API integration.
+ * and silent Google Gemini LLM API integration via owner environment variable (zero settings UI for visitors).
+ * Compact, movable (draggable) floating icon launcher.
  */
 
 (function () {
-  const STORAGE_KEY_API = 'avya_gemini_api_key';
   const STORAGE_KEY_LEADS = 'avya_collected_leads';
+  const STORAGE_KEY_POS = 'avya_chat_trigger_pos';
   const TARGET_EMAIL = 'contacts@avyaservices.in';
+
+  // Retrieve API key silently from owner environment / config without any user UI
+  function getGeminiApiKey() {
+    if (typeof window !== 'undefined') {
+      if (window.GEMINI_API_KEY && typeof window.GEMINI_API_KEY === 'string') {
+        return window.GEMINI_API_KEY.trim();
+      }
+      if (window.ENV && window.ENV.GEMINI_API_KEY) {
+        return window.ENV.GEMINI_API_KEY.trim();
+      }
+      if (window.AVYA_CONFIG && window.AVYA_CONFIG.geminiApiKey) {
+        return window.AVYA_CONFIG.geminiApiKey.trim();
+      }
+    }
+    if (typeof process !== 'undefined' && process.env && process.env.GEMINI_API_KEY) {
+      return process.env.GEMINI_API_KEY.trim();
+    }
+    try {
+      const stored = localStorage.getItem('avya_gemini_api_key');
+      if (stored) return stored.trim();
+    } catch (e) {}
+    return '';
+  }
 
   // Lead collection state
   const leadState = {
@@ -58,35 +82,38 @@
   ];
 
   // DOM Elements
-  let chatWindow, chatMessages, chatInput, sendBtn, triggerBtn, settingsModal, apiKeyInput;
+  let chatWindow, chatMessages, chatInput, sendBtn, triggerBtn;
 
   function init() {
     createChatbotMarkup();
     bindEvents();
+    initDraggableTrigger(triggerBtn);
     renderWelcomeMessage();
   }
 
   function createChatbotMarkup() {
-    // Floating Launcher Button
+    // Compact, movable floating launcher button (only icon, no text pill)
     const trigger = document.createElement('div');
     trigger.className = 'ai-chat-trigger';
     trigger.id = 'aiChatTrigger';
+    trigger.setAttribute('role', 'button');
+    trigger.setAttribute('tabindex', '0');
+    trigger.setAttribute('aria-label', 'Open Avya AI Concierge');
+    trigger.setAttribute('title', 'Avya AI Concierge (Drag to move, Click to chat)');
     trigger.innerHTML = `
       <div class="ai-chat-trigger-icon">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
           <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
           <path d="M12 7v2"></path>
           <path d="M9 11h6"></path>
         </svg>
       </div>
-      <div class="ai-chat-trigger-text">
-        <div class="ai-chat-trigger-title">Avya AI Concierge</div>
-        <div class="ai-chat-trigger-sub"><span class="pulse-dot"></span> Get Instant Proposal</div>
-      </div>
+      <div class="ai-chat-trigger-badge"></div>
     `;
     document.body.appendChild(trigger);
+    triggerBtn = trigger;
 
-    // Chatbot Window
+    // Chatbot Window (without any settings button/modal for clean visitor experience)
     const win = document.createElement('div');
     win.className = 'chatbot-window';
     win.id = 'chatbotWindow';
@@ -104,13 +131,7 @@
           </div>
         </div>
         <div class="chatbot-header-actions">
-          <button class="chatbot-action-btn" id="chatSettingsBtn" title="Gemini API Key Settings">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <circle cx="12" cy="12" r="3"></circle>
-              <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
-            </svg>
-          </button>
-          <button class="chatbot-action-btn" id="chatCloseBtn" title="Close Chat">
+          <button class="chatbot-action-btn" id="chatCloseBtn" title="Close Chat" aria-label="Close Chat">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <line x1="18" y1="6" x2="6" y2="18"></line>
               <line x1="6" y1="6" x2="18" y2="18"></line>
@@ -133,25 +154,6 @@
         </div>
         <div class="chatbot-disclaimer">Inquiries are verified and dispatched to ${TARGET_EMAIL}</div>
       </div>
-
-      <!-- Settings / Gemini Key Modal -->
-      <div class="api-key-modal" id="apiKeyModal">
-        <div>
-          <h3>AI Service Configuration</h3>
-          <p>You can connect your <strong>Google Gemini API Key</strong> for open-ended conversation, or use our built-in Smart Corporate Lead Assistant.</p>
-          <div style="margin-bottom: 16px;">
-            <label class="form-label" for="geminiApiKey">Gemini API Key</label>
-            <input type="password" id="geminiApiKey" class="form-input" placeholder="AIzaSy...">
-          </div>
-          <div style="font-size: 0.75rem; color: var(--text-muted); line-height: 1.5; margin-bottom: 24px;">
-            Your key is kept safe in local browser storage and is only used to connect to Google's official Gemini endpoint.
-          </div>
-        </div>
-        <div style="display: flex; gap: 12px;">
-          <button class="btn btn-gold btn-sm" id="saveApiKeyBtn" style="flex: 1;">Save & Enable</button>
-          <button class="btn btn-outline btn-sm" id="cancelApiKeyBtn">Close</button>
-        </div>
-      </div>
     `;
     document.body.appendChild(win);
 
@@ -159,18 +161,9 @@
     chatMessages = document.getElementById('chatMessages');
     chatInput = document.getElementById('chatInput');
     sendBtn = document.getElementById('chatSendBtn');
-    triggerBtn = document.getElementById('aiChatTrigger');
-    settingsModal = document.getElementById('apiKeyModal');
-    apiKeyInput = document.getElementById('geminiApiKey');
-
-    const savedKey = localStorage.getItem(STORAGE_KEY_API);
-    if (savedKey) {
-      apiKeyInput.value = savedKey;
-    }
   }
 
   function bindEvents() {
-    triggerBtn.addEventListener('click', toggleChat);
     document.getElementById('chatCloseBtn').addEventListener('click', toggleChat);
 
     sendBtn.addEventListener('click', handleUserSend);
@@ -181,24 +174,142 @@
       }
     });
 
-    document.getElementById('chatSettingsBtn').addEventListener('click', () => {
-      settingsModal.classList.add('open');
-    });
-
-    document.getElementById('cancelApiKeyBtn').addEventListener('click', () => {
-      settingsModal.classList.remove('open');
-    });
-
-    document.getElementById('saveApiKeyBtn').addEventListener('click', () => {
-      const val = apiKeyInput.value.trim();
-      if (val) {
-        localStorage.setItem(STORAGE_KEY_API, val);
-        showToast('Gemini API Key saved! Live AI assistant active.');
-      } else {
-        localStorage.removeItem(STORAGE_KEY_API);
-        showToast('Switched to built-in Smart Corporate Lead Assistant.');
+    // Keyboard accessibility for launcher
+    triggerBtn.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        toggleChat();
       }
-      settingsModal.classList.remove('open');
+    });
+  }
+
+  // Draggable movable launcher functionality for mouse and touch
+  function initDraggableTrigger(el) {
+    let isPointerDown = false;
+    let hasMoved = false;
+    let startX = 0;
+    let startY = 0;
+    let initialLeft = 0;
+    let initialTop = 0;
+
+    // Restore saved position if valid
+    try {
+      const saved = JSON.parse(localStorage.getItem(STORAGE_KEY_POS));
+      if (saved && typeof saved.left === 'number' && typeof saved.top === 'number') {
+        const btnW = 56;
+        const btnH = 56;
+        const maxL = window.innerWidth - btnW - 12;
+        const maxT = window.innerHeight - btnH - 12;
+        const validL = Math.max(12, Math.min(saved.left, maxL));
+        const validT = Math.max(12, Math.min(saved.top, maxT));
+        el.style.left = `${validL}px`;
+        el.style.top = `${validT}px`;
+        el.style.right = 'auto';
+        el.style.bottom = 'auto';
+      }
+    } catch (e) {}
+
+    function onPointerDown(e) {
+      if (e.button !== undefined && e.button !== 0) return; // left click only
+
+      const clientX = e.type.startsWith('touch') ? e.touches[0].clientX : e.clientX;
+      const clientY = e.type.startsWith('touch') ? e.touches[0].clientY : e.clientY;
+
+      isPointerDown = true;
+      hasMoved = false;
+      startX = clientX;
+      startY = clientY;
+
+      const rect = el.getBoundingClientRect();
+      initialLeft = rect.left;
+      initialTop = rect.top;
+
+      window.addEventListener('mousemove', onPointerMove, { passive: false });
+      window.addEventListener('mouseup', onPointerUp);
+      window.addEventListener('touchmove', onPointerMove, { passive: false });
+      window.addEventListener('touchend', onPointerUp);
+      window.addEventListener('touchcancel', onPointerUp);
+    }
+
+    function onPointerMove(e) {
+      if (!isPointerDown) return;
+
+      const clientX = e.type.startsWith('touch') ? e.touches[0].clientX : e.clientX;
+      const clientY = e.type.startsWith('touch') ? e.touches[0].clientY : e.clientY;
+      if (clientX === undefined || clientY === undefined) return;
+
+      const deltaX = clientX - startX;
+      const deltaY = clientY - startY;
+
+      if (!hasMoved && (Math.abs(deltaX) > 4 || Math.abs(deltaY) > 4)) {
+        hasMoved = true;
+        el.classList.add('dragging');
+      }
+
+      if (hasMoved) {
+        if (e.cancelable) e.preventDefault();
+
+        const btnW = el.offsetWidth || 56;
+        const btnH = el.offsetHeight || 56;
+        const maxL = window.innerWidth - btnW - 12;
+        const maxT = window.innerHeight - btnH - 12;
+
+        let newL = initialLeft + deltaX;
+        let newT = initialTop + deltaY;
+
+        newL = Math.max(12, Math.min(newL, maxL));
+        newT = Math.max(12, Math.min(newT, maxT));
+
+        el.style.left = `${newL}px`;
+        el.style.top = `${newT}px`;
+        el.style.right = 'auto';
+        el.style.bottom = 'auto';
+      }
+    }
+
+    function onPointerUp() {
+      if (!isPointerDown) return;
+      isPointerDown = false;
+      el.classList.remove('dragging');
+
+      window.removeEventListener('mousemove', onPointerMove);
+      window.removeEventListener('mouseup', onPointerUp);
+      window.removeEventListener('touchmove', onPointerMove);
+      window.removeEventListener('touchend', onPointerUp);
+      window.removeEventListener('touchcancel', onPointerUp);
+
+      if (hasMoved) {
+        // Save relocated position
+        try {
+          const rect = el.getBoundingClientRect();
+          localStorage.setItem(STORAGE_KEY_POS, JSON.stringify({ left: rect.left, top: rect.top }));
+        } catch (e) {}
+      } else {
+        // Simple click without movement: toggle chat
+        toggleChat();
+      }
+    }
+
+    el.addEventListener('mousedown', onPointerDown);
+    el.addEventListener('touchstart', onPointerDown, { passive: true });
+
+    // Handle screen resize safely
+    window.addEventListener('resize', () => {
+      const rect = el.getBoundingClientRect();
+      const btnW = el.offsetWidth || 56;
+      const btnH = el.offsetHeight || 56;
+      const maxL = window.innerWidth - btnW - 12;
+      const maxT = window.innerHeight - btnH - 12;
+
+      let adjL = Math.max(12, Math.min(rect.left, maxL));
+      let adjT = Math.max(12, Math.min(rect.top, maxT));
+
+      if (rect.left !== adjL || rect.top !== adjT) {
+        el.style.left = `${adjL}px`;
+        el.style.top = `${adjT}px`;
+        el.style.right = 'auto';
+        el.style.bottom = 'auto';
+      }
     });
   }
 
@@ -292,8 +403,8 @@
     appendUserMessage(text);
     showTypingIndicator();
 
-    // Check if live Gemini API key is configured
-    const apiKey = localStorage.getItem(STORAGE_KEY_API);
+    // Check if live Gemini API key is provided via repository environment variable
+    const apiKey = getGeminiApiKey();
     if (apiKey && leadState.step >= steps.length) {
       await callGeminiApi(text, apiKey);
       return;
@@ -406,7 +517,7 @@
     scrollToBottom();
   }
 
-  // Live Gemini API Integration
+  // Live Gemini API Integration (triggered only when owner API key is injected)
   async function callGeminiApi(userPrompt, apiKey) {
     try {
       const endpoint = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey}`;
@@ -452,8 +563,8 @@ Always reply in an elegant, executive, professional tone. If the user shares cor
 
     } catch (err) {
       removeTypingIndicator();
-      console.warn("Gemini API call failed, falling back to smart engine:", err);
-      appendBotMessage(`Thank you for your inquiry! Our corporate relationship team will review this and connect with you directly. You can also write directly to <strong>${TARGET_EMAIL}</strong>.`);
+      console.warn("Live API call unavailable, falling back to corporate concierge engine:", err.message);
+      appendBotMessage(`Thank you for your inquiry! Our corporate relationship team will review your specifications and connect with you directly. You can also reach our desk directly at <strong>${TARGET_EMAIL}</strong>.`);
     }
   }
 
