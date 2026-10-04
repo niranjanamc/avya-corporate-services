@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 650" width="100%" height="100%" fill="none">
+  <defs>
+    <linearGradient id="bgGradGifting" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#08090D"/>
+      <stop offset="50%" stop-color="#12141D"/>
+      <stop offset="100%" stop-color="#1A1813"/>
+    </linearGradient>
+    <linearGradient id="goldHdrGift" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F5DF9E"/>
+      <stop offset="50%" stop-color="#C5A059"/>
+      <stop offset="100%" stop-color="#8E6A26"/>
+    </linearGradient>
+    <radialGradient id="heroGlowGift" cx="70%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#C5A059" stop-opacity="0.32"/>
+      <stop offset="60%" stop-color="#C5A059" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#08090D" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Deep Luxury Obsidian Background with Radial Ambient Gold Light -->
+  <rect width="1600" height="650" fill="url(#bgGradGifting)"/>
+  <rect width="1600" height="650" fill="url(#heroGlowGift)"/>
+
+  <!-- Subtle Perspective Grid Floor Lines -->
+  <g stroke="#C5A059" stroke-opacity="0.08" stroke-width="1.5">
+    <line x1="800" y1="420" x2="0" y2="650"/>
+    <line x1="800" y1="420" x2="400" y2="650"/>
+    <line x1="800" y1="420" x2="800" y2="650"/>
+    <line x1="800" y1="420" x2="1200" y2="650"/>
+    <line x1="800" y1="420" x2="1600" y2="650"/>
+    <line x1="0" y1="480" x2="1600" y2="480"/>
+    <line x1="0" y1="550" x2="1600" y2="550"/>
+    <line x1="0" y1="620" x2="1600" y2="620"/>
+  </g>
+
+  <!-- Architectural Background Elements -->
+  <path d="M 1150 80 L 1520 80 L 1520 540 L 1150 540 L 1150 490" stroke="url(#goldHdrGift)" stroke-width="6" fill="none" opacity="0.45"/>
+  <rect x="1530" y="86" width="12" height="460" fill="#111111" opacity="0.6"/>
+
+  <!-- Floating Gift Box Main Showcase (Center-Right) -->
+  <!-- Outer Rigid Box Shadow -->
+  <rect x="1020" y="240" width="380" height="260" rx="14" fill="#06070A" opacity="0.6" filter="url(#softGlow)"/>
+  <!-- Main Rigid Gift Box -->
+  <rect x="1000" y="220" width="380" height="260" rx="12" fill="#151722" stroke="url(#goldHdrGift)" stroke-width="3"/>
+  <rect x="980" y="200" width="420" height="48" rx="8" fill="#1C202F" stroke="url(#goldHdrGift)" stroke-width="3"/>
+  
+  <!-- Gold Silk Ribbon -->
+  <rect x="1170" y="200" width="40" height="280" fill="url(#goldHdrGift)"/>
+  <rect x="1000" y="320" width="380" height="34" fill="url(#goldHdrGift)"/>
+  <!-- Gold Ribbon Bow Loops -->
+  <path d="M 1190 200 C 1130 140, 1080 160, 1120 195 C 1150 215, 1180 205, 1190 200 Z" fill="url(#goldHdrGift)"/>
+  <path d="M 1190 200 C 1250 140, 1300 160, 1260 195 C 1230 215, 1200 205, 1190 200 Z" fill="url(#goldHdrGift)"/>
+  <circle cx="1190" cy="200" r="14" fill="#F8FAFC" filter="url(#softGlow)"/>
+
+  <!-- Left Secondary Box (Tech Swag Box) -->
+  <rect x="830" y="320" width="220" height="180" rx="10" fill="#1A1D2A" stroke="url(#goldHdrGift)" stroke-width="2.5"/>
+  <rect x="815" y="305" width="250" height="34" rx="6" fill="#24293A" stroke="url(#goldHdrGift)" stroke-width="2"/>
+  <rect x="920" y="305" width="24" height="195" fill="url(#goldHdrGift)"/>
+
+  <!-- Luxury Stainless Tumbler in Gold & Matte Black -->
+  <rect x="870" y="210" width="46" height="120" rx="12" fill="#0C0E14" stroke="url(#goldHdrGift)" stroke-width="2"/>
+  <rect x="866" y="200" width="54" height="16" rx="4" fill="url(#goldHdrGift)"/>
+  <line x1="875" y1="260" x2="910" y2="260" stroke="url(#goldHdrGift)" stroke-width="2"/>
+
+  <!-- Executive Notebook / Journal -->
+  <path d="M 720 370 L 820 330 L 870 420 L 770 460 Z" fill="#13151D" stroke="url(#goldHdrGift)" stroke-width="2"/>
+  <line x1="740" y1="365" x2="830" y2="330" stroke="url(#goldHdrGift)" stroke-width="1.5"/>
+
+  <!-- Floating Sparkles & Light Prisms -->
+  <path d="M 1380 140 L 1384 125 L 1388 140 L 1403 144 L 1388 148 L 1384 163 L 1380 148 L 1365 144 Z" fill="url(#goldHdrGift)"/>
+  <path d="M 880 120 L 883 108 L 886 120 L 898 123 L 886 126 L 883 138 L 880 126 L 868 123 Z" fill="url(#goldHdrGift)"/>
+  <circle cx="1060" cy="160" r="4" fill="url(#goldHdrGift)"/>
+  <circle cx="1450" cy="280" r="3" fill="url(#goldHdrGift)"/>
+</svg>

@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-dynamic-title="Print Media Services">Print Media Services | Avya Corporate Services</title>
+  <meta name="description" content="Comprehensive corporate print media solutions: business stationery, marketing brochures, custom rigid packaging boxes, roll-up standees, and luxury specialty finishes.">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/service-pages.css">
+  <link rel="stylesheet" href="css/chatbot.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo-link" aria-label="Avya Corporate Services Home">
+        <img src="assets/logo.svg" alt="Avya Corporate Services Logo" class="brand-logo-img">
+      </a>
+
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="corporate-gifting.html" class="nav-link">Corporate Gifting</a></li>
+        <li><a href="print-media.html" class="nav-link active">Print Media</a></li>
+        <li><a href="corporate-travel.html" class="nav-link">Travel & Retreats</a></li>
+        <li><a href="rewards-recognition.html" class="nav-link">R&R Awards</a></li>
+        <li><a href="brand-design.html" class="nav-link">Brand Design</a></li>
+        <li><a href="event-branding.html" class="nav-link">Event Branding</a></li>
+        <li><a href="#quote-section" class="nav-link">Get a Quote</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="theme-toggle-btn" onclick="toggleTheme()" aria-label="Toggle Theme">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle></svg>
+        </button>
+        <a href="#quote-section" class="btn btn-gold btn-sm">Get a Quote</a>
+        <button class="mobile-toggle-btn" id="mobileNavToggle" aria-label="Toggle Mobile Navigation">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="service-hero" style="background-image: url('assets/images/hero-print-media.svg');">
+    <div class="container service-hero-content">
+      <div class="breadcrumb-nav">
+        <a href="index.html">Home</a>
+        <span class="breadcrumb-separator">/</span>
+        <a href="index.html#services">Services</a>
+        <span class="breadcrumb-separator">/</span>
+        <span style="color: var(--gold-500);">Print Media Services</span>
+      </div>
+
+      <div class="service-hero-badge-row">
+        <img src="assets/icons/icon-print-media.svg" alt="Print Media Icon" class="service-hero-icon-mark">
+        <span class="badge badge-gold">Full-Spectrum Corporate Print</span>
+        <span class="badge badge-enterprise">Heidelberg Precision Presses</span>
+      </div>
+
+      <h1 class="service-hero-title">
+        Comprehensive Corporate Print Media Services
+      </h1>
+
+      <p class="service-hero-subtitle">
+        Covering every print requirement demanded by modern startups and multinational corporations. From tactile executive stationery and high-gloss marketing catalogs to custom rigid product packaging and large-format architectural signage.
+      </p>
+
+      <div class="hero-cta-group">
+        <a href="#quote-section" class="btn btn-gold btn-lg">Request Print Media Quote</a>
+        <button class="btn btn-outline btn-lg" onclick="openAvyaChat('Print Media Services')">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+          Consult AI Concierge
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Introduction & Capabilities -->
+  <section class="section">
+    <div class="container">
+      <div class="text-center" style="max-width: 820px; margin: 0 auto 60px;">
+        <span class="section-label">State-of-the-Art Manufacturing</span>
+        <h2 class="section-title">End-to-End Corporate Print Manufacturing</h2>
+        <p class="section-subtitle">
+          We bring decades of pre-press expertise, high-speed offset lines, and precision digital finishing under one roof in Bengaluru, backed by strict color-consistency audits and SLA commitments.
+        </p>
+      </div>
+
+      <!-- Split Section 1: Corporate Identity & Stationery -->
+      <div class="split-section">
+        <div class="split-text">
+          <h2>Corporate Identity &amp; Executive Stationery</h2>
+          <p>
+            Your corporate stationery represents your organization’s physical handshake. We produce tactile, high-grade stationery that conveys corporate prestige in every letter, card, and presentation folder.
+          </p>
+          <ul class="feature-checklist">
+            <li><span class="feature-checklist-icon">✦</span> 400–600 GSM Cotton and linen textured executive business cards</li>
+            <li><span class="feature-checklist-icon">✦</span> Spot UV gloss, raised tactile varnish, and gold/silver metallic foil edges</li>
+            <li><span class="feature-checklist-icon">✦</span> Bond watermark letterheads with crisp laser-compatible printing</li>
+            <li><span class="feature-checklist-icon">✦</span> Custom die-cut corporate presentation folders with business card slots</li>
+            <li><span class="feature-checklist-icon">✦</span> Branded security envelopes with tamper-evident peel-and-seal strips</li>
+          </ul>
+        </div>
+        <div class="split-visual card-gold-accent">
+          <div class="split-visual-header">
+            <img src="assets/icons/icon-print-media.svg" alt="Print Icon" class="split-visual-icon">
+            <div>
+              <h4 style="font-size: 1.1rem; color: var(--text-primary);">Stationery Specifications</h4>
+              <span style="font-size: 0.75rem; color: var(--gold-500); font-weight: 700;">PREMIUM PAPER STOCKS</span>
+            </div>
+          </div>
+          <p style="font-size: 0.875rem; color: var(--text-secondary); line-height: 1.6;">
+            We offer imported Italian Fedrigoni, Conqueror, and Sappi paper stocks with FSC-certified environmental verification.
+          </p>
+          <div class="spec-list">
+            <div class="spec-box">
+              <h5>Paper Weights</h5>
+              <p>100 GSM to 800 GSM</p>
+            </div>
+            <div class="spec-box">
+              <h5>Finishes</h5>
+              <p>Foil, Spot UV, Deboss</p>
+            </div>
+            <div class="spec-box">
+              <h5>Color Match</h5>
+              <p>100% Pantone Delta-E &lt; 1</p>
+            </div>
+            <div class="spec-box">
+              <h5>Batch Sizing</h5>
+              <p>500 to 50,000+ Units</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Split Section 2: Marketing Collateral & Annual Reports (Reversed) -->
+      <div class="split-section reversed">
+        <div class="split-text">
+          <h2>Brochures, Catalogs &amp; Annual Reports</h2>
+          <p>
+            From high-stakes shareholder annual reports to vibrant multi-page marketing collateral, our advanced 5-color offset presses produce flawless gradient rendering and razor-sharp typography.
+          </p>
+          <ul class="feature-checklist">
+            <li><span class="feature-checklist-icon">✦</span> Saddle-stitched, perfect-bound (PUR glue), and hardbound thread-sewn bindings</li>
+            <li><span class="feature-checklist-icon">✦</span> High-bulk art paper, matte coated sheets, and metallic iridescent cover stocks</li>
+            <li><span class="feature-checklist-icon">✦</span> Thermal velvet soft-touch lamination with scratch-resistant finishes</li>
+            <li><span class="feature-checklist-icon">✦</span> Die-cut window covers, gatefold layouts, and fold-out technical schematics</li>
+            <li><span class="feature-checklist-icon">✦</span> Rapid overnight digital print runs for urgent board meetings and investor summits</li>
+          </ul>
+        </div>
+        <div class="split-visual card-gold-accent">
+          <div class="split-visual-header">
+            <img src="assets/icons/icon-print-media.svg" alt="Print Icon" class="split-visual-icon">
+            <div>
+              <h4 style="font-size: 1.1rem; color: var(--text-primary);">Publishing Architecture</h4>
+              <span style="font-size: 0.75rem; color: var(--gold-500); font-weight: 700;">PRECISION BINDING</span>
+            </div>
+          </div>
+          <p style="font-size: 0.875rem; color: var(--text-secondary); line-height: 1.6;">
+            Each binding method is tested for spine durability, lay-flat readability, and long-term archival preservation.
+          </p>
+          <div class="spec-list">
+            <div class="spec-box">
+              <h5>Binding Options</h5>
+              <p>PUR, Hardcase, Wire-O</p>
+            </div>
+            <div class="spec-box">
+              <h5>Page Counts</h5>
+              <p>8 Pages to 500+ Pages</p>
+            </div>
+            <div class="spec-box">
+              <h5>Proofing SLA</h5>
+              <p>Physical Proof 24 Hours</p>
+            </div>
+            <div class="spec-box">
+              <h5>Logistics</h5>
+              <p>Despatch to Metro Hubs</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Split Section 3: Custom Packaging & Rigid Boxes -->
+      <div class="split-section">
+        <div class="split-text">
+          <h2>Custom Packaging &amp; Luxury Rigid Boxes</h2>
+          <p>
+            Unboxing is a powerful sensory experience. We engineer bespoke packaging structures, magnetic closure rigid boxes, and custom retail folding cartons that protect products while amplifying brand value.
+          </p>
+          <ul class="feature-checklist">
+            <li><span class="feature-checklist-icon">✦</span> Heavy greyboard rigid boxes wrapped in custom dyed textured paper</li>
+            <li><span class="feature-checklist-icon">✦</span> Hidden neodymium magnetic closures and custom grosgrain pull-ribbons</li>
+            <li><span class="feature-checklist-icon">✦</span> Custom CNC die-cut high-density EVA foam and velvet-flocked trays</li>
+            <li><span class="feature-checklist-icon">✦</span> Corrugated mailer boxes with interior four-color flood printing</li>
+            <li><span class="feature-checklist-icon">✦</span> Eco-friendly kraft packaging with soy-based non-toxic inks</li>
+          </ul>
+        </div>
+        <div class="split-visual card-gold-accent">
+          <div class="split-visual-header">
+            <img src="assets/icons/icon-print-media.svg" alt="Print Icon" class="split-visual-icon">
+            <div>
+              <h4 style="font-size: 1.1rem; color: var(--text-primary);">Structural Dieline Engineering</h4>
+              <span style="font-size: 0.75rem; color: var(--gold-500); font-weight: 700;">CUSTOM CAD MOCKUPS</span>
+            </div>
+          </div>
+          <p style="font-size: 0.875rem; color: var(--text-secondary); line-height: 1.6;">
+            Our packaging engineers create precision CAD dielines and unprinted white structural samples for fit testing before full production.
+          </p>
+          <div class="spec-list">
+            <div class="spec-box">
+              <h5>Box Types</h5>
+              <p>Clamshell, Drawer, Top-Bottom</p>
+            </div>
+            <div class="spec-box">
+              <h5>Internal Trays</h5>
+              <p>Die-cut Foam, Pulp, Velvet</p>
+            </div>
+            <div class="spec-box">
+              <h5>Sampling</h5>
+              <p>White Sample in 48 Hours</p>
+            </div>
+            <div class="spec-box">
+              <h5>Drop Test</h5>
+              <p>ISTA Packaging Certified</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Split Section 4: Large Format & Signage (Reversed) -->
+      <div class="split-section reversed">
+        <div class="split-text">
+          <h2>Large Format &amp; Spatial Signage</h2>
+          <p>
+            Command attention across office campuses, exhibition halls, and corporate receptions with high-resolution large-format graphics, durable roll-up standees, and architectural signage.
+          </p>
+          <ul class="feature-checklist">
+            <li><span class="feature-checklist-icon">✦</span> Luxury heavy-base teardrop roll-up standees with non-curling grey-back film</li>
+            <li><span class="feature-checklist-icon">✦</span> Seamless vinyl backdrops and star-flex conference stage banners</li>
+            <li><span class="feature-checklist-icon">✦</span> Laser-cut 3D acrylic and brushed metallic reception logos</li>
+            <li><span class="feature-checklist-icon">✦</span> Backlit fabric lightboxes and LED directional campus signage</li>
+            <li><span class="feature-checklist-icon">✦</span> Removable frosted vinyl glass film with precision plotted logos for office cabins</li>
+          </ul>
+        </div>
+        <div class="split-visual card-gold-accent">
+          <div class="split-visual-header">
+            <img src="assets/icons/icon-print-media.svg" alt="Print Icon" class="split-visual-icon">
+            <div>
+              <h4 style="font-size: 1.1rem; color: var(--text-primary);">Spatial Signage Capabilities</h4>
+              <span style="font-size: 0.75rem; color: var(--gold-500); font-weight: 700;">CAMPUS INSTALLATION</span>
+            </div>
+          </div>
+          <p style="font-size: 0.875rem; color: var(--text-secondary); line-height: 1.6;">
+            Our certified installation team handles on-site site surveys, surface preparation, electrical connections for LED signage, and installation in Bengaluru and major metros.
+          </p>
+          <div class="spec-list">
+            <div class="spec-box">
+              <h5>Print Width</h5>
+              <p>Up to 10 Feet Seamless</p>
+            </div>
+            <div class="spec-box">
+              <h5>Ink Technology</h5>
+              <p>UV Curable & Eco-Solvent</p>
+            </div>
+            <div class="spec-box">
+              <h5>Durability</h5>
+              <p>5+ Years Color Fastness</p>
+            </div>
+            <div class="spec-box">
+              <h5>Installation</h5>
+              <p>On-Site Across Bengaluru</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Perfect For Section -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="text-center" style="margin-bottom: 48px;">
+        <span class="section-label">Enterprise Applications</span>
+        <h2 class="section-title">Perfect For All Corporate Requirements</h2>
+      </div>
+
+      <div class="perfect-for-grid">
+        <div class="perfect-for-card">
+          <img src="assets/icons/icon-print-media.svg" alt="Rebrands" class="perfect-for-icon">
+          <h4>Corporate Rebranding &amp; Stationeries</h4>
+        </div>
+        <div class="perfect-for-card">
+          <img src="assets/icons/icon-print-media.svg" alt="Marketing" class="perfect-for-icon">
+          <h4>Sales Collateral &amp; Product Catalogs</h4>
+        </div>
+        <div class="perfect-for-card">
+          <img src="assets/icons/icon-print-media.svg" alt="Packaging" class="perfect-for-icon">
+          <h4>Bespoke Gift Boxes &amp; Product Packaging</h4>
+        </div>
+        <div class="perfect-for-card">
+          <img src="assets/icons/icon-print-media.svg" alt="Trade Shows" class="perfect-for-icon">
+          <h4>Trade Show Booth Graphics &amp; Standees</h4>
+        </div>
+        <div class="perfect-for-card">
+          <img src="assets/icons/icon-print-media.svg" alt="Annual Reports" class="perfect-for-icon">
+          <h4>Shareholder Annual Reports &amp; Booklets</h4>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Request a Quote Section -->
+  <section class="section" id="quote-section">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div>
+            <span class="section-label">Fast Turnaround Quotations</span>
+            <h2 class="section-title">Request a Print Media Quotation</h2>
+            <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 24px;">
+              Send us your artwork files, print specifications, or concept brief. We provide detailed rate estimates, paper stock swatches, and physical sample proofs.
+            </p>
+          </div>
+
+          <div class="contact-info-card">
+            <div class="contact-info-icon">✉️</div>
+            <div class="contact-info-text">
+              <h4>Print Inquiries Desk</h4>
+              <a href="mailto:contacts@avyaservices.in" data-company="email">contacts@avyaservices.in</a>
+            </div>
+          </div>
+
+          <div class="contact-info-card">
+            <div class="contact-info-icon">📞</div>
+            <div class="contact-info-text">
+              <h4>Direct Telephone</h4>
+              <a href="tel:+919845012345" data-company="phone">+91 98450 12345</a>
+            </div>
+          </div>
+
+          <div class="contact-info-card">
+            <div class="contact-info-icon">📍</div>
+            <div class="contact-info-text">
+              <h4>Printing Facility Coordinates</h4>
+              <p data-company="address">No. 208, Venkatapura, 8th Cross, Koramangala 1st Block, Bengaluru - 560034</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form-container">
+          <h3 class="font-display" style="font-size: 1.5rem; margin-bottom: 8px;">Print Media RFP Form</h3>
+          <p style="font-size: 0.875rem; color: var(--text-secondary); margin-bottom: 24px;">
+            Submitted specifications route directly to <strong data-company="email">contacts@avyaservices.in</strong>.
+          </p>
+
+          <form id="contactForm">
+            <input type="hidden" id="serviceInterest" value="Print Media Services">
+            <div class="form-grid">
+              <div>
+                <label class="form-label" for="fullName">Your Full Name *</label>
+                <input type="text" id="fullName" class="form-input" required placeholder="e.g. Ramesh Kulkarni">
+              </div>
+              <div>
+                <label class="form-label" for="companyName">Company Name *</label>
+                <input type="text" id="companyName" class="form-input" required placeholder="e.g. TechVentures India">
+              </div>
+              <div>
+                <label class="form-label" for="workEmail">Work Email *</label>
+                <input type="email" id="workEmail" class="form-input" required placeholder="e.g. ramesh@techventures.com">
+              </div>
+              <div>
+                <label class="form-label" for="phoneNumber">Contact Phone *</label>
+                <input type="tel" id="phoneNumber" class="form-input" required placeholder="+91 98450 67890">
+              </div>
+              <div class="form-group-full">
+                <label class="form-label" for="orderVolume">Print Category Required</label>
+                <select id="orderVolume" class="form-select">
+                  <option value="Corporate Stationery (Cards, Letterheads)">Corporate Stationery (Business Cards, Letterheads, Envelopes)</option>
+                  <option value="Marketing Brochures & Catalogs" selected>Marketing Brochures & Catalogs (Multi-page, Perfect Bound)</option>
+                  <option value="Custom Packaging & Rigid Gift Boxes">Custom Packaging & Luxury Rigid Boxes</option>
+                  <option value="Large Format Standees & Signage">Large Format Rollup Standees, Vinyl Backdrops & Signage</option>
+                  <option value="Full Corporate Print Package">Full Corporate Print Package (Multiple Requirements)</option>
+                </select>
+              </div>
+              <div class="form-group-full">
+                <label class="form-label" for="projectDetails">Paper Specifications, Quantity, Finishes &amp; Timeline</label>
+                <textarea id="projectDetails" class="form-textarea" placeholder="Specify quantity, paper GSM preference, specialty finishes (Spot UV, Gold Foil, Matte), dimensions, and required delivery date..."></textarea>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-gold btn-lg" style="width: 100%;">
+              Submit Print Media RFP to contacts@avyaservices.in
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="assets/logo.svg" alt="Avya Corporate Services" class="brand-logo-img" style="height: 52px;">
+          <p data-company="tagline">
+            Premier brand execution, corporate gifting, print media, and domestic travel partner for IT/ITeS and MNC enterprises across India.
+          </p>
+          <div class="badge badge-enterprise" data-company="msme">MSME Registered • GST Compliant • ISO 9001</div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Dedicated Services</h4>
+          <ul class="footer-links">
+            <li><a href="corporate-gifting.html">Corporate Gifting &amp; Swag</a></li>
+            <li><a href="print-media.html">Print Media Services</a></li>
+            <li><a href="corporate-travel.html">Corporate Domestic Travel</a></li>
+            <li><a href="rewards-recognition.html">Rewards &amp; Recognition</a></li>
+            <li><a href="brand-design.html">Brand &amp; Design Services</a></li>
+            <li><a href="event-branding.html">Event Branding &amp; Signage</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Solutions</h4>
+          <ul class="footer-links">
+            <li><a href="print-media.html">Executive Stationery</a></li>
+            <li><a href="print-media.html">Marketing Collateral</a></li>
+            <li><a href="print-media.html">Custom Rigid Boxes</a></li>
+            <li><a href="print-media.html">Roll-Up Standees</a></li>
+            <li><a href="print-media.html">Campus Wayfinding Signs</a></li>
+            <li><a href="print-media.html">Foil Stamped Folders</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Corporate Coordinates</h4>
+          <p style="font-size: 0.875rem; color: var(--text-secondary); margin-bottom: 8px;">
+            Inquiries: <a href="mailto:contacts@avyaservices.in" data-company="email" style="color: var(--gold-500); text-decoration: none;">contacts@avyaservices.in</a>
+          </p>
+          <p style="font-size: 0.8125rem; color: var(--text-muted); line-height: 1.6;" data-company="address">
+            No. 208, Venkatapura, 8th Cross, Koramangala 1st Block, Bengaluru - 560034, Karnataka, India
+          </p>
+          <div style="margin-top: 14px;" data-company="hashtags"></div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          © <span data-company="year">2026</span> <span data-company="name">Avya Corporate Services</span>. All rights reserved. Registered domains: <span data-company="domains">avyaservices.in | avyaservices.co.in</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/config.js"></script>
+  <script src="js/hydrate-config.js"></script>
+  <script src="js/theme.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/chatbot.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

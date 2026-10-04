@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 650" width="100%" height="100%" fill="none">
+  <defs>
+    <linearGradient id="bgGradTravel" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#08090D"/>
+      <stop offset="50%" stop-color="#121622"/>
+      <stop offset="100%" stop-color="#221B10"/>
+    </linearGradient>
+    <linearGradient id="goldHdrTravel" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F5DF9E"/>
+      <stop offset="50%" stop-color="#C5A059"/>
+      <stop offset="100%" stop-color="#8E6A26"/>
+    </linearGradient>
+    <radialGradient id="heroGlowTravel" cx="72%" cy="40%" r="65%">
+      <stop offset="0%" stop-color="#C5A059" stop-opacity="0.32"/>
+      <stop offset="60%" stop-color="#C5A059" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#08090D" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1600" height="650" fill="url(#bgGradTravel)"/>
+  <rect width="1600" height="650" fill="url(#heroGlowTravel)"/>
+
+  <!-- Architectural Gold Frame Accent -->
+  <path d="M 1150 80 L 1520 80 L 1520 540 L 1150 540 L 1150 490" stroke="url(#goldHdrTravel)" stroke-width="6" fill="none" opacity="0.45"/>
+  <rect x="1530" y="86" width="12" height="460" fill="#111111" opacity="0.6"/>
+
+  <!-- Mountain Silhouette (Coorg / Western Ghats Vibe) -->
+  <path d="M 650 440 L 820 280 L 980 440 Z" fill="#11141E" opacity="0.7"/>
+  <path d="M 880 440 L 1050 240 L 1260 440 Z" fill="#171B28" opacity="0.85"/>
+  <path d="M 1180 440 L 1340 310 L 1540 440 Z" fill="#1C2132" opacity="0.9"/>
+
+  <!-- Executive Homestay & Villa Pavilion (Center-Right) -->
+  <!-- Main Villa Structure -->
+  <rect x="940" y="310" width="340" height="150" rx="6" fill="#141722" stroke="url(#goldHdrTravel)" stroke-width="3"/>
+  <!-- Villa Overhanging Roof -->
+  <polygon points="910 310 1110 230 1310 310" fill="#1E2333" stroke="url(#goldHdrTravel)" stroke-width="3"/>
+  <!-- Floor-to-Ceiling Glass Walls -->
+  <g fill="none" stroke="url(#goldHdrTravel)" stroke-width="1.5">
+    <rect x="960" y="330" width="60" height="130" fill="#1C2230" opacity="0.6"/>
+    <rect x="1040" y="330" width="60" height="130" fill="#1C2230" opacity="0.6"/>
+    <rect x="1120" y="330" width="60" height="130" fill="#1C2230" opacity="0.6"/>
+    <rect x="1200" y="330" width="60" height="130" fill="#1C2230" opacity="0.6"/>
+  </g>
+  <!-- Warm Golden Light Inside Villa -->
+  <rect x="970" y="350" width="40" height="80" fill="url(#goldHdrTravel)" opacity="0.4"/>
+  <rect x="1050" y="350" width="40" height="80" fill="url(#goldHdrTravel)" opacity="0.4"/>
+  <rect x="1130" y="350" width="40" height="80" fill="url(#goldHdrTravel)" opacity="0.4"/>
+
+  <!-- Infinity Pool / Reflection Deck -->
+  <polygon points="860 460 1380 460 1440 560 800 560" fill="#101522" stroke="url(#goldHdrTravel)" stroke-width="2"/>
+  <line x1="840" y1="490" x2="1400" y2="490" stroke="url(#goldHdrTravel)" stroke-width="1" stroke-opacity="0.4"/>
+  <line x1="820" y1="520" x2="1420" y2="520" stroke="url(#goldHdrTravel)" stroke-width="1" stroke-opacity="0.3"/>
+
+  <!-- Flight Path Arc & Jet Silhouette -->
+  <path d="M 680 320 C 850 140, 1150 120, 1420 220" stroke="url(#goldHdrTravel)" stroke-width="2.5" stroke-dasharray="8 6"/>
+  <g transform="translate(1420, 220) rotate(15)">
+    <path d="M 0 0 L -25 -8 L -18 0 L -28 6 L -20 8 L -22 14 L -12 10 L 0 0 Z" fill="url(#goldHdrTravel)"/>
+  </g>
+
+  <!-- Stars & Moon Crescent -->
+  <circle cx="860" cy="160" r="28" fill="url(#goldHdrTravel)" opacity="0.2"/>
+  <circle cx="860" cy="160" r="24" fill="#0C0E16"/>
+  <circle cx="866" cy="158" r="22" fill="url(#goldHdrTravel)"/>
+  <circle cx="872" cy="154" r="22" fill="#0C0E16"/>
+
+  <polygon points="1260 140 1264 148 1272 148 1266 153 1268 161 1260 156 1252 161 1254 153 1248 148 1256 148" fill="url(#goldHdrTravel)"/>
+  <circle cx="1020" cy="130" r="3" fill="url(#goldHdrTravel)"/>
+  <circle cx="1360" cy="110" r="2" fill="url(#goldHdrTravel)"/>
+</svg>

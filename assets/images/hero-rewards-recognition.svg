@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 650" width="100%" height="100%" fill="none">
+  <defs>
+    <linearGradient id="bgGradRnr" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#08090D"/>
+      <stop offset="50%" stop-color="#14141E"/>
+      <stop offset="100%" stop-color="#1F190F"/>
+    </linearGradient>
+    <linearGradient id="goldHdrRnr" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F5DF9E"/>
+      <stop offset="50%" stop-color="#C5A059"/>
+      <stop offset="100%" stop-color="#8E6A26"/>
+    </linearGradient>
+    <radialGradient id="heroGlowRnr" cx="72%" cy="40%" r="65%">
+      <stop offset="0%" stop-color="#C5A059" stop-opacity="0.32"/>
+      <stop offset="60%" stop-color="#C5A059" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#08090D" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1600" height="650" fill="url(#bgGradRnr)"/>
+  <rect width="1600" height="650" fill="url(#heroGlowRnr)"/>
+
+  <!-- Architectural Gold Frame Accent -->
+  <path d="M 1150 80 L 1520 80 L 1520 540 L 1150 540 L 1150 490" stroke="url(#goldHdrRnr)" stroke-width="6" fill="none" opacity="0.45"/>
+  <rect x="1530" y="86" width="12" height="460" fill="#111111" opacity="0.6"/>
+
+  <!-- Grand Pedestal / Stage Podium -->
+  <polygon points="900 480 1340 480 1380 580 860 580" fill="#141722" stroke="url(#goldHdrRnr)" stroke-width="3"/>
+  <rect x="940" y="450" width="360" height="30" fill="#1E2333" stroke="url(#goldHdrRnr)" stroke-width="2"/>
+
+  <!-- Centerpiece: Luxury Optical K9 Crystal Trophy -->
+  <polygon points="1060 210 1180 210 1220 450 1020 450" fill="#181D2C" stroke="url(#goldHdrRnr)" stroke-width="3"/>
+  <!-- Facet Cut Reflections -->
+  <polygon points="1060 210 1120 210 1100 450 1020 450" fill="url(#goldHdrRnr)" opacity="0.25"/>
+  <polygon points="1120 210 1180 210 1220 450 1140 450" fill="url(#goldHdrRnr)" opacity="0.35"/>
+  <line x1="1120" y1="210" x2="1120" y2="450" stroke="url(#goldHdrRnr)" stroke-width="2.5"/>
+
+  <!-- Crystal Trophy Top Crown Star -->
+  <polygon points="1120 150 1132 180 1164 180 1138 200 1148 230 1120 212 1092 230 1102 200 1076 180 1108 180" fill="url(#goldHdrRnr)"/>
+
+  <!-- Left: Cast Metal Excellence Medal with Ribbon -->
+  <g transform="translate(880, 290)">
+    <!-- V-Ribbon -->
+    <polygon points="40 0 20 60 40 80 60 60" fill="#886524"/>
+    <polygon points="80 0 100 60 80 80 60 60" fill="#A88237"/>
+    <!-- Medallion Disc -->
+    <circle cx="60" cy="90" r="36" fill="#181B26" stroke="url(#goldHdrRnr)" stroke-width="3"/>
+    <circle cx="60" cy="90" r="28" stroke="url(#goldHdrRnr)" stroke-width="1.5" stroke-dasharray="3 3"/>
+    <polygon points="60 76 64 85 73 85 66 90 68 99 60 94 52 99 54 90 47 85 56 85" fill="url(#goldHdrRnr)"/>
+  </g>
+
+  <!-- Right: Laser Engraved Mahogany & Gold Plaque -->
+  <rect x="1270" y="310" width="160" height="200" rx="8" fill="#12141D" stroke="url(#goldHdrRnr)" stroke-width="3"/>
+  <rect x="1285" y="325" width="130" height="170" rx="4" fill="#1C202F" stroke="url(#goldHdrRnr)" stroke-width="1.5"/>
+  <line x1="1305" y1="360" x2="1395" y2="360" stroke="url(#goldHdrRnr)" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="1315" y1="380" x2="1385" y2="380" stroke="url(#goldHdrRnr)" stroke-width="2" stroke-linecap="round"/>
+  <line x1="1310" y1="410" x2="1390" y2="410" stroke="url(#goldHdrRnr)" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="1320" y1="430" x2="1380" y2="430" stroke="url(#goldHdrRnr)" stroke-width="1.5" stroke-linecap="round"/>
+
+  <!-- Radiant Light Rays & Sparkles -->
+  <circle cx="1120" cy="180" r="80" fill="url(#goldHdrRnr)" opacity="0.15"/>
+  <circle cx="820" cy="240" r="4" fill="url(#goldHdrRnr)"/>
+  <circle cx="1480" cy="220" r="3" fill="url(#goldHdrRnr)"/>
+  <circle cx="1020" cy="130" r="2.5" fill="url(#goldHdrRnr)"/>
+</svg>

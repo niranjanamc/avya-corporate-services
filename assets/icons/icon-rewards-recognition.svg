@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="100%" height="100%" fill="none">
+  <defs>
+    <linearGradient id="goldGradRnr" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F3D899"/>
+      <stop offset="50%" stop-color="#C5A059"/>
+      <stop offset="100%" stop-color="#9E7B35"/>
+    </linearGradient>
+    <radialGradient id="discGlowRnr" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#C5A059" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#0B0C10" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="120" height="120" rx="24" fill="#0E1017"/>
+  <rect width="120" height="120" rx="24" fill="url(#discGlowRnr)"/>
+  <rect x="1" y="1" width="118" height="118" rx="23" stroke="#252A38" stroke-width="1.5"/>
+
+  <!-- Architectural Gold Frame -->
+  <path d="M 52 18 L 102 18 L 102 102 L 52 102 L 52 92" stroke="url(#goldGradRnr)" stroke-width="3.5" fill="none" stroke-linecap="square"/>
+  <path d="M 104 20 L 107 20 L 107 104 L 104 104 Z" fill="#111111"/>
+
+  <!-- Crystal Trophy Cup / Award Silhouette -->
+  <!-- Trophy Cup Body -->
+  <path d="M 40 40 L 80 40 C 80 62, 70 72, 60 74 C 50 72, 40 62, 40 40 Z" fill="#1A1E29" stroke="url(#goldGradRnr)" stroke-width="2.5"/>
+  <!-- Handles -->
+  <path d="M 40 46 C 26 46, 26 62, 42 64" stroke="url(#goldGradRnr)" stroke-width="2.5" fill="none"/>
+  <path d="M 80 46 C 94 46, 94 62, 78 64" stroke="url(#goldGradRnr)" stroke-width="2.5" fill="none"/>
+  <!-- Stem & Pedestal -->
+  <line x1="60" y1="74" x2="60" y2="86" stroke="url(#goldGradRnr)" stroke-width="4"/>
+  <path d="M 42 86 L 78 86 L 74 94 L 46 94 Z" fill="url(#goldGradRnr)"/>
+
+  <!-- Star on Cup -->
+  <polygon points="60 48 62 53 67 53 63 56 65 61 60 58 55 61 57 56 53 53 58 53" fill="url(#goldGradRnr)"/>
+
+  <!-- Laurels / Sparkles -->
+  <path d="M 32 30 C 28 36, 28 42, 34 46" stroke="url(#goldGradRnr)" stroke-width="1.5" stroke-dasharray="2 2"/>
+  <path d="M 88 30 C 92 36, 92 42, 86 46" stroke="url(#goldGradRnr)" stroke-width="1.5" stroke-dasharray="2 2"/>
+</svg>

@@ -1,4 +1,4 @@
-# Avya Corporate Services — Official Web Platform
+# Avya Corporate Services — Multi-Page Enterprise Platform
 
 > **Bengaluru's Premier Brand Execution, Corporate Gifting, Print Media & Enterprise Hospitality Partner**  
 > Serving leading IT / ITeS Enterprises & Multinational Corporations across India.  
@@ -7,68 +7,28 @@
 
 ---
 
-## 🌟 Overview
+## 🌟 Overview & Architecture
 
 **Avya Corporate Services** (formerly Designz, established in 2009 in Koramangala, Bengaluru) is an enterprise vendor partner specializing in end-to-end brand execution, custom corporate gifting, full-spectrum print media, and domestic corporate travel management.
 
-This platform is engineered using modern, high-performance, accessible, and responsive web standards.
+This platform has been architected to compete with top industry vendors, inspired by the executive concierge standards of platforms like [Voyage Monk](https://voyagemonk.com/).
 
----
-
-## 🎨 Brand Identity & Design System
-
-The visual design is grounded directly in the official **Avya Corporate Services** brand mark:
-- **Warm Champagne Gold**: `#C5A059` / `#D4AF37` / `#DFBA5C`
-- **Obsidian / Onyx Black**: `#0B0C10` / `#111215` / `#1A1D27`
-- **Pristine Ivory / Light Surfaces**: `#FFFFFF` / `#F8F9FA` / `#EEF0F5`
-- **Typography**: Display serif (`Cinzel`, `Playfair Display`) paired with clean geometric sans-serif (`Plus Jakarta Sans`, `Inter`).
-- **Dark & Light Mode**: Seamless automatic detection using the user's browser/system preferences (`prefers-color-scheme`), with manual override saved in `localStorage`.
-- **Adaptive Vector Logos**: Crisp SVGs (`assets/logo.svg` and `assets/logo-dark.svg`) providing infinite resolution on Retina displays.
-
----
-
-## 🚀 Key Service Pillars
-
-1. **Corporate Gifting & Swag (Primary Business Engine)**:
-   - Employee Onboarding & Welcome Boxes
-   - Diwali, New Year & Festive Luxury Hampers
-   - High-end Tech Accessories & Branded Merchandise
-   - Eco-Friendly & Sustainable Gifting Collections
-   - Pan-India Direct-to-Employee Doorstep Fulfilment
-
-2. **Full-Spectrum Print Media Services**:
-   - Corporate Stationery: Business cards, embossed letterheads, presentation folders
-   - Marketing Collateral: High-GSM brochures, product catalogues, annual reports
-   - Custom Packaging: Rigid gift boxes with die-cut EVA foam inserts, branded sleeves
-   - Large-Format & Outdoor: Roll-up standees, backdrop banners, vinyl prints, acrylic directional signage
-   - Luxury Specialty Finishes: Spot UV, gold & silver foil stamping, debossing/embossing
-
-3. **Corporate Domestic Travel & Hospitality**:
-   - Curated Corporate Homestays & Private Villas (Coorg, Chikmagalur, Wayanad, Goa, Ooty, Rishikesh)
-   - Corporate Event Planning & Strategy Execution
-   - Business Hotel Bookings at Negotiated Enterprise Rates
-   - Leadership Retreats, Workations, Hackathons & Team Building
-   - Single-Window Consolidated Corporate Billing & Full GST Compliance
-
-4. **MNC Vendor Hub & IT/ITeS Credentials**:
-   - Registered corporate vendor with Fortune 500 & top-tier IT companies
-   - Procurement Integration: SAP Ariba, Coupa, standard Corporate PO & MSA contracts
-   - ISO 9001 quality audits & NDA-backed data protection
-   - Multi-campus consolidated logistics (Bengaluru, Hyderabad, Pune, Chennai, Gurugram, Noida, Mumbai)
-
-5. **Rewards & Recognition (R&R)**:
-   - K9 Optical Crystal & Sculptured Metal Trophies
-   - Laser-engraved plaques, long-service tenure commemorative awards, and custom presentation cases
-
----
-
-## 🤖 AI-Assisted Executive Concierge Chatbot
-
-The platform includes a built-in floating AI Chatbot widget configured specifically for corporate lead acquisition:
-- **Intelligent Guided Lead Flow**: Greets visitors, qualifies requirements (Gifting, Print Media, Travel, R&R), captures contact coordinates (Name, Company, Work Email, Phone), volume, timeline, and budget.
-- **Lead Dossier Generation**: Summarizes the requirements and automatically routes the inquiry to `contacts@avyaservices.in`.
-- **Live Google Gemini API Integration**: Features an integrated configuration modal where an administrator or user can input their Google Gemini API Key. When active, the bot uses the official Gemini API with pre-prompted corporate domain knowledge for open-ended conversation.
-- **Local Persistence & Mailto Fallback**: Inquiries are saved in browser storage (`localStorage`) and provide a one-click pre-filled email client link for immediate dispatch.
+### Key Platform Highlights
+1. **Dedicated Service Pages with Custom AI Hero Visuals**:
+   - Each service has its own dedicated page with an immersive hero banner, detailed split-feature sections, "Perfect For" use cases, enterprise specifications, and an itemized RFP form.
+2. **Custom Built Service Logos / Icons**:
+   - Every service is represented by a dedicated, custom-crafted vector icon ([assets/icons/](assets/icons/)) adhering strictly to the brand’s warm champagne gold (`#C5A059`) and deep obsidian palette with the brand's signature geometric architectural offset frame.
+3. **Single Master Configuration File (`js/config.js`)**:
+   - All company details, legal entity names, phone numbers, email addresses, physical office addresses, domain variants, social media URLs, and campaign hashtags are centralized in `js/config.js`.
+   - Modifying `js/config.js` instantly updates every page across the entire website via the automated DOM hydrator (`js/hydrate-config.js`).
+4. **GitHub Pages Ready**:
+   - Built with clean, dependency-free vanilla HTML5, CSS3 design tokens, and modular JavaScript.
+   - Hosted effortlessly on GitHub Pages without any compilation or build steps.
+5. **Dark & Light Mode**:
+   - Automatically detects system/browser preference (`prefers-color-scheme`) and provides an instant manual toggle with `localStorage` persistence.
+6. **Dual-Mode AI Executive Concierge Chatbot**:
+   - Features a progressive corporate lead qualification workflow that routes captured specifications to `contacts@avyaservices.in`.
+   - Features a settings modal allowing administrators to connect a live Google Gemini API key for open-ended generative AI conversations.
 
 ---
 
@@ -76,47 +36,93 @@ The platform includes a built-in floating AI Chatbot widget configured specifica
 
 ```text
 avya-corporate-services/
-├── index.html              # Semantic, responsive, SEO-optimized markup
+├── index.html                      # Homepage & master corporate hub
+├── corporate-gifting.html          # Dedicated page: Corporate Gifting & Swag (Main business)
+├── print-media.html                # Dedicated page: Full-Spectrum Print Media Services
+├── corporate-travel.html           # Dedicated page: Domestic Homestays, Offsites & Bookings
+├── rewards-recognition.html        # Dedicated page: Crystal Trophies & Milestone Awards
+├── brand-design.html               # Dedicated page: Pantone Matching & 3D Packaging Mockups
+├── event-branding.html             # Dedicated page: Stage Fabrication & Exhibition Stalls
 ├── assets/
-│   ├── logo.svg            # Crisp vector brand logo (light mode)
-│   ├── logo-dark.svg       # Crisp vector brand logo (dark mode)
-│   └── favicon.svg         # High-resolution vector favicon
+│   ├── logo.svg                    # Crisp vector brand logo (light mode)
+│   ├── logo-dark.svg               # Crisp vector brand logo (dark mode)
+│   ├── favicon.svg                 # High-resolution vector favicon
+│   ├── icons/                      # Custom-built service icons (Gold & Obsidian)
+│   │   ├── icon-corporate-gifting.svg
+│   │   ├── icon-print-media.svg
+│   │   ├── icon-corporate-travel.svg
+│   │   ├── icon-rewards-recognition.svg
+│   │   ├── icon-brand-design.svg
+│   │   └── icon-event-branding.svg
+│   └── images/                     # Custom AI-crafted wide hero section visuals
+│       ├── hero-corporate-gifting.svg
+│       ├── hero-print-media.svg
+│       ├── hero-corporate-travel.svg
+│       ├── hero-rewards-recognition.svg
+│       ├── hero-brand-design.svg
+│       └── hero-event-branding.svg
 ├── css/
-│   ├── theme.css           # Design tokens, color palettes, dark/light theme variables
-│   ├── components.css      # Buttons, badges, cards, toasts, modals
-│   ├── main.css            # Navigation, hero, services, process, footer layout
-│   └── chatbot.css         # Floating AI Concierge interface & chat bubbles
+│   ├── theme.css                   # Design tokens, color palettes, dark/light variables
+│   ├── components.css              # Buttons, badges, cards, toasts, modals
+│   ├── main.css                    # Main layout, hero, grid styles, footer
+│   ├── service-pages.css           # Dedicated service pages layout (Voyage Monk style)
+│   └── chatbot.css                 # Floating AI Concierge interface & chat bubbles
 ├── js/
-│   ├── theme.js            # Auto-detection of system dark/light mode & toggle
-│   ├── data.js             # Comprehensive content model for services, solutions, FAQs
-│   ├── chatbot.js          # AI Chatbot controller, Gemini API caller, lead router
-│   └── main.js             # Navigation, counters, accordions, and contact form
-├── .gitignore              # Standard git exclusion rules
-└── README.md               # Architecture and documentation
+│   ├── config.js                   # MASTER EDITABLE CONFIGURATION FILE (Source of truth)
+│   ├── hydrate-config.js           # Automated DOM placeholder hydrator
+│   ├── theme.js                    # Auto-detection of system dark/light mode & toggle
+│   ├── data.js                     # Content model for services, solutions, FAQs
+│   ├── chatbot.js                  # AI Chatbot controller, Gemini API caller, lead router
+│   └── main.js                     # Navigation, counters, accordions, and contact form
+├── .gitignore                      # Standard git exclusion rules
+└── README.md                       # Comprehensive platform documentation
 ```
 
 ---
 
-## 🛠️ Local Development & Deployment
+## ⚙️ How to Update Company Details
 
-### Running Locally
-No heavy build steps or npm installations are required! Simply open `index.html` in any modern web browser, or launch a local static server:
+All company information across the website is controlled from **one file**:
+👉 `js/config.js`
 
+To update any details:
+1. Open `js/config.js` in your favorite editor.
+2. Edit the corresponding value (e.g. `contacts.primaryPhone`, `contacts.primaryEmail`, `location.fullAddress`, `socials.linkedin`, `hashtags`, etc.).
+3. Save the file.
+4. Refresh your browser—**every single occurrence across all 7 pages updates automatically!**
+
+---
+
+## 🚀 Local Preview & GitHub Pages Hosting
+
+### Local Preview
+Open any `.html` file directly in your web browser:
+- Homepage: `index.html`
+- Corporate Gifting: `corporate-gifting.html`
+- Print Media: `print-media.html`
+- Corporate Travel: `corporate-travel.html`
+- Rewards & Recognition: `rewards-recognition.html`
+- Brand Design: `brand-design.html`
+- Event Branding: `event-branding.html`
+
+Or run a local lightweight server:
 ```bash
-# Using Python 3
 python3 -m http.server 8080
-
-# Or using npx serve
-npx serve .
 ```
 Navigate to `http://localhost:8080`.
 
-### Hosting on GitHub Pages / Vercel / Netlify
-1. Push this repository to GitHub:
+### Deploying to GitHub Pages
+1. Push this repository to your GitHub account:
    ```bash
-   git remote add origin https://github.com/<username>/avya-corporate-services.git
+   cd /Users/niranjanamurthyc/Developer/projects/avya-corporate-services
+   git remote add origin https://github.com/<your-username>/avya-corporate-services.git
    git branch -M main
    git push -u origin main
    ```
-2. Enable **GitHub Pages** under `Settings > Pages > Source: main branch / (root)`.
-3. Configure your custom domains: `avyaservices.in` and `avyaservices.co.in`.
+2. In your GitHub repository:
+   - Go to **Settings** > **Pages**.
+   - Under **Build and deployment** > **Source**, choose **Deploy from a branch**.
+   - Select `main` branch and `/ (root)` folder. Click **Save**.
+3. Your website will be live in 1–2 minutes at:
+   `https://<your-username>.github.io/avya-corporate-services/`
+4. Once you register `avyaservices.in` and `avyaservices.co.in`, enter your custom domain under the **Custom domain** setting in GitHub Pages.

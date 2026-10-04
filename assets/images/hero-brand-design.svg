@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 650" width="100%" height="100%" fill="none">
+  <defs>
+    <linearGradient id="bgGradBrandHdr" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#08090D"/>
+      <stop offset="50%" stop-color="#141724"/>
+      <stop offset="100%" stop-color="#201C11"/>
+    </linearGradient>
+    <linearGradient id="goldHdrBrand" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F5DF9E"/>
+      <stop offset="50%" stop-color="#C5A059"/>
+      <stop offset="100%" stop-color="#8E6A26"/>
+    </linearGradient>
+    <radialGradient id="heroGlowBrand" cx="72%" cy="40%" r="65%">
+      <stop offset="0%" stop-color="#C5A059" stop-opacity="0.32"/>
+      <stop offset="60%" stop-color="#C5A059" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#08090D" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1600" height="650" fill="url(#bgGradBrandHdr)"/>
+  <rect width="1600" height="650" fill="url(#heroGlowBrand)"/>
+
+  <!-- Architectural Gold Frame Accent -->
+  <path d="M 1150 80 L 1520 80 L 1520 540 L 1150 540 L 1150 490" stroke="url(#goldHdrBrand)" stroke-width="6" fill="none" opacity="0.45"/>
+  <rect x="1530" y="86" width="12" height="460" fill="#111111" opacity="0.6"/>
+
+  <!-- Creative Studio Design Display (Center-Right) -->
+  <!-- Modern Tablet / Canvas Display -->
+  <rect x="960" y="190" width="460" height="310" rx="18" fill="#151824" stroke="url(#goldHdrBrand)" stroke-width="3"/>
+  <rect x="980" y="210" width="420" height="270" rx="10" fill="#0C0E15"/>
+
+  <!-- Golden Ratio Geometric Grid on Canvas -->
+  <circle cx="1190" cy="345" r="90" stroke="url(#goldHdrBrand)" stroke-width="1.5" stroke-dasharray="4 4" fill="none"/>
+  <rect x="1100" y="255" width="180" height="180" stroke="url(#goldHdrBrand)" stroke-width="1.5" stroke-dasharray="4 4" fill="none"/>
+  
+  <!-- Vector Brand Emblem In Construction -->
+  <polygon points="1190 270 1250 380 1130 380" stroke="url(#goldHdrBrand)" stroke-width="3" fill="none"/>
+  <circle cx="1190" cy="270" r="6" fill="url(#goldHdrBrand)"/>
+  <circle cx="1250" cy="380" r="6" fill="url(#goldHdrBrand)"/>
+  <circle cx="1130" cy="380" r="6" fill="url(#goldHdrBrand)"/>
+  <!-- Tangent Handles -->
+  <line x1="1170" y1="270" x2="1210" y2="270" stroke="url(#goldHdrBrand)" stroke-width="1.5"/>
+  <circle cx="1170" cy="270" r="3" fill="#FFFFFF"/>
+  <circle cx="1210" cy="270" r="3" fill="#FFFFFF"/>
+
+  <!-- Pantone Color Swatch Fan Out (Left of Canvas) -->
+  <g transform="translate(860, 310) rotate(-20)">
+    <rect x="0" y="0" width="45" height="140" rx="4" fill="#1E2333" stroke="url(#goldHdrBrand)" stroke-width="2"/>
+    <rect x="5" y="5" width="35" height="70" fill="url(#goldHdrBrand)"/>
+    <text x="10" y="100" font-family="sans-serif" font-size="8" fill="#FFFFFF">PMS 142</text>
+  </g>
+  <g transform="translate(885, 305) rotate(0)">
+    <rect x="0" y="0" width="45" height="140" rx="4" fill="#1E2333" stroke="url(#goldHdrBrand)" stroke-width="2"/>
+    <rect x="5" y="5" width="35" height="70" fill="#242838"/>
+    <text x="10" y="100" font-family="sans-serif" font-size="8" fill="#FFFFFF">ONYX 01</text>
+  </g>
+  <g transform="translate(910, 315) rotate(20)">
+    <rect x="0" y="0" width="45" height="140" rx="4" fill="#1E2333" stroke="url(#goldHdrBrand)" stroke-width="2"/>
+    <rect x="5" y="5" width="35" height="70" fill="#E8EDF5"/>
+    <text x="10" y="100" font-family="sans-serif" font-size="8" fill="#111111">IVORY 02</text>
+  </g>
+
+  <!-- Precision Digital Pen Stylus -->
+  <g transform="translate(1360, 230) rotate(40)">
+    <rect x="0" y="0" width="14" height="180" rx="7" fill="#1F2332" stroke="url(#goldHdrBrand)" stroke-width="2"/>
+    <polygon points="0 0 14 0 7 -25" fill="url(#goldHdrBrand)"/>
+    <circle cx="7" cy="60" r="3" fill="url(#goldHdrBrand)"/>
+  </g>
+</svg>
