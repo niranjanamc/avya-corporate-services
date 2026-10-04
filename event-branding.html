@@ -19,13 +19,14 @@
 </head>
 <body>
 
-  <!-- Navigation Bar -->
+    <!-- Navigation Bar -->
   <header class="header">
     <div class="container nav-container">
       <a href="index.html" class="brand-logo-link" aria-label="Avya Corporate Services Home">
         <img src="assets/logo.svg" alt="Avya Corporate Services Logo" class="brand-logo-img">
       </a>
 
+      <!-- Desktop Nav Menu with Dedicated Pages Links -->
       <ul class="nav-menu" id="navMenu">
         <li><a href="index.html" class="nav-link">Home</a></li>
         <li><a href="corporate-gifting.html" class="nav-link">Corporate Gifting</a></li>
@@ -34,14 +35,30 @@
         <li><a href="rewards-recognition.html" class="nav-link">R&R Awards</a></li>
         <li><a href="brand-design.html" class="nav-link">Brand Design</a></li>
         <li><a href="event-branding.html" class="nav-link active">Event Branding</a></li>
-        <li><a href="#quote-section" class="nav-link">Get a Quote</a></li>
+        <li><a href="#quote-section" class="nav-link">Contact</a></li>
       </ul>
 
+      <!-- Nav Actions -->
       <div class="nav-actions">
+        <!-- Theme Toggle Button -->
         <button class="theme-toggle-btn" onclick="toggleTheme()" aria-label="Toggle Theme">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle></svg>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
         </button>
+
+        <!-- Get a Quote CTA -->
         <a href="#quote-section" class="btn btn-gold btn-sm">Get a Quote</a>
+
+        <!-- Mobile Drawer Hamburger Toggle -->
         <button class="mobile-toggle-btn" id="mobileNavToggle" aria-label="Toggle Mobile Navigation">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
         </button>
@@ -226,6 +243,7 @@
 
   <!-- Request a Quote Section -->
   <section class="section" id="quote-section">
+    <div id="contact"></div>
     <div class="container">
       <div class="contact-grid">
         <div class="contact-info">
