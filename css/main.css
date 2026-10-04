@@ -125,18 +125,18 @@
   right: 0;
   bottom: 0;
   background: linear-gradient(90deg, 
-    rgba(11, 12, 16, 0.95) 0%, 
-    rgba(11, 12, 16, 0.88) 50%, 
-    rgba(11, 12, 16, 0.65) 100%),
+    rgba(11, 12, 16, 0.75) 0%, 
+    rgba(11, 12, 16, 0.68) 50%, 
+    rgba(11, 12, 16, 0.45) 100%),
     radial-gradient(circle at 80% 20%, rgba(197, 160, 89, 0.16) 0%, transparent 60%);
   z-index: 1;
 }
 
 [data-theme="light"] .hero-section::before {
   background: linear-gradient(90deg, 
-    rgba(255, 255, 255, 0.96) 0%, 
-    rgba(255, 255, 255, 0.88) 50%, 
-    rgba(255, 255, 255, 0.65) 100%),
+    rgba(255, 255, 255, 0.76) 0%, 
+    rgba(255, 255, 255, 0.68) 50%, 
+    rgba(255, 255, 255, 0.45) 100%),
     radial-gradient(circle at 80% 20%, rgba(197, 160, 89, 0.14) 0%, transparent 60%);
 }
 

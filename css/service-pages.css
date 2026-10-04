@@ -26,18 +26,18 @@
   right: 0;
   bottom: 0;
   background: linear-gradient(90deg, 
-    rgba(11, 12, 16, 0.95) 0%, 
-    rgba(11, 12, 16, 0.85) 48%, 
-    rgba(11, 12, 16, 0.40) 100%),
+    rgba(11, 12, 16, 0.75) 0%, 
+    rgba(11, 12, 16, 0.65) 48%, 
+    rgba(11, 12, 16, 0.20) 100%),
     radial-gradient(circle at 80% 30%, rgba(197, 160, 89, 0.16) 0%, transparent 60%);
   z-index: 1;
 }
 
 [data-theme="light"] .service-hero::before {
   background: linear-gradient(90deg, 
-    rgba(255, 255, 255, 0.96) 0%, 
-    rgba(255, 255, 255, 0.88) 48%, 
-    rgba(255, 255, 255, 0.35) 100%),
+    rgba(255, 255, 255, 0.76) 0%, 
+    rgba(255, 255, 255, 0.68) 48%, 
+    rgba(255, 255, 255, 0.15) 100%),
     radial-gradient(circle at 80% 30%, rgba(197, 160, 89, 0.14) 0%, transparent 60%);
 }
 
