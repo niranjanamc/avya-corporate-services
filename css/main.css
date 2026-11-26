@@ -128,19 +128,19 @@
   right: 0;
   bottom: 0;
   background: linear-gradient(90deg, 
-    rgba(11, 12, 16, 0.88) 0%, 
-    rgba(11, 12, 16, 0.78) 55%, 
-    rgba(11, 12, 16, 0.45) 100%),
+    rgba(11, 12, 16, 0.92) 0%, 
+    rgba(11, 12, 16, 0.80) 45%, 
+    rgba(11, 12, 16, 0.35) 100%),
     radial-gradient(circle at 80% 30%, rgba(197, 160, 89, 0.16) 0%, transparent 60%);
   z-index: 1;
 }
 
 [data-theme="light"] .hero-section::before {
   background: linear-gradient(90deg, 
-    rgba(255, 255, 255, 0.95) 0%, 
-    rgba(255, 255, 255, 0.90) 55%, 
-    rgba(255, 255, 255, 0.75) 100%),
-    radial-gradient(circle at 80% 30%, rgba(140, 103, 28, 0.08) 0%, transparent 60%);
+    rgba(255, 255, 255, 0.94) 0%, 
+    rgba(255, 255, 255, 0.85) 45%, 
+    rgba(255, 255, 255, 0.40) 100%),
+    radial-gradient(circle at 80% 30%, rgba(140, 103, 28, 0.06) 0%, transparent 60%);
 }
 
 .hero-content {
