@@ -1,34 +1,31 @@
-# Avya Corporate Services — Multi-Page Enterprise Platform
+# AVYA Corporate Services — Enterprise Operations & Compliance Platform
 
-> **Bengaluru's Premier Brand Execution, Corporate Gifting, Print Media & Enterprise Hospitality Partner**  
-> Serving leading IT / ITeS Enterprises & Multinational Corporations across India.  
-> Primary Domains: `avyaservices.in` | `avyaservices.co.in`  
-> Direct Inquiries: `contacts@avyaservices.in`
+> **Bengaluru's Trusted Corporate Operations, Statutory Liaison, Facilities Coordination & Logistics Partner**  
+> Serving leading IT / ITeS Enterprises, Multinational Corporations, Fleet Operators & Institutions.  
+> Primary Coordinates: 131/9, SMIGB, 5th Phase, Yelahanka New Town, Bangalore - 560064  
+> Direct Desk / WhatsApp: `+91 99165 99960` | Email: `contacts@avyaservices.in`
 
 ---
 
 ## 🌟 Overview & Architecture
 
-**Avya Corporate Services** (formerly Designz, established in 2009 in Koramangala, Bengaluru) is an enterprise vendor partner specializing in end-to-end brand execution, custom corporate gifting, full-spectrum print media, and domestic corporate travel management.
+**AVYA Corporate Services** offers a wide range of business support and corporate assistance services, helping organizations simplify their day-to-day operational and administrative requirements through a single point of contact, ensuring smooth coordination and timely execution.
 
-This platform has been architected to compete with top industry vendors, inspired by the executive concierge standards of platforms like [Voyage Monk](https://voyagemonk.com/).
-
-### Key Platform Highlights
-1. **Dedicated Service Pages with Custom AI Hero Visuals**:
-   - Each service has its own dedicated page with an immersive hero banner, detailed split-feature sections, "Perfect For" use cases, enterprise specifications, and an itemized RFP form.
-2. **Custom Built Service Logos / Icons**:
-   - Every service is represented by a dedicated, custom-crafted vector icon ([assets/icons/](assets/icons/)) adhering strictly to the brand’s warm champagne gold (`#C5A059`) and deep obsidian palette with the brand's signature geometric architectural offset frame.
-3. **Single Master Configuration File (`js/config.js`)**:
-   - All company details, legal entity names, phone numbers, email addresses, physical office addresses, domain variants, social media URLs, and campaign hashtags are centralized in `js/config.js`.
-   - Modifying `js/config.js` instantly updates every page across the entire website via the automated DOM hydrator (`js/hydrate-config.js`).
-4. **GitHub Pages Ready**:
-   - Built with clean, dependency-free vanilla HTML5, CSS3 design tokens, and modular JavaScript.
-   - Hosted effortlessly on GitHub Pages without any compilation or build steps.
-5. **Dark & Light Mode**:
-   - Automatically detects system/browser preference (`prefers-color-scheme`) and provides an instant manual toggle with `localStorage` persistence.
-6. **Dual-Mode AI Executive Concierge Chatbot**:
-   - Features a progressive corporate lead qualification workflow that routes captured specifications to `contacts@avyaservices.in`.
-   - Features a settings modal allowing administrators to connect a live Google Gemini API key for open-ended generative AI conversations.
+### Key Service Pillars
+1. **Business Support Services (`business-support.html`)**:
+   - Coordination and support for small vendors, office florists, daily newspaper/periodical subscriptions, and local workplace maintenance under one consolidated monthly GST invoice.
+2. **RTO & Fleet Liaison Services (`rto-services.html`)**:
+   - Comprehensive assistance for corporate fleets and employee vehicles: RC transfers, hypothecation cancellations, commercial vehicle fitness certificates (FC), inter-state NOCs, and driving licence services across all Bangalore RTOs.
+3. **Stamp Paper & Notary Services (`stamp-paper-notary.html`)**:
+   - Government-authorized Karnataka e-stamp paper procurement (all denominations: ₹20 to ₹1000+), legal agreement drafting (NDAs, MSAs, commercial leases), affidavits, and registered Notary Public attestations with campus delivery.
+4. **CSR Initiatives & Supply Kits (`csr-services.html`)**:
+   - Corporate-to-NGO initiative planning, turnkey wholesale procurement, assembly, and verified distribution of medical kits, grocery ration kits, winter blankets, clothing, and student school packs with photo-audit proof for Section 135 compliance.
+5. **Corporate Passport Services (`passport-services.html`)**:
+   - Dedicated employee travel mobility desk: application pre-scrutiny, Tatkal expedited filings, Police Clearance Certificates (PCC) for onsite deputation, and PSK appointment slot coordination.
+6. **Courier Services & IT Asset Movement (`courier-asset-movement.html`)**:
+   - Secure doorstep transit for employee IT laptops, monitors, and computing workstations for remote/hybrid teams, with anti-static shock packaging and multi-carrier tier-1 courier partnerships (Blue Dart, DHL, DTDC, FedEx).
+7. **Tailored Corporate Support / Operational Concierge**:
+   - Bespoke administrative solutions, municipal/trade license assistance, and on-demand facility errand logistics.
 
 ---
 
@@ -37,92 +34,72 @@ This platform has been architected to compete with top industry vendors, inspire
 ```text
 avya-corporate-services/
 ├── index.html                      # Homepage & master corporate hub
-├── corporate-gifting.html          # Dedicated page: Corporate Gifting & Swag (Main business)
-├── print-media.html                # Dedicated page: Full-Spectrum Print Media Services
-├── corporate-travel.html           # Dedicated page: Domestic Homestays, Offsites & Bookings
-├── rewards-recognition.html        # Dedicated page: Crystal Trophies & Milestone Awards
-├── brand-design.html               # Dedicated page: Pantone Matching & 3D Packaging Mockups
-├── event-branding.html             # Dedicated page: Stage Fabrication & Exhibition Stalls
+├── business-support.html           # Dedicated page: Facility & Daily Vendor Coordination
+├── rto-services.html               # Dedicated page: Corporate Fleet & RTO Liaison
+├── stamp-paper-notary.html         # Dedicated page: E-Stamps, Drafting & Notarisation
+├── csr-services.html               # Dedicated page: Turnkey CSR Supplies & NGO Liaison
+├── passport-services.html          # Dedicated page: Corporate Passport & PCC Desk
+├── courier-asset-movement.html     # Dedicated page: IT Hardware Logistics & Courier
 ├── assets/
-│   ├── logo.svg                    # Crisp vector brand logo (light mode)
-│   ├── logo-dark.svg               # Crisp vector brand logo (dark mode)
-│   ├── favicon.svg                 # High-resolution vector favicon
-│   ├── icons/                      # Custom-built service icons (Gold & Obsidian)
-│   │   ├── icon-corporate-gifting.svg
-│   │   ├── icon-print-media.svg
-│   │   ├── icon-corporate-travel.svg
-│   │   ├── icon-rewards-recognition.svg
-│   │   ├── icon-brand-design.svg
-│   │   └── icon-event-branding.svg
-│   └── images/                     # Custom AI-crafted wide hero section visuals
-│       ├── hero-corporate-gifting.svg
-│       ├── hero-print-media.svg
-│       ├── hero-corporate-travel.svg
-│       ├── hero-rewards-recognition.svg
-│       ├── hero-brand-design.svg
-│       └── hero-event-branding.svg
+│   ├── logo.svg                    # Vector brand logo (Light mode)
+│   ├── logo-dark.svg               # Vector brand logo (Dark mode)
+│   ├── favicon.svg                 # High-resolution favicon
+│   ├── icons/                      # Custom-crafted geometric gold & obsidian service icons
+│   │   ├── icon-business-support.svg
+│   │   ├── icon-rto-services.svg
+│   │   ├── icon-stamp-notary.svg
+│   │   ├── icon-csr-services.svg
+│   │   ├── icon-passport-services.svg
+│   │   └── icon-courier-asset.svg
+│   └── images/                     # Hero section visuals
 ├── css/
-│   ├── theme.css                   # Design tokens, color palettes, dark/light variables
+│   ├── theme.css                   # Design tokens, obsidian & champagne gold palettes
 │   ├── components.css              # Buttons, badges, cards, toasts, modals
 │   ├── main.css                    # Main layout, hero, grid styles, footer
-│   ├── service-pages.css           # Dedicated service pages layout (Voyage Monk style)
+│   ├── service-pages.css           # Dedicated service pages layout
 │   └── chatbot.css                 # Floating AI Concierge interface & chat bubbles
 ├── js/
-│   ├── config.js                   # MASTER EDITABLE CONFIGURATION FILE (Source of truth)
+│   ├── config.js                   # MASTER EDITABLE CONFIGURATION (Source of truth)
 │   ├── hydrate-config.js           # Automated DOM placeholder hydrator
-│   ├── theme.js                    # Auto-detection of system dark/light mode & toggle
-│   ├── data.js                     # Content model for services, solutions, FAQs
+│   ├── theme.js                    # Auto dark/light system detection & manual toggle
+│   ├── data.js                     # Content model for services, solutions, FAQs, testimonials
 │   ├── chatbot.js                  # AI Chatbot controller, Gemini API caller, lead router
 │   └── main.js                     # Navigation, counters, accordions, and contact form
-├── .gitignore                      # Standard git exclusion rules
 └── README.md                       # Comprehensive platform documentation
 ```
 
 ---
 
-## ⚙️ How to Update Company Details
+## ⚙️ Master Configuration (`js/config.js`)
 
-All company information across the website is controlled from **one file**:
+All company coordinates, phones, addresses, and services are centrally controlled in:
 👉 `js/config.js`
 
-To update any details:
-1. Open `js/config.js` in your favorite editor.
-2. Edit the corresponding value (e.g. `contacts.primaryPhone`, `contacts.primaryEmail`, `location.fullAddress`, `socials.linkedin`, `hashtags`, etc.).
-3. Save the file.
-4. Refresh your browser—**every single occurrence across all 7 pages updates automatically!**
+Any modification to `js/config.js` automatically hydrates across the homepage and all dedicated pages via `js/hydrate-config.js`.
 
 ---
 
-## 🚀 Local Preview & GitHub Pages Hosting
+## 🚀 GoDaddy Domain & Go-Live Setup
 
-### Local Preview
-Open any `.html` file directly in your web browser:
-- Homepage: `index.html`
-- Corporate Gifting: `corporate-gifting.html`
-- Print Media: `print-media.html`
-- Corporate Travel: `corporate-travel.html`
-- Rewards & Recognition: `rewards-recognition.html`
-- Brand Design: `brand-design.html`
-- Event Branding: `event-branding.html`
-
-Or run a local lightweight server:
-```bash
-python3 -m http.server 8080
-```
-Navigate to `http://localhost:8080`.
-
-### Deploying to GitHub Pages
-1. Push this repository to your GitHub account:
-   ```bash
-   cd /Users/niranjanamurthyc/Developer/projects/avya-corporate-services
-   git remote add origin https://github.com/<your-username>/avya-corporate-services.git
-   git branch -M main
-   git push -u origin main
-   ```
-2. In your GitHub repository:
+### If Hosting on GitHub Pages (Recommended, Free & Fast):
+1. **In GoDaddy DNS Management Zone:**
+   - Under your registered domain, add **4 `A` Records** for `@` pointing to GitHub Pages IP addresses:
+     ```
+     185.199.108.153
+     185.199.109.153
+     185.199.110.153
+     185.199.111.153
+     ```
+   - Add/Update **1 `CNAME` Record** for `www` pointing to:
+     ```
+     niranjanamc.github.io.
+     ```
+2. **In GitHub Repository Settings:**
    - Go to **Settings** > **Pages**.
-   - Under **Build and deployment** > **Source**, choose **Deploy from a branch**.
-   - Select `main` branch and `/ (root)` folder. Click **Save**.
-3. Your website will be live in 1–2 minutes at:
-   `https://<your-username>.github.io/avya-corporate-services/`
-4. Once you register `avyaservices.in` and `avyaservices.co.in`, enter your custom domain under the **Custom domain** setting in GitHub Pages.
+   - Under **Custom domain**, enter your domain (e.g., `avyaservices.in`).
+   - Check **Enforce HTTPS**.
+   - Your site is live with a free SSL certificate within minutes!
+
+### If Hosting on GoDaddy cPanel / Linux Web Hosting:
+1. Upload all files from this repository directly into the `public_html/` root folder.
+2. In GoDaddy cPanel, enable **AutoSSL** for free HTTPS certification.

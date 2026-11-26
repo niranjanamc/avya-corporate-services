@@ -1,5 +1,5 @@
 /**
- * Avya Corporate Services - AI Executive Concierge Chatbot
+ * AVYA Corporate Services - AI Executive Concierge Chatbot
  * Handles lead qualification, requirements collection, automated email routing to contacts@avyaservices.in,
  * and silent Google Gemini LLM API integration via owner environment variable (zero settings UI for visitors).
  * Compact, movable (draggable) floating icon launcher.
@@ -52,32 +52,32 @@
   const steps = [
     {
       key: 'name_company',
-      prompt: "Welcome to <strong>Avya Corporate Services</strong>! I am your AI Executive Concierge.<br><br>Whether you're looking for enterprise corporate gifting, full-spectrum print media, or corporate domestic travel & retreats, I'm here to curate the perfect solution for your organization.<br><br>May I know your <strong>Name</strong> and the <strong>Company</strong> you represent?",
-      placeholder: "e.g., Priya Sharma from TechCorp India",
-      chips: ["Corporate Gifting 🎁", "Print Media 🖨️", "Domestic Travel & Stays ✈️", "Employee Welcome Kits 🎒", "MNC Vendor Quote 💼"]
+      prompt: "Welcome to <strong>AVYA Corporate Services</strong>! I am your AI Corporate Operations Concierge.<br><br>We help organizations simplify day-to-day administrative, statutory, and logistical requirements through a single point of contact.<br><br>May I know your <strong>Name</strong> and the <strong>Company / Institution</strong> you represent?",
+      placeholder: "e.g., Ramesh Kumar from TechCorp Solutions",
+      chips: ["RTO & Fleet Liaison 🚗", "Stamp Paper & Notary ⚖️", "IT Asset & Courier Movement 💻", "CSR Supply Kits 🤝", "Business Support / Florists 🏢", "Passport Services 🛂"]
     },
     {
       key: 'service',
-      prompt: "Great to connect with you! Which of our corporate service pillars can we assist you with today?",
+      prompt: "Great to connect with you! Which of our corporate service pillars can we assist your organization with today?",
       placeholder: "Choose below or type your requirement...",
-      chips: ["Corporate Gifting & Swag", "Print Media Services", "Domestic Travel & Retreats", "Rewards & Recognition", "Multiple / Custom RFP"]
+      chips: ["RTO Services", "Stamp Paper & Notary", "Courier & IT Asset Movement", "CSR Services", "Business Support Services", "Passport Services", "Tailored Corporate Support"]
     },
     {
       key: 'contact_info',
-      prompt: "Excellent choice. What is your <strong>Work Email</strong> and <strong>Contact Number</strong> so our enterprise relationship manager can send you a tailored proposal?",
-      placeholder: "e.g., priya@techcorp.com, +91 98765 43210"
+      prompt: "Understood! Could you share your <strong>Work Email</strong> and <strong>Contact Phone / WhatsApp</strong> so our operations manager can send you a detailed checklist and quote?",
+      placeholder: "e.g., ramesh@techcorp.com, +91 99165 99960"
     },
     {
       key: 'quantity_timeline',
-      prompt: "What is your estimated <strong>quantity / headcount</strong> and desired <strong>delivery date or event timeline</strong>?",
-      placeholder: "e.g., 500 kits needed by Diwali / Next month",
-      chips: ["50 - 200 units", "200 - 500 units", "500 - 2,000 units", "2,000+ Enterprise bulk"]
+      prompt: "What is your estimated <strong>volume, number of vehicles/units</strong>, or desired <strong>timeline</strong> for this requirement?",
+      placeholder: "e.g., 25 laptops to dispatch next week / 5 fleet vehicle FC renewals",
+      chips: ["Immediate (1 - 3 Days)", "Within this week", "Ongoing Monthly Retainer", "Bulk Enterprise Batch"]
     },
     {
       key: 'budget_notes',
-      prompt: "Do you have an approximate <strong>budget per person or total project budget</strong>, or any specific branding/delivery requirements?",
-      placeholder: "e.g., ₹1,500 - ₹2,500 per kit, doorstep delivery across Bengaluru & Hyderabad",
-      chips: ["Under ₹1,000 / unit", "₹1,000 - ₹2,500 / unit", "₹2,500 - ₹5,000 / unit", "Luxury / Custom Quote"]
+      prompt: "Do you have any specific locations, vehicle registration numbers, document types, or special delivery notes?",
+      placeholder: "e.g., Doorstep delivery across Bangalore North / Yelahanka RTO",
+      chips: ["Bangalore Only", "Pan-India Multi-City", "Doorstep Campus Delivery", "Need Urgent Consultation"]
     }
   ];
 
@@ -98,8 +98,8 @@
     trigger.id = 'aiChatTrigger';
     trigger.setAttribute('role', 'button');
     trigger.setAttribute('tabindex', '0');
-    trigger.setAttribute('aria-label', 'Open Avya AI Concierge');
-    trigger.setAttribute('title', 'Avya AI Concierge (Drag to move, Click to chat)');
+    trigger.setAttribute('aria-label', 'Open AVYA AI Concierge');
+    trigger.setAttribute('title', 'AVYA AI Concierge (Drag to move, Click to chat)');
     trigger.innerHTML = `
       <div class="ai-chat-trigger-icon">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
@@ -126,8 +126,8 @@
             </svg>
           </div>
           <div class="chatbot-header-info">
-            <h4>Avya Executive AI</h4>
-            <div class="chatbot-status"><span class="pulse-dot"></span> Ready to curate & dispatch</div>
+            <h4>AVYA Operations AI</h4>
+            <div class="chatbot-status"><span class="pulse-dot"></span> Ready to assist &amp; route</div>
           </div>
         </div>
         <div class="chatbot-header-actions">
@@ -152,19 +152,21 @@
             </svg>
           </button>
         </div>
-        <div class="chatbot-disclaimer">Inquiries are verified and dispatched to ${TARGET_EMAIL}</div>
+        <div class="chatbot-disclaimer">
+          Single Point of Contact for Operations • Direct Routing to contacts@avyaservices.in
+        </div>
       </div>
     `;
     document.body.appendChild(win);
-
-    chatWindow = document.getElementById('chatbotWindow');
-    chatMessages = document.getElementById('chatMessages');
-    chatInput = document.getElementById('chatInput');
-    sendBtn = document.getElementById('chatSendBtn');
+    chatWindow = win;
+    chatMessages = win.querySelector('#chatMessages');
+    chatInput = win.querySelector('#chatInput');
+    sendBtn = win.querySelector('#chatSendBtn');
   }
 
   function bindEvents() {
-    document.getElementById('chatCloseBtn').addEventListener('click', toggleChat);
+    triggerBtn.addEventListener('click', toggleChat);
+    chatWindow.querySelector('#chatCloseBtn').addEventListener('click', closeChat);
 
     sendBtn.addEventListener('click', handleUserSend);
     chatInput.addEventListener('keydown', (e) => {
@@ -174,25 +176,21 @@
       }
     });
 
-    // Keyboard accessibility for launcher
-    triggerBtn.addEventListener('keydown', (e) => {
-      if (e.key === 'Enter' || e.key === ' ') {
-        e.preventDefault();
-        toggleChat();
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && chatWindow.classList.contains('active')) {
+        closeChat();
       }
     });
   }
 
-  // Draggable movable launcher functionality for mouse and touch
+  // Draggable Floating Launcher with position persistence
   function initDraggableTrigger(el) {
     let isPointerDown = false;
     let hasMoved = false;
-    let startX = 0;
-    let startY = 0;
-    let initialLeft = 0;
-    let initialTop = 0;
+    let startX = 0, startY = 0;
+    let initialLeft = 0, initialTop = 0;
 
-    // Restore saved position if valid
+    // Restore saved coordinates if any
     try {
       const saved = JSON.parse(localStorage.getItem(STORAGE_KEY_POS));
       if (saved && typeof saved.left === 'number' && typeof saved.top === 'number') {
@@ -210,7 +208,7 @@
     } catch (e) {}
 
     function onPointerDown(e) {
-      if (e.button !== undefined && e.button !== 0) return; // left click only
+      if (e.button !== undefined && e.button !== 0) return;
 
       const clientX = e.type.startsWith('touch') ? e.touches[0].clientX : e.clientX;
       const clientY = e.type.startsWith('touch') ? e.touches[0].clientY : e.clientY;
@@ -279,13 +277,11 @@
       window.removeEventListener('touchcancel', onPointerUp);
 
       if (hasMoved) {
-        // Save relocated position
         try {
           const rect = el.getBoundingClientRect();
           localStorage.setItem(STORAGE_KEY_POS, JSON.stringify({ left: rect.left, top: rect.top }));
         } catch (e) {}
       } else {
-        // Simple click without movement: toggle chat
         toggleChat();
       }
     }
@@ -293,7 +289,6 @@
     el.addEventListener('mousedown', onPointerDown);
     el.addEventListener('touchstart', onPointerDown, { passive: true });
 
-    // Handle screen resize safely
     window.addEventListener('resize', () => {
       const rect = el.getBoundingClientRect();
       const btnW = el.offsetWidth || 56;
@@ -301,43 +296,43 @@
       const maxL = window.innerWidth - btnW - 12;
       const maxT = window.innerHeight - btnH - 12;
 
-      let adjL = Math.max(12, Math.min(rect.left, maxL));
-      let adjT = Math.max(12, Math.min(rect.top, maxT));
-
-      if (rect.left !== adjL || rect.top !== adjT) {
-        el.style.left = `${adjL}px`;
-        el.style.top = `${adjT}px`;
-        el.style.right = 'auto';
-        el.style.bottom = 'auto';
+      if (rect.left > maxL || rect.top > maxT) {
+        el.style.left = `${Math.min(rect.left, maxL)}px`;
+        el.style.top = `${Math.min(rect.top, maxT)}px`;
       }
     });
   }
 
   function toggleChat() {
     const isActive = chatWindow.classList.toggle('active');
+    triggerBtn.setAttribute('aria-expanded', isActive);
     if (isActive) {
-      setTimeout(() => chatInput.focus(), 300);
+      setTimeout(() => chatInput.focus(), 250);
     }
   }
 
-  window.openAvyaChat = function (prefilledService) {
-    if (!chatWindow.classList.contains('active')) {
-      chatWindow.classList.add('active');
+  function openChat(prefillService) {
+    chatWindow.classList.add('active');
+    triggerBtn.setAttribute('aria-expanded', 'true');
+    if (prefillService) {
+      appendUserMessage(`I am interested in ${prefillService}`);
+      leadState.data.service = prefillService;
+      leadState.step = 2;
+      appendBotMessage(`Excellent choice! Could you share your <strong>Name, Work Email</strong>, and <strong>Contact Phone</strong> so our operations manager can send over the specific checklist and pricing for <strong>${prefillService}</strong>?`);
     }
-    if (prefilledService) {
-      setTimeout(() => {
-        leadState.data.service = prefilledService;
-        appendBotMessage(`I see you are interested in <strong>${prefilledService}</strong>! Let's get your details so we can deliver a comprehensive quote to your inbox.`);
-      }, 400);
-    }
-  };
+    setTimeout(() => chatInput.focus(), 250);
+  }
+
+  window.openAvyaChat = openChat;
+
+  function closeChat() {
+    chatWindow.classList.remove('active');
+    triggerBtn.setAttribute('aria-expanded', 'false');
+  }
 
   function renderWelcomeMessage() {
-    const firstStep = steps[0];
-    appendBotMessage(firstStep.prompt);
-    if (firstStep.chips) {
-      appendChips(firstStep.chips);
-    }
+    appendBotMessage(steps[0].prompt);
+    appendChips(steps[0].chips);
   }
 
   function appendUserMessage(text) {
@@ -403,14 +398,12 @@
     appendUserMessage(text);
     showTypingIndicator();
 
-    // Check if live Gemini API key is provided via repository environment variable
     const apiKey = getGeminiApiKey();
     if (apiKey && leadState.step >= steps.length) {
       await callGeminiApi(text, apiKey);
       return;
     }
 
-    // Default: Progressive Lead Qualification Flow
     setTimeout(() => {
       removeTypingIndicator();
       processLeadStep(text);
@@ -422,27 +415,27 @@
       case 0:
         leadState.data.name = input;
         leadState.step++;
-        appendBotMessage(`Pleased to meet you! What specific service or solution can <strong>Avya Corporate Services</strong> prepare for you?`);
+        appendBotMessage(`Pleased to connect! Which of our corporate service verticals can <strong>AVYA Corporate Services</strong> assist you with?`);
         appendChips(steps[1].chips);
         break;
 
       case 1:
         leadState.data.service = input;
         leadState.step++;
-        appendBotMessage(`Understood, <strong>${input}</strong>. Could you share your <strong>Work Email</strong> and <strong>Phone Number</strong> so our account manager can prepare the proposal?`);
+        appendBotMessage(`Noted: <strong>${input}</strong>. Could you share your <strong>Work Email</strong> and <strong>Contact Phone</strong> so our relationship manager can prepare the proposal and documentation checklist?`);
         break;
 
       case 2:
         leadState.data.email = input;
         leadState.step++;
-        appendBotMessage(`Thank you! What is your estimated <strong>quantity or headcount</strong>, and what is your required <strong>delivery or event date</strong>?`);
+        appendBotMessage(`Thank you! What is your estimated <strong>volume, number of items/vehicles</strong>, or desired <strong>timeline</strong>?`);
         appendChips(steps[3].chips);
         break;
 
       case 3:
         leadState.data.quantity = input;
         leadState.step++;
-        appendBotMessage(`Noted. Do you have an estimated <strong>budget</strong> per kit/person, or any special branding requirements (e.g. foil stamping, custom homestay location, multi-city delivery)?`);
+        appendBotMessage(`Understood. Do you have any specific notes, delivery locations (e.g. Bangalore North / Yelahanka / Electronic City), or urgent constraints?`);
         appendChips(steps[4].chips);
         break;
 
@@ -453,14 +446,12 @@
         break;
 
       default:
-        // Conversation beyond initial qualification
-        appendBotMessage(`I have captured all your specifications. Our team has received your inquiry for <strong>${leadState.data.service || 'Corporate Services'}</strong> and is processing it for <strong>${TARGET_EMAIL}</strong>.<br><br>Feel free to type any additional questions about our vendor on-boarding, GST compliance, or sample kits!`);
+        appendBotMessage(`I have captured all your specifications. Our operations desk has received your inquiry for <strong>${leadState.data.service || 'Corporate Services'}</strong> and is routing it to <strong>${TARGET_EMAIL}</strong>.<br><br>Feel free to ask any additional questions regarding our single SPOC billing, statutory RTO timelines, or e-stamp procurement!`);
         break;
     }
   }
 
   function completeAndDispatchLead() {
-    // Save to local storage ledger
     const existing = JSON.parse(localStorage.getItem(STORAGE_KEY_LEADS) || '[]');
     const record = {
       timestamp: new Date().toISOString(),
@@ -470,7 +461,6 @@
     existing.push(record);
     localStorage.setItem(STORAGE_KEY_LEADS, JSON.stringify(existing));
 
-    // Render Lead Summary Card
     const summaryCard = document.createElement('div');
     summaryCard.className = 'lead-summary-card';
     summaryCard.innerHTML = `
@@ -479,28 +469,27 @@
         Corporate Requirement Dossier Prepared
       </div>
       <div class="lead-summary-item"><strong>Contact / Organization:</strong> ${leadState.data.name}</div>
-      <div class="lead-summary-item"><strong>Primary Service:</strong> ${leadState.data.service}</div>
+      <div class="lead-summary-item"><strong>Service Pillar:</strong> ${leadState.data.service}</div>
       <div class="lead-summary-item"><strong>Contact Coordinates:</strong> ${leadState.data.email}</div>
-      <div class="lead-summary-item"><strong>Volume / Scope:</strong> ${leadState.data.quantity}</div>
-      <div class="lead-summary-item"><strong>Budget & Details:</strong> ${leadState.data.budget}</div>
+      <div class="lead-summary-item"><strong>Volume / Timeline:</strong> ${leadState.data.quantity}</div>
+      <div class="lead-summary-item"><strong>Location & Notes:</strong> ${leadState.data.budget}</div>
       <div class="lead-summary-item" style="margin-top: 8px; color: var(--gold-500); font-weight: 600;">
         ✓ Direct Routing Target: ${TARGET_EMAIL}
       </div>
     `;
     chatMessages.appendChild(summaryCard);
 
-    appendBotMessage(`Your request has been successfully registered and routed to <strong>${TARGET_EMAIL}</strong>!<br><br>Our corporate relationship manager is reviewing your requirements and will contact you with a customized digital proposal within 24 business hours.`);
+    appendBotMessage(`Your request has been successfully registered and routed to <strong>${TARGET_EMAIL}</strong>!<br><br>Our operations relationship manager will review your specifications and contact you with a customized proposal within a few business hours.`);
 
-    // Mailto fallback option for direct email dispatch
     const mailtoSubject = encodeURIComponent(`New Corporate Inquiry: ${leadState.data.service} - ${leadState.data.name}`);
     const mailtoBody = encodeURIComponent(
-      `Avya Corporate Services Inquiry:\n\n` +
+      `AVYA Corporate Services Inquiry:\n\n` +
       `Contact/Company: ${leadState.data.name}\n` +
       `Service: ${leadState.data.service}\n` +
       `Contact Email/Phone: ${leadState.data.email}\n` +
       `Volume / Timeline: ${leadState.data.quantity}\n` +
-      `Budget & Notes: ${leadState.data.budget}\n\n` +
-      `Sent via Avya AI Concierge`
+      `Location & Notes: ${leadState.data.budget}\n\n` +
+      `Sent via AVYA Operations AI`
     );
 
     const emailButtonContainer = document.createElement('div');
@@ -517,23 +506,25 @@
     scrollToBottom();
   }
 
-  // Live Gemini API Integration (triggered only when owner API key is injected)
+  // Live Gemini API Integration
   async function callGeminiApi(userPrompt, apiKey) {
     try {
       const endpoint = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey}`;
 
       const systemContext = `
-You are the Executive AI Concierge for Avya Corporate Services (Bengaluru, India; website: avyaservices.in).
-We are a premier corporate solutions vendor for leading MNC and IT/ITeS enterprises.
+You are the Operations AI Concierge for AVYA Corporate Services (Bangalore, India; website: avyaservices.in; phone: +91 99165 99960).
+We are a single-window corporate operations partner for enterprises, facilities, and HR departments.
 Key services:
-1. Corporate Gifting & Swag (Our Flagship Business): Onboarding kits, festive hampers, tech merchandise, sustainable gift sets, luxury desk accessories.
-2. Print Media Services: Comprehensive corporate print covering business stationery, brochures, product packaging & rigid boxes, roll-up standees, acrylic/LED signage, spot UV, foiling.
-3. Corporate Domestic Travel & Hospitality: Executive homestays & private villas (Coorg, Chikmagalur, Wayanad, Goa, Ooty, Rishikesh), corporate event planning, retreats, business hotel bookings.
-4. Rewards & Recognition: Crystal trophies, engraved plaques, tenure awards.
-Vendor Credentials: GST registered, ISO 9001 certified, MSME compliant, enterprise SLAs, Pan-India multi-campus & doorstep delivery.
-Target Inquiry Email: contacts@avyaservices.in.
+1. Business Support Services: Daily vendor coordination, corporate florists, newspaper/periodical subscriptions, and local facility providers with consolidated monthly billing.
+2. RTO Services: RC transfers, hypothecation cancellations, commercial vehicle fitness certificates (FC), NOCs, and driving licence services across all Bangalore RTOs.
+3. Stamp Paper & Notary Services: Government-authorized e-stamp paper procurement (all denominations), agreement drafting, affidavits, and registered advocate notarisation with campus delivery.
+4. CSR Services: Corporate-NGO liaison, initiative planning, turnkey procurement and distribution of medical kits, grocery ration kits, blankets, and school kits with audit proof.
+5. Passport Services: Corporate employee passport desk, Tatkal expedited applications, Police Clearance Certificates (PCC) for onsite deputation, and PSK appointment slots.
+6. Courier & IT Asset Movement: Doorstep laptop hardware transit for remote/hybrid employees, tamper-proof packaging, and multi-carrier courier coordination (Blue Dart, DHL, DTDC, FedEx).
+7. Tailored Corporate Support: Bespoke operational concierge and administrative solutions.
+Headquarters: 131/9, SMIGB, 5th Phase, Yelahanka New Town, Bangalore 560064. Phone: +91 99165 99960. Email: contacts@avyaservices.in.
 
-Always reply in an elegant, executive, professional tone. If the user shares corporate requirements, acknowledge them clearly and advise them that their inquiry can be dispatched directly to contacts@avyaservices.in. Keep answers concise, clear, and action-oriented.
+Always reply in an elegant, executive, professional tone. If the user shares corporate requirements, acknowledge them clearly and advise them that their inquiry can be dispatched directly to contacts@avyaservices.in or via WhatsApp at +91 99165 99960. Keep answers concise, clear, and action-oriented.
       `;
 
       const response = await fetch(endpoint, {
@@ -564,11 +555,10 @@ Always reply in an elegant, executive, professional tone. If the user shares cor
     } catch (err) {
       removeTypingIndicator();
       console.warn("Live API call unavailable, falling back to corporate concierge engine:", err.message);
-      appendBotMessage(`Thank you for your inquiry! Our corporate relationship team will review your specifications and connect with you directly. You can also reach our desk directly at <strong>${TARGET_EMAIL}</strong>.`);
+      appendBotMessage(`Thank you for your inquiry! Our corporate relationship team will review your specifications and connect with you directly. You can also reach our desk directly at <strong>${TARGET_EMAIL}</strong> or via WhatsApp at <strong>+91 99165 99960</strong>.`);
     }
   }
 
-  // Toast Notification helper
   function showToast(message) {
     let container = document.querySelector('.toast-container');
     if (!container) {
@@ -594,7 +584,6 @@ Always reply in an elegant, executive, professional tone. If the user shares cor
 
   window.showAvyaToast = showToast;
 
-  // Initialize when DOM is ready
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', init);
   } else {

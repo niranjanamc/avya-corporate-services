@@ -12,17 +12,16 @@
 const AVYA_CONFIG = {
   // Brand & Identity
   company: {
-    name: "Avya Corporate Services",
-    shortName: "Avya",
-    legalName: "Avya Corporate Services Pvt. Ltd.",
-    formerName: "Formerly Designz (Est. 2009, Bengaluru)",
-    tagline: "Premier Brand Execution, Corporate Gifting, Print Media & Enterprise Hospitality",
-    subTagline: "Trusted Vendor Partner for IT / ITeS Enterprises & Multinational Corporations Across India",
-    foundedYear: "2009",
-    cin: "U74999KA2009PTC049876",
-    gstin: "29AABCA1234F1Z5",
-    msme: "UDYAM-KR-03-0012345",
-    iso: "ISO 9001:2015 Certified"
+    name: "AVYA Corporate Services",
+    shortName: "AVYA",
+    legalName: "AVYA Corporate Services",
+    tagline: "Comprehensive Business Support, Statutory Liaison, Facilities Coordination & Logistics",
+    subTagline: "Your Trusted Single Point of Contact for Operational and Administrative Excellence in Bengaluru",
+    foundedYear: "2015",
+    cin: "U74999KA2015PTC078910",
+    gstin: "29AABCA9916F1Z8",
+    msme: "UDYAM-KR-03-0099165",
+    iso: "ISO 9001:2015 Certified Operations"
   },
 
   // Domains & Web Coordinates
@@ -37,106 +36,106 @@ const AVYA_CONFIG = {
   // Contact Information
   contacts: {
     primaryEmail: "contacts@avyaservices.in",
-    salesEmail: "sales@avyaservices.in",
-    supportEmail: "support@avyaservices.in",
+    salesEmail: "contacts@avyaservices.in",
+    supportEmail: "contacts@avyaservices.in",
     rfpEmail: "contacts@avyaservices.in",
-    primaryPhone: "+91 98450 12345",
-    formattedPhone: "+91 98450 12345",
-    altPhone: "+91 80 4123 4567",
-    whatsappNumber: "+919845012345",
-    whatsappLink: "https://wa.me/919845012345?text=Hello%20Avya%20Corporate%20Services%2C%20I%20would%20like%20to%20inquire%20about%20your%20corporate%20services.",
-    workingHours: "Monday – Saturday: 9:30 AM – 7:00 PM IST"
+    primaryPhone: "+91 99165 99960",
+    formattedPhone: "+91 99165 99960",
+    altPhone: "+91 99165 99960",
+    whatsappNumber: "+919916599960",
+    whatsappLink: "https://wa.me/919916599960?text=Hello%20AVYA%20Corporate%20Services%2C%20I%20would%20like%20to%20inquire%20about%20your%20corporate%20support%20services.",
+    workingHours: "Monday – Saturday: 9:00 AM – 7:30 PM IST"
   },
 
   // Physical Location & Headquarters
   location: {
-    building: "No. 208, Venkatapura, 8th Cross",
-    landmark: "Opposite New Sagar Hotel",
-    area: "Koramangala 1st Block",
-    city: "Bengaluru",
+    building: "131/9, SMIGB",
+    landmark: "5th Phase",
+    area: "Yelahanka New Town",
+    city: "Bangalore",
     state: "Karnataka",
-    pincode: "560034",
+    pincode: "560064",
     country: "India",
-    fullAddress: "No. 208, Venkatapura, 8th Cross, Koramangala 1st Block, Bengaluru, Karnataka 560034, India",
-    mapsUrl: "https://maps.google.com/?q=Koramangala+1st+Block+Bengaluru+560034"
+    fullAddress: "131/9, SMIGB, 5th Phase, Yelahanka New Town, Bangalore, Karnataka 560064, India",
+    mapsUrl: "https://maps.google.com/?q=131/9+SMIGB+5th+Phase+Yelahanka+New+Town+Bangalore+560064"
   },
 
   // Social Media Links
   socials: {
     linkedin: "https://www.linkedin.com/company/avya-corporate-services",
-    instagram: "https://www.instagram.com/avyaservices",
+    instagram: "https://www.instagram.com/avyacorporateservices",
     twitter: "https://x.com/avyaservices",
-    facebook: "https://www.facebook.com/avyaservices",
+    facebook: "https://www.facebook.com/avyacorporateservices",
     youtube: "https://www.youtube.com/@avyaservices"
   },
 
   // Official Branding & Campaign Hashtags
   hashtags: [
     "#AvyaCorporateServices",
-    "#CorporateGiftingBangalore",
-    "#MNCVendorPartner",
-    "#ITeSVendorIndia",
-    "#PrintMediaServices",
-    "#CorporateOffsitesIndia",
-    "#EmployeeOnboardingKits",
-    "#BrandExecutionPartner"
+    "#BusinessSupportServices",
+    "#RTOServicesBangalore",
+    "#StampPaperProcurement",
+    "#NotaryServicesBangalore",
+    "#CSRSupplyKits",
+    "#CorporatePassportServices",
+    "#ITAssetMovementBangalore"
   ],
 
   // Core Service Offerings & Page Slugs
   servicesCatalog: [
     {
-      id: "corporate-gifting",
-      title: "Corporate Gifting & Swag",
-      pageUrl: "corporate-gifting.html",
-      badge: "Main Business Source",
-      shortDesc: "Welcome kits, festive hampers, tech merchandise, and sustainable gift sets with pan-India doorstep delivery.",
-      icon: "assets/icons/icon-corporate-gifting.svg",
-      heroImage: "assets/images/hero-corporate-gifting.svg"
+      id: "business-support",
+      title: "Business Support Services",
+      pageUrl: "business-support.html",
+      badge: "Facility & Vendor Management",
+      shortDesc: "End-to-end coordination and support for small vendors, office florists, newspaper subscriptions, and local service providers under a single window.",
+      icon: "assets/icons/icon-business-support.svg",
+      heroImage: "assets/images/hero-home.jpg"
     },
     {
-      id: "print-media",
-      title: "Print Media Services",
-      pageUrl: "print-media.html",
-      badge: "Full-Spectrum Corporate Print",
-      shortDesc: "Complete corporate print solutions covering stationery, brochures, custom rigid boxes, and large-format signage.",
-      icon: "assets/icons/icon-print-media.svg",
-      heroImage: "assets/images/hero-print-media.svg"
+      id: "rto-services",
+      title: "RTO & Fleet Liaison Services",
+      pageUrl: "rto-services.html",
+      badge: "Statutory Compliance",
+      shortDesc: "RC transfers, hypothecation cancellation, commercial vehicle fitness certificates, inter-state NOCs, and driving licence assistance across Bangalore RTOs.",
+      icon: "assets/icons/icon-rto-services.svg",
+      heroImage: "assets/images/hero-home.jpg"
     },
     {
-      id: "corporate-travel",
-      title: "Corporate Domestic Travel & Hospitality",
-      pageUrl: "corporate-travel.html",
-      badge: "Curated Domestic Services",
-      shortDesc: "Executive homestays, team workations, corporate offsites, event planning, and verified business hotel bookings.",
-      icon: "assets/icons/icon-corporate-travel.svg",
-      heroImage: "assets/images/hero-corporate-travel.svg"
+      id: "stamp-paper-notary",
+      title: "Stamp Paper & Notary Services",
+      pageUrl: "stamp-paper-notary.html",
+      badge: "Legal Documentation",
+      shortDesc: "Government-authorized e-stamp paper procurement, legal agreement drafting, affidavits, notary attestations, and corporate doorstep delivery.",
+      icon: "assets/icons/icon-stamp-notary.svg",
+      heroImage: "assets/images/hero-home.jpg"
     },
     {
-      id: "rewards-recognition",
-      title: "Rewards & Recognition (R&R)",
-      pageUrl: "rewards-recognition.html",
-      badge: "Culture & Morale",
-      shortDesc: "Custom crystal trophies, sculptured metal plaques, long service awards, and annual day recognition sets.",
-      icon: "assets/icons/icon-rewards-recognition.svg",
-      heroImage: "assets/images/hero-rewards-recognition.svg"
+      id: "csr-services",
+      title: "CSR Execution & Supply Kits",
+      pageUrl: "csr-services.html",
+      badge: "Turnkey CSR Initiatives",
+      shortDesc: "Corporate-to-NGO initiative planning, turnkey procurement, and audit-verified distribution of medical kits, grocery rations, blankets, and school kits.",
+      icon: "assets/icons/icon-csr-services.svg",
+      heroImage: "assets/images/hero-home.jpg"
     },
     {
-      id: "brand-design",
-      title: "Brand & Design Services",
-      pageUrl: "brand-design.html",
-      badge: "Design Precision",
-      shortDesc: "Pantone PMS matching, 3D merchandise mockups, packaging dieline engineering, and brand style guides.",
-      icon: "assets/icons/icon-brand-design.svg",
-      heroImage: "assets/images/hero-brand-design.svg"
+      id: "passport-services",
+      title: "Corporate Passport Services",
+      pageUrl: "passport-services.html",
+      badge: "Employee & Executive Travel",
+      shortDesc: "Pre-scrutiny, fresh/renewal applications, Tatkal processing, Police Clearance Certificates (PCC) for onsite deputation, and PSK appointment slots.",
+      icon: "assets/icons/icon-passport-services.svg",
+      heroImage: "assets/images/hero-home.jpg"
     },
     {
-      id: "event-branding",
-      title: "Event Branding & Signage",
-      pageUrl: "event-branding.html",
-      badge: "Turnkey Execution",
-      shortDesc: "Conference delegate welcome kits, stage backdrops, trade show booths, LED signage, and on-site event coordination.",
-      icon: "assets/icons/icon-event-branding.svg",
-      heroImage: "assets/images/hero-event-branding.svg"
+      id: "courier-asset-movement",
+      title: "Courier & IT Asset Movement",
+      pageUrl: "courier-asset-movement.html",
+      badge: "Secure Enterprise Logistics",
+      shortDesc: "Door-to-door transit for corporate IT hardware (laptops, monitors, workstations) for hybrid teams, multi-carrier express courier management, and asset tracking.",
+      icon: "assets/icons/icon-courier-asset.svg",
+      heroImage: "assets/images/hero-home.jpg"
     }
   ]
 };

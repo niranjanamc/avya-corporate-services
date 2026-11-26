@@ -1,241 +1,245 @@
 /**
  * Avya Corporate Services - Data Store
- * Comprehensive Services, MNC Solutions, Travel, Print Media & Portfolio Data
+ * Comprehensive Corporate Services, Statutory Liaison, CSR & IT Asset Logistics Data
  */
 
 const AVYA_DATA = {
   company: {
-    name: "Avya Corporate Services",
-    tagline: "Premier Brand Execution, Corporate Gifting & Enterprise Hospitality Partner",
-    founded: 2009,
-    headquarters: "Bengaluru, Karnataka, India",
+    name: "AVYA Corporate Services",
+    tagline: "Comprehensive Business Support, Statutory Liaison, Facilities Coordination & Logistics",
+    founded: 2015,
+    headquarters: "Bangalore, Karnataka, India",
     domain: "avyaservices.in",
     contactEmail: "contacts@avyaservices.in",
-    phone: "+91 98450 12345",
-    address: "No. 208, Koramangala 1st Block, Bengaluru, Karnataka 560034, India"
+    phone: "+91 99165 99960",
+    address: "131/9, SMIGB, 5th Phase, Yelahanka New Town, Bangalore, Karnataka 560064, India"
   },
 
   stats: [
-    { value: "98%", label: "Client Satisfaction Rate", sub: "Backed by enterprise SLAs" },
-    { value: "12,000+", label: "Successful Deliveries", sub: "Pan-India & Global reach" },
-    { value: "150+", label: "MNC & IT/ITeS Clients", sub: "Registered corporate vendor" },
-    { value: "24/7", label: "Dedicated Account Support", sub: "Direct SPOC assigned" }
+    { value: "100%", label: "Statutory & SLA Compliance", sub: "Strict legal & regulatory adherence" },
+    { value: "5,000+", label: "Tasks & Deliveries Completed", sub: "RTO, e-stamps, CSR kits & assets" },
+    { value: "50+", label: "Corporate & Institutional Clients", sub: "Trusted corporate support partner" },
+    { value: "Single SPOC", label: "Single Point of Contact", sub: "Consolidated monthly billing" }
   ],
 
   mncHighlights: [
-    { name: "IT & Software Services", desc: "Campus-wide employee kits & leadership merchandise" },
-    { name: "Global Cloud & SaaS", desc: "Global welcome swags & virtual event gifts" },
-    { name: "FinTech & Banking MNCs", desc: "Executive luxury hampers & milestone awards" },
-    { name: "Healthcare & Biotech", desc: "Annual summit collateral & wellness gifting" },
-    { name: "E-Commerce & LogTech", desc: "Field-force uniforms, bags & performance awards" }
+    { name: "IT / ITeS Tech Campuses", desc: "Remote laptop logistics, onboarding courier & legal agreements" },
+    { name: "Corporate Fleet Operators", desc: "Commercial vehicle FC, RC transfers & hypothecation cancellation" },
+    { name: "Enterprises & Multinational Firms", desc: "Turnkey CSR project execution & multi-carrier parcel coordination" },
+    { name: "Financial & Legal Institutions", desc: "Daily e-stamp paper procurement & advocate notary attestations" },
+    { name: "Facility & Admin Departments", desc: "Daily florist, newspaper & local micro-vendor management" }
   ],
 
   services: [
     {
-      id: "corporate-gifting",
-      title: "Corporate Gifting & Swag",
-      category: "Flagship Business",
-      badge: "Main Business Source",
-      icon: "🎁",
-      summary: "End-to-end bespoke gifting solutions tailored to reflect your company's values and brand prestige.",
-      description: "From luxury executive hampers to sustainable employee swag, we curate, brand, assemble, and deliver across multiple office hubs and direct-to-employee doorsteps nationwide.",
+      id: "business-support",
+      title: "Business Support Services",
+      category: "Workplace & Facility Operations",
+      badge: "Facility & Vendor Management",
+      icon: "🏢",
+      summary: "Streamline daily workplace coordination for micro-vendors, florists, periodicals, and office essentials under one roof.",
+      description: "Managing dozens of small local vendors creates administrative strain and chaotic billing. AVYA acts as your single accountable partner to coordinate daily office florists, newspaper and magazine subscriptions, pantry micro-suppliers, and local support providers with consolidated GST billing.",
       highlights: [
-        "Premium Employee Onboarding & Welcome Boxes",
-        "Diwali, Festive & New Year Curated Hampers",
-        "Tech Merchandise (Anker, Boat, JBL, Portronics)",
-        "Sustainable, Eco-friendly & Bamboo Collections",
-        "Custom Embossed Leatherette Organizers & Planners",
-        "Direct-to-Home Doorstep Delivery Across India"
+        "Corporate Floral Arrangements: Weekly reception displays, corporate events & executive bouquets",
+        "Periodicals & Newspaper Management: Multi-floor daily newspaper & trade journal subscriptions",
+        "Pantry & Daily Office Consumables: Coordination with local verified micro-vendors",
+        "Emergency Facility Coordination & On-demand Office Errand Support",
+        "Single Monthly Consolidated GST Invoice for all micro-vendor services",
+        "Dedicated Account SPOC with strict SLA and quality tracking"
       ]
     },
     {
-      id: "print-media",
-      title: "Print Media Services",
-      category: "Full-Spectrum Corporate Print",
-      badge: "All Corporate Requirements",
-      icon: "🖨️",
-      summary: "Comprehensive print manufacturing covering any requirement an enterprise or startup demands.",
-      description: "State-of-the-art offset, digital, and large-format printing with precision color matching, premium paper weights, and luxury specialty finishes.",
+      id: "rto-services",
+      title: "RTO & Fleet Liaison Services",
+      category: "Transport & Statutory Compliance",
+      badge: "Statutory Compliance",
+      icon: "🚗",
+      summary: "End-to-end RTO liaison across Bangalore for corporate fleets, leased vehicles, and employee documentation.",
+      description: "Avoid bureaucratic delays and lost employee productivity at Regional Transport Offices. AVYA handles corporate vehicle RC transfers, bank hypothecation cancellations, commercial vehicle fitness certificates (FC), inter-state NOCs, and driving licence services with complete statutory compliance.",
       highlights: [
-        "Corporate Stationery: Business Cards, Letterheads, Envelopes",
-        "Marketing Collateral: Multi-page Brochures, Catalogs, Booklets",
-        "Custom Product Packaging & Rigid Gift Boxes with Foam Inserts",
-        "Large Format Printing: Roll-up Standees, Vinyl Backdrops",
-        "Signage & Acrylic Displays for Office Campuses & Booths",
-        "Specialty Finishes: Spot UV, Gold/Silver Foiling, Embossing"
+        "RC Transfers: Ownership change for corporate leases, buyouts, and company-to-individual transfers",
+        "Hypothecation Cancellation: Loan clearance and HP endorsement removal on RC smart cards",
+        "Fitness Certificates (FC): Timely renewal and inspection assistance for cabs, vans & staff buses",
+        "No Objection Certificates (NOC): Seamless inter-state and inter-RTO vehicle clearance",
+        "Corporate Driving Licence Desk: Renewals, address changes & International Driving Permits (IDP)",
+        "Coverage across all Bangalore RTOs (Indiranagar, Koramangala, Yelahanka, Yeshwanthpur, Electronic City, etc.)"
       ]
     },
     {
-      id: "corporate-travel",
-      title: "Corporate Domestic Travel & Hospitality",
-      category: "Enterprise Hospitality",
-      badge: "Curated Domestic Services",
-      icon: "✈️",
-      summary: "Tailored domestic corporate hospitality, executive homestays, team retreats, and venue bookings.",
-      description: "Specialized in corporate offsites, leadership workations, and end-to-end domestic event planning with verified premium partners.",
+      id: "stamp-paper-notary",
+      title: "Stamp Paper & Notary Services",
+      category: "Legal & Corporate Documentation",
+      badge: "Legal Documentation",
+      icon: "⚖️",
+      summary: "Authorized e-stamp paper procurement, agreement drafting, affidavits, and notary attestation at your doorstep.",
+      description: "Every commercial contract, vendor agreement, and HR document requires legally sound stamping and attestation. AVYA provides prompt procurement of Karnataka Government e-stamp papers across all denominations, along with legal agreement drafting, gazetted notarisation, and secure campus pickup and delivery.",
       highlights: [
-        "Curated Corporate Homestays & Private Villas (Coorg, Chikmagalur, Wayanad, Goa, Ooty, Rishikesh)",
-        "Corporate Event Planning & Offsite Strategy Execution",
-        "Business Hotel Bookings with Negotiated Corporate Rates",
-        "Team Hackathons, Annual Retreats & Leadership Summits",
-        "Complete On-Ground Logistics, AV Setups & Banqueting",
-        "Single-Window Corporate Billing & GST Compliance"
+        "E-Stamp Paper Procurement: Instant procurement across all denominations (₹20, ₹50, ₹100, ₹500, ₹1000+)",
+        "Commercial Agreement Drafting: NDAs, MSAs, vendor contracts, commercial lease agreements & HR letters",
+        "Notarisation & Attestation: Registered Notary Public seals, Gazette officer stamps & PoA verification",
+        "Affidavits & Sworn Declarations: Address proofs, name-change declarations & indemnity bonds",
+        "Desk-to-Desk Pickup & Delivery: Secure courier collection and return of sensitive documents",
+        "100% Karnataka Government Authorised & Compliant"
       ]
     },
     {
-      id: "rewards-recognition",
-      title: "Rewards & Recognition (R&R)",
-      category: "Employee Engagement",
-      badge: "Culture & Morale",
-      icon: "🏆",
-      summary: "Distinctive trophies, crystal plaques, and milestone rewards designed to inspire high performance.",
-      description: "Celebrate tenure, sales achievements, leadership excellence, and project milestones with timeless custom-crafted awards.",
+      id: "csr-services",
+      title: "CSR Execution & Supply Kits",
+      category: "Corporate Social Responsibility",
+      badge: "Turnkey CSR Initiatives",
+      icon: "🤝",
+      summary: "End-to-end CSR project planning, corporate-NGO liaison, and turnkey procurement of essential supply kits.",
+      description: "Ensure your corporate social responsibility initiatives achieve meaningful impact with full audit compliance. AVYA coordinates between corporate CSR committees and vetted NGOs to plan, procure, assemble, and distribute essential kits with verifiable distribution receipts and photographic evidence.",
       highlights: [
-        "K9 Crystal & Optical Glass Sculptured Trophies",
-        "Custom Cast Metal Medals & Laser-Engraved Wooden Plaques",
-        "Annual Day Gala & Town Hall Recognition Kits",
-        "Years of Service / Long Tenure Commemorative Gifts",
-        "Spot Award Gift Cards & Experience Vouchers",
-        "Velvet Gift Cases & Custom Silk-Lined Packaging"
+        "Corporate & NGO Liaison: Identifying, planning, and executing verified community CSR projects",
+        "Emergency Medical & First-Aid Kits: Bulk assembly for primary health centers and rural clinics",
+        "Dry Grocery & Nutrition Ration Kits: High-quality food staples for disaster relief & community aid",
+        "Winter Blankets & Clothing Drives: Bulk procurement and on-ground beneficiary distribution",
+        "Student School Kits: Backpacks, stationery, notebooks, and educational tools for underprivileged children",
+        "Audit & Statutory Compliance: Signed beneficiary distribution rolls, high-res photos & Section 135 reporting"
       ]
     },
     {
-      id: "brand-identity",
-      title: "Brand Identity & Graphic Services",
-      category: "Creative Execution",
-      badge: "Design Precision",
-      icon: "🎨",
-      summary: "Creative alignment ensuring your brand visual language translates flawlessly into physical merchandise.",
-      description: "Our in-house design studio refines mockups, Pantone matching, vector artwork, and custom packaging dielines for zero-defect production.",
+      id: "passport-services",
+      title: "Corporate Passport Services",
+      category: "Executive & Employee Travel",
+      badge: "Employee & Executive Travel",
+      icon: "🛂",
+      summary: "Expedited passport assistance, documentation pre-scrutiny, Tatkal filing, and PSK appointment coordination.",
+      description: "Don't let passport bottlenecks delay international client meetings or overseas project deputations. AVYA provides dedicated corporate passport desk support, ensuring error-free documentation, Tatkal filings, Police Clearance Certificates (PCC), and confirmed appointment slots at Passport Seva Kendras.",
       highlights: [
-        "Pantone PMS Precision Color Matching",
-        "Merchandise & Apparel 3D Vector Mockups",
-        "Custom Packaging Dieline Architecture",
-        "Brand Guidelines & Swag Style-Guides",
-        "Print-Ready Pre-Press File Preparation",
-        "Custom Artwork & Corporate Mascot Vectorization"
+        "Fresh & Renewal Passport Filing: Hassle-free online application submission and document checks",
+        "Tatkal Expedited Processing: Urgent processing assistance for immediate corporate travel",
+        "Police Clearance Certificates (PCC): Crucial documentation support for overseas work permits and visas",
+        "Appointment Slot Coordination: Preferred booking at Bangalore PSKs (Lalbagh, Marathahalli, Sai Arcade, POPSK)",
+        "Pre-Submission Document Scrutiny: Eliminate counter rejections and repeat visits",
+        "Corporate Bulk Desk: Dedicated support for batch employee onsite deputations"
       ]
     },
     {
-      id: "event-branding",
-      title: "Event Branding & Spatial Signage",
-      category: "Experiential Branding",
-      badge: "Turnkey Execution",
-      icon: "🎪",
-      summary: "Transform conference venues, trade show booths, and corporate corridors into branded environments.",
-      description: "From tech conference collateral to stage fabrication and pop-up displays, we ensure your physical presence turns heads.",
+      id: "courier-asset-movement",
+      title: "Courier & IT Asset Movement",
+      category: "Enterprise Logistics & Asset Care",
+      badge: "Secure Enterprise Logistics",
+      icon: "💻",
+      summary: "Multi-carrier express courier management and secure doorstep transit for employee IT laptops and equipment.",
+      description: "Remote and hybrid workforces demand reliable, zero-damage transit of expensive IT computing hardware. AVYA coordinates with major tier-1 logistics networks to provide tamper-proof, anti-static shock packaging and door-to-door transit for employee laptops, monitors, workstations, and urgent corporate documentation.",
       highlights: [
-        "Conference Welcome Kits, Badges, Lanyards & Folders",
-        "Trade Show Exhibition Booth Displays & Modular Popups",
-        "Stage Backdrops, LED Wall Graphics & Entrance Arches",
-        "Directional Wayfinding & Floor Graphics",
-        "On-Site Setup & Tear-Down Support in Bengaluru & Metros",
-        "Eco-friendly Recyclable Event Materials"
+        "IT Hardware Logistics: Secure doorstep dispatch & retrieval of laptops, monitors, chargers & peripherals",
+        "Onboarding & Exit Asset Movement: Smooth Day-1 hardware deliveries and clean offboarding return logistics",
+        "Specialized Protective Packaging: Anti-static bubble wrapping, rigid shock-resistant boxes & security tape",
+        "Multi-Carrier Coordination: Partnered with Blue Dart, DHL, DTDC, FedEx and express air/surface networks",
+        "Real-Time Milestone Tracking: End-to-end consignment visibility with delivery proof and insurance coverage",
+        "Consolidated Corporate Monthly Invoicing for all domestic and intra-city logistics"
       ]
     }
   ],
 
   solutions: [
     {
-      title: "Employee Onboarding Kits",
-      desc: "Delight new hires on Day 1 with custom branded backpacks, notebooks, stainless steel tumblers, hoodies, and welcome notes.",
-      tag: "HR & People Teams"
+      title: "Remote Employee IT Hardware Dispatch & Return",
+      desc: "Doorstep delivery of laptops, dual monitors, and welcome items to new hires across India, with secure return logistics upon employee offboarding.",
+      tag: "IT & HR Operations"
     },
     {
-      title: "Diwali & Festive Celebrations",
-      desc: "Thoughtfully curated hampers blending artisanal gourmet treats, smart gadgets, and festive brass/silver keepsakes.",
-      tag: "Festive Season"
+      title: "Corporate Fleet RTO Compliance Management",
+      desc: "Comprehensive renewal of fitness certificates, hypothecation removals, and inter-state NOCs for corporate transport cabs and staff buses.",
+      tag: "Admin & Transport"
     },
     {
-      title: "Annual Day & Awards Nights",
-      desc: "Comprehensive solutions including winner trophies, stage backdrops, presenter folders, and commemorative souvenirs.",
-      tag: "Company Milestones"
+      title: "Bulk E-Stamp Procurement & Legal Agreement Drafting",
+      desc: "Authorized government e-stamps, NDA drafting, lease agreements, and registered advocate notarisation delivered directly to your corporate desk.",
+      tag: "Legal & Procurement"
     },
     {
-      title: "MNC Vendor RFP & Bulk Sourcing",
-      desc: "Centralized vendor billing, verified supply chains, dedicated SLAs, and pan-India multi-location dispatch.",
-      tag: "Procurement & Admin"
+      title: "Turnkey CSR Aid Drives & Supply Procurement",
+      desc: "Complete sourcing, packaging, and verified on-ground distribution of ration kits, medical kits, blankets, and school packs with photo-audit proof.",
+      tag: "CSR Committees"
     },
     {
-      title: "Executive Workations & Retreats",
-      desc: "Curated domestic villa takeovers and homestays equipped for high-speed Wi-Fi, team brainstorming, and curated meals.",
-      tag: "Corporate Travel"
+      title: "Expedited Employee Passport & PCC Travel Desk",
+      desc: "Fast-track passport renewals, Tatkal filings, and Police Clearance Certificates for staff scheduled for overseas client site deputations.",
+      tag: "Global Mobility & HR"
     },
     {
-      title: "Trade Shows & Global Summits",
-      desc: "High-impact booth graphics, promotional giveaways, pull-up banners, and product brochures delivered direct to the venue.",
-      tag: "Marketing & Sales"
+      title: "Daily Workplace Vendor & Florist Management",
+      desc: "Single-window coordination for daily reception floral displays, newspaper/magazine subscriptions, pantry vendors, and local facility errands.",
+      tag: "Facility Management"
     }
   ],
 
   process: [
     {
       step: "01",
-      title: "Consult & Scope",
-      desc: "We analyze your timeline, headcount, brand guidelines, and budget to pinpoint the ideal corporate solution."
+      title: "Share Your Requirement",
+      desc: "Tell us about your administrative, statutory, logistics, or CSR requirement via phone, WhatsApp, or our online portal."
     },
     {
       step: "02",
-      title: "Curate & Propose",
-      desc: "Receive interactive digital proposals with 3D product mockups, sample boxes, transparent tiered pricing, and milestones."
+      title: "Single SPOC & Clear Plan",
+      desc: "We assign a dedicated relationship manager who provides a transparent quotation, required document checklist, and SLA timeline."
     },
     {
       step: "03",
-      title: "Precision Production",
-      desc: "In-house quality auditing, Pantone color matching, and meticulous packaging ensure zero defects."
+      title: "Flawless On-Ground Execution",
+      desc: "Our field team liaises directly with government authorities (RTO/PSK), vetted suppliers, advocates, or express logistics networks."
     },
     {
       step: "04",
-      title: "Pan-India Fulfilment",
-      desc: "Bulk consolidated shipments to campuses or individual doorstep delivery with real-time tracking dashboards."
+      title: "Verified Handover & Invoicing",
+      desc: "Receive your processed documents, verified delivery receipts, or distributed supplies with a consolidated GST monthly invoice."
     }
   ],
 
   testimonials: [
     {
-      quote: "Avya Corporate Services has been our primary corporate gifting vendor across 6 India campuses. Their turnaround time for 4,500 Diwali hampers was flawless, with zero transit damages.",
-      author: "Pooja Hegde",
-      role: "VP - People & Culture, Tier-1 Global IT MNC",
-      location: "Bengaluru"
+      quote: "AVYA Corporate Services transformed our remote IT hardware logistics. Managing the dispatch and retrieval of over 400 laptops across Bangalore was seamless, with zero transit damage.",
+      author: "Siddharth Rao",
+      role: "Head of IT Infrastructure, Enterprise Cloud Solutions",
+      location: "Bangalore"
     },
     {
-      quote: "Managing our leadership offsite in Coorg and all event print collateral through one single partner was a game changer. The homestay was pristine and the conference materials were top-tier.",
-      author: "Aditya Nair",
-      role: "Head of Corporate Operations, Cloud Software Enterprise",
-      location: "Hyderabad"
+      quote: "Handling RTO compliance and fitness certificates for our 35-bus corporate fleet used to take weeks. AVYA’s liaison team completed the inspections and paperwork in record time without a hitch.",
+      author: "Manjunath Swamy",
+      role: "Senior Manager - Employee Transportation & Admin",
+      location: "Yelahanka, Bangalore"
     },
     {
-      quote: "Their onboarding kits have set the gold standard for our new hires. Avya's attention to brand colors and premium finishing makes our team feel valued from day one.",
-      author: "Rohan Sengupta",
-      role: "Director of Human Resources, FinTech Innovator",
-      location: "Gurugram"
+      quote: "From procuring ₹500 e-stamps within hours to drafting commercial vendor agreements with registered notary attestations, AVYA is our go-to legal operations partner.",
+      author: "Deepika Krishnan",
+      role: "Corporate Legal Counsel, FinTech Enterprise",
+      location: "Bangalore"
     }
   ],
 
   faqs: [
     {
-      q: "How does Avya Corporate Services handle vendor onboarding for MNCs?",
-      a: "We are an ISO-certified, GST-registered enterprise with full compliance documentation, MSME certification, and standardized Master Service Agreements (MSAs). We support corporate purchase orders (POs), milestone invoicing, vendor management portals (e.g., Ariba, Coupa), and strict non-disclosure agreements (NDAs)."
+      q: "What services does AVYA Corporate Services offer?",
+      a: "AVYA Corporate Services is a single-window corporate operations partner providing Business Support Services (daily vendors, florists, periodicals), RTO Services (RC transfer, HP cancellation, FC, NOC), Stamp Paper & Notary Services (e-stamps, drafting, attestations), CSR Services (NGO coordination, medical/grocery/winter supply kits), Passport Services (new/renewal, Tatkal, PCC), and Courier & IT Asset Movement (laptop transit, multi-carrier parcel coordination)."
     },
     {
-      q: "What is your primary specialty and business focus?",
-      a: "Corporate gifting and custom branded merchandise form our core flagship business. We power welcome kits, festive hampers, executive gifts, and recognition awards for major IT/ITeS enterprises."
+      q: "How does AVYA simplify vendor management for facility and admin teams?",
+      a: "Instead of dealing with multiple unorganized vendors for flowers, newspapers, pantry items, and local errands, AVYA acts as a single point of contact (SPOC). We coordinate quality, track deliveries, and provide one consolidated GST-compliant monthly invoice."
     },
     {
-      q: "What capabilities do you offer under Print Media Services?",
-      a: "We manage the entire corporate printing lifecycle: business stationery, brochures, product catalogues, rigid gift boxes with custom die-cut foam, large format roll-ups, vinyl backdrops, and acrylic signage, backed by spot UV, embossing, and foil stamping."
+      q: "Which RTO offices in Bangalore do you cover for corporate vehicle services?",
+      a: "We cover all major Regional Transport Offices across Bangalore and Karnataka, including Yelahanka (KA-50), Yeshwanthpur (KA-04), Koramangala (KA-01), Indiranagar (KA-03), Jayanagar (KA-05), KR Puram (KA-53), Electronic City (KA-51), and surrounding zones."
     },
     {
-      q: "What domestic corporate travel services do you provide?",
-      a: "We specialize in corporate domestic arrangements within India: curated executive homestays and private villas for team workations (Coorg, Chikmagalur, Wayanad, Goa, Ooty, etc.), corporate event planning, and business hotel bookings with preferred corporate rates."
+      q: "Can you procure e-stamp papers of any denomination and provide notarisation?",
+      a: "Yes. We procure government-authorized Karnataka e-stamp papers of all denominations (₹20, ₹50, ₹100, ₹200, ₹500, ₹1000, and custom high-value amounts). We also provide drafting assistance and registered Notary Public attestations with doorstep collection and delivery."
     },
     {
-      q: "Do you ship gifts directly to employees' homes across India?",
-      a: "Yes. In addition to bulk deliveries to tech campuses, we provide individual doorstep delivery nationwide with secure tamper-proof packaging, gift messaging, and tracking links."
+      q: "How does AVYA assist with Corporate Social Responsibility (CSR) projects?",
+      a: "We connect corporate CSR committees with verified NGOs, plan initiatives, and handle turnkey bulk procurement and assembly of emergency medical kits, ration kits, winter blankets, clothing, and school kits. We provide signed beneficiary acknowledgments and photographic documentation for Section 135 compliance."
     },
     {
-      q: "How can I request a sample box or customized proposal?",
-      a: "You can use our interactive AI Chatbot on this website, submit the request form, or email our corporate sales desk directly at contacts@avyaservices.in. We typically deliver a customized proposal within 24 hours."
+      q: "How do you ensure the safety of employee laptops and IT equipment during courier transit?",
+      a: "We use specialized anti-static bubble packaging, rigid shock-resistant boxes, and tamper-evident security tape. All movements are handled via express logistics networks with real-time consignment tracking, insurance, and signed proof of delivery."
+    },
+    {
+      q: "Where is AVYA Corporate Services located and how can we get started?",
+      a: "Our headquarters is located at 131/9, SMIGB, 5th Phase, Yelahanka New Town, Bangalore 560064. You can reach us directly at +91 99165 99960, WhatsApp us, or email contacts@avyaservices.in. We will assign a dedicated SPOC to discuss your requirements immediately."
     }
   ]
 };
