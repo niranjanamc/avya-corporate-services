@@ -5,7 +5,7 @@
  * 
  * Central editable source of truth for the entire website.
  * Any updates made in this file automatically update all references, headers,
- * footers, forms, social links, phone numbers, email addresses, and #tags
+ * footers, forms, phone numbers, email addresses, and #tags
  * across the homepage and all dedicated service pages.
  */
 
@@ -16,35 +16,42 @@ const AVYA_CONFIG = {
     shortName: "AVYA",
     legalName: "AVYA Corporate Services",
     tagline: "Comprehensive Business Support, Statutory Liaison, Facilities Coordination & Logistics",
-    subTagline: "Your Trusted Single Point of Contact for Operational and Administrative Excellence in Bengaluru",
-    foundedYear: "2015",
-    cin: "U74999KA2015PTC078910",
-    gstin: "29AABCA9916F1Z8",
+    subTagline: "Over 25 Years of Operational & Administrative Excellence in Bengaluru",
+    experienceYears: "25+",
+    foundedYear: "1999",
+    gstin: "29APAPV7401D1ZY",
     msme: "UDYAM-KR-03-0099165",
     iso: "ISO 9001:2015 Certified Operations"
   },
 
-  // Domains & Web Coordinates
+  // Domains & Web Coordinates (Single Official Domain)
   web: {
-    primaryDomain: "avyaservices.in",
-    secondaryDomain: "avyaservices.co.in",
-    websiteUrl: "https://avyaservices.in",
+    primaryDomain: "avyaservices.co.in",
+    secondaryDomain: "",
+    websiteUrl: "https://avyaservices.co.in",
     githubRepo: "https://github.com/niranjanamc/avya-corporate-services",
     githubPagesUrl: "https://niranjanamc.github.io/avya-corporate-services"
   },
 
   // Contact Information
   contacts: {
-    primaryEmail: "contacts@avyaservices.in",
-    salesEmail: "contacts@avyaservices.in",
-    supportEmail: "contacts@avyaservices.in",
-    rfpEmail: "contacts@avyaservices.in",
+    primaryEmail: "support@avyaservices.co.in",
+    managementEmail: "umesh@avyaservices.co.in",
+    salesEmail: "support@avyaservices.co.in",
+    supportEmail: "support@avyaservices.co.in",
+    rfpEmail: "support@avyaservices.co.in",
     primaryPhone: "+91 99165 99960",
     formattedPhone: "+91 99165 99960",
     altPhone: "+91 99165 99960",
     whatsappNumber: "+919916599960",
     whatsappLink: "https://wa.me/919916599960?text=Hello%20AVYA%20Corporate%20Services%2C%20I%20would%20like%20to%20inquire%20about%20your%20corporate%20support%20services.",
     workingHours: "Monday – Saturday: 9:00 AM – 7:30 PM IST"
+  },
+
+  // Web3Forms Gateway for 100% Free Form-to-Email Delivery
+  web3forms: {
+    accessKey: "5a133df1-53e7-4b7f-b883-9b88eb34c329", // Standard free endpoint
+    targetEmails: "support@avyaservices.co.in, umesh@avyaservices.co.in"
   },
 
   // Physical Location & Headquarters
@@ -88,9 +95,9 @@ const AVYA_CONFIG = {
       title: "Business Support Services",
       pageUrl: "business-support.html",
       badge: "Facility & Vendor Management",
-      shortDesc: "End-to-end coordination and support for small vendors, office florists, newspaper subscriptions, and local service providers under a single window.",
+      shortDesc: "Coordination and support for small vendors, office florists, newspaper subscriptions, and local workplace maintenance under one consolidated bill.",
       icon: "assets/icons/icon-business-support.svg",
-      heroImage: "assets/images/hero-home.jpg"
+      heroImage: "assets/images/hero-business-support.svg"
     },
     {
       id: "rto-services",
@@ -99,7 +106,7 @@ const AVYA_CONFIG = {
       badge: "Statutory Compliance",
       shortDesc: "RC transfers, hypothecation cancellation, commercial vehicle fitness certificates, inter-state NOCs, and driving licence assistance across Bangalore RTOs.",
       icon: "assets/icons/icon-rto-services.svg",
-      heroImage: "assets/images/hero-home.jpg"
+      heroImage: "assets/images/hero-rto-services.svg"
     },
     {
       id: "stamp-paper-notary",
@@ -108,7 +115,7 @@ const AVYA_CONFIG = {
       badge: "Legal Documentation",
       shortDesc: "Government-authorized e-stamp paper procurement, legal agreement drafting, affidavits, notary attestations, and corporate doorstep delivery.",
       icon: "assets/icons/icon-stamp-notary.svg",
-      heroImage: "assets/images/hero-home.jpg"
+      heroImage: "assets/images/hero-stamp-paper.svg"
     },
     {
       id: "csr-services",
@@ -117,7 +124,7 @@ const AVYA_CONFIG = {
       badge: "Turnkey CSR Initiatives",
       shortDesc: "Corporate-to-NGO initiative planning, turnkey procurement, and audit-verified distribution of medical kits, grocery rations, blankets, and school kits.",
       icon: "assets/icons/icon-csr-services.svg",
-      heroImage: "assets/images/hero-home.jpg"
+      heroImage: "assets/images/hero-csr-services.svg"
     },
     {
       id: "passport-services",
@@ -126,7 +133,7 @@ const AVYA_CONFIG = {
       badge: "Employee & Executive Travel",
       shortDesc: "Pre-scrutiny, fresh/renewal applications, Tatkal processing, Police Clearance Certificates (PCC) for onsite deputation, and PSK appointment slots.",
       icon: "assets/icons/icon-passport-services.svg",
-      heroImage: "assets/images/hero-home.jpg"
+      heroImage: "assets/images/hero-passport-services.svg"
     },
     {
       id: "courier-asset-movement",
@@ -135,7 +142,7 @@ const AVYA_CONFIG = {
       badge: "Secure Enterprise Logistics",
       shortDesc: "Door-to-door transit for corporate IT hardware (laptops, monitors, workstations) for hybrid teams, multi-carrier express courier management, and asset tracking.",
       icon: "assets/icons/icon-courier-asset.svg",
-      heroImage: "assets/images/hero-home.jpg"
+      heroImage: "assets/images/hero-courier-asset.svg"
     }
   ]
 };

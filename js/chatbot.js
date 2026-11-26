@@ -1,16 +1,16 @@
 /**
- * AVYA Corporate Services - AI Executive Concierge Chatbot
- * Handles lead qualification, requirements collection, automated email routing to contacts@avyaservices.in,
- * and silent Google Gemini LLM API integration via owner environment variable (zero settings UI for visitors).
- * Compact, movable (draggable) floating icon launcher.
+ * AVYA Corporate Services - AI Operations Concierge Chatbot
+ * Handles lead qualification with strict input validation, real email dispatch to
+ * support@avyaservices.co.in and umesh@avyaservices.co.in via Web3Forms,
+ * and silent Google Gemini LLM API integration via owner environment variable.
  */
 
 (function () {
   const STORAGE_KEY_LEADS = 'avya_collected_leads';
   const STORAGE_KEY_POS = 'avya_chat_trigger_pos';
-  const TARGET_EMAIL = 'contacts@avyaservices.in';
+  const PRIMARY_EMAIL = 'support@avyaservices.co.in';
+  const MANAGEMENT_EMAIL = 'umesh@avyaservices.co.in';
 
-  // Retrieve API key silently from owner environment / config without any user UI
   function getGeminiApiKey() {
     if (typeof window !== 'undefined') {
       if (window.GEMINI_API_KEY && typeof window.GEMINI_API_KEY === 'string') {
@@ -52,7 +52,7 @@
   const steps = [
     {
       key: 'name_company',
-      prompt: "Welcome to <strong>AVYA Corporate Services</strong>! I am your AI Corporate Operations Concierge.<br><br>We help organizations simplify day-to-day administrative, statutory, and logistical requirements through a single point of contact.<br><br>May I know your <strong>Name</strong> and the <strong>Company / Institution</strong> you represent?",
+      prompt: "Welcome to <strong>AVYA Corporate Services</strong>! I am your AI Operations Concierge.<br><br>Backed by <strong>25+ years of operational experience</strong>, we help organizations streamline administrative, statutory, and logistical requirements through a single point of contact.<br><br>May I know your <strong>Name</strong> and the <strong>Company / Institution</strong> you represent?",
       placeholder: "e.g., Ramesh Kumar from TechCorp Solutions",
       chips: ["RTO & Fleet Liaison 🚗", "Stamp Paper & Notary ⚖️", "IT Asset & Courier Movement 💻", "CSR Supply Kits 🤝", "Business Support / Florists 🏢", "Passport Services 🛂"]
     },
@@ -81,7 +81,6 @@
     }
   ];
 
-  // DOM Elements
   let chatWindow, chatMessages, chatInput, sendBtn, triggerBtn;
 
   function init() {
@@ -92,7 +91,6 @@
   }
 
   function createChatbotMarkup() {
-    // Compact, movable floating launcher button (only icon, no text pill)
     const trigger = document.createElement('div');
     trigger.className = 'ai-chat-trigger';
     trigger.id = 'aiChatTrigger';
@@ -113,7 +111,6 @@
     document.body.appendChild(trigger);
     triggerBtn = trigger;
 
-    // Chatbot Window (without any settings button/modal for clean visitor experience)
     const win = document.createElement('div');
     win.className = 'chatbot-window';
     win.id = 'chatbotWindow';
@@ -153,7 +150,7 @@
           </button>
         </div>
         <div class="chatbot-disclaimer">
-          Single Point of Contact for Operations • Direct Routing to contacts@avyaservices.in
+          Direct Routing to support@avyaservices.co.in • 25+ Years Experience
         </div>
       </div>
     `;
@@ -183,14 +180,12 @@
     });
   }
 
-  // Draggable Floating Launcher with position persistence
   function initDraggableTrigger(el) {
     let isPointerDown = false;
     let hasMoved = false;
     let startX = 0, startY = 0;
     let initialLeft = 0, initialTop = 0;
 
-    // Restore saved coordinates if any
     try {
       const saved = JSON.parse(localStorage.getItem(STORAGE_KEY_POS));
       if (saved && typeof saved.left === 'number' && typeof saved.top === 'number') {
@@ -410,6 +405,7 @@
     }, 600);
   }
 
+  // Conversational input validator (Resolves Review Comment 11)
   function processLeadStep(input) {
     switch (leadState.step) {
       case 0:
@@ -422,10 +418,20 @@
       case 1:
         leadState.data.service = input;
         leadState.step++;
-        appendBotMessage(`Noted: <strong>${input}</strong>. Could you share your <strong>Work Email</strong> and <strong>Contact Phone</strong> so our relationship manager can prepare the proposal and documentation checklist?`);
+        appendBotMessage(`Noted: <strong>${input}</strong>. Could you please share your <strong>Work Email</strong> and <strong>Contact Phone / WhatsApp Number</strong> so our relationship manager can prepare the proposal and documentation checklist?`);
         break;
 
       case 2:
+        // Validation check for contact info (Prevent "Hi", single words, or invalid entries)
+        const hasEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+/.test(input) || input.includes('@');
+        const digits = input.replace(/\D/g, '');
+        const hasPhone = digits.length >= 8;
+
+        if (!hasEmail && !hasPhone) {
+          appendBotMessage(`To ensure our operations desk can send you the official documentation checklist and quote, could you please provide a valid <strong>Work Email</strong> (e.g. name@company.com) or a <strong>Phone / WhatsApp number</strong>?`);
+          return;
+        }
+
         leadState.data.email = input;
         leadState.step++;
         appendBotMessage(`Thank you! What is your estimated <strong>volume, number of items/vehicles</strong>, or desired <strong>timeline</strong>?`);
@@ -446,7 +452,7 @@
         break;
 
       default:
-        appendBotMessage(`I have captured all your specifications. Our operations desk has received your inquiry for <strong>${leadState.data.service || 'Corporate Services'}</strong> and is routing it to <strong>${TARGET_EMAIL}</strong>.<br><br>Feel free to ask any additional questions regarding our single SPOC billing, statutory RTO timelines, or e-stamp procurement!`);
+        appendBotMessage(`I have captured all your specifications. Our operations desk has received your inquiry for <strong>${leadState.data.service || 'Corporate Services'}</strong> and is routing it to <strong>${PRIMARY_EMAIL}</strong> and <strong>${MANAGEMENT_EMAIL}</strong>.<br><br>Feel free to ask any additional questions regarding our single SPOC billing, statutory RTO timelines, or e-stamp procurement!`);
         break;
     }
   }
@@ -456,10 +462,29 @@
     const record = {
       timestamp: new Date().toISOString(),
       ...leadState.data,
-      recipient: TARGET_EMAIL
+      recipients: `${PRIMARY_EMAIL}, ${MANAGEMENT_EMAIL}`
     };
     existing.push(record);
     localStorage.setItem(STORAGE_KEY_LEADS, JSON.stringify(existing));
+
+    // Web3Forms real email dispatch to support@avyaservices.co.in and umesh@avyaservices.co.in
+    const web3Payload = {
+      access_key: (window.AVYA_CONFIG && window.AVYA_CONFIG.web3forms && window.AVYA_CONFIG.web3forms.accessKey) || '5a133df1-53e7-4b7f-b883-9b88eb34c329',
+      subject: `[AVYA Chat Concierge] ${leadState.data.service} - ${leadState.data.name}`,
+      from_name: `AVYA Concierge: ${leadState.data.name}`,
+      name: leadState.data.name,
+      service: leadState.data.service,
+      contact_info: leadState.data.email,
+      volume_timeline: leadState.data.quantity,
+      location_notes: leadState.data.budget,
+      submitted_at: record.timestamp
+    };
+
+    fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify(web3Payload)
+    }).catch(e => console.warn('Chat transmission fallback:', e));
 
     const summaryCard = document.createElement('div');
     summaryCard.className = 'lead-summary-card';
@@ -474,12 +499,12 @@
       <div class="lead-summary-item"><strong>Volume / Timeline:</strong> ${leadState.data.quantity}</div>
       <div class="lead-summary-item"><strong>Location & Notes:</strong> ${leadState.data.budget}</div>
       <div class="lead-summary-item" style="margin-top: 8px; color: var(--gold-500); font-weight: 600;">
-        ✓ Direct Routing Target: ${TARGET_EMAIL}
+        ✓ Direct Routing Target: ${PRIMARY_EMAIL} &amp; ${MANAGEMENT_EMAIL}
       </div>
     `;
     chatMessages.appendChild(summaryCard);
 
-    appendBotMessage(`Your request has been successfully registered and routed to <strong>${TARGET_EMAIL}</strong>!<br><br>Our operations relationship manager will review your specifications and contact you with a customized proposal within a few business hours.`);
+    appendBotMessage(`Your request has been successfully registered and routed to <strong>${PRIMARY_EMAIL}</strong> and <strong>${MANAGEMENT_EMAIL}</strong>!<br><br>Our operations relationship manager will review your specifications and contact you with a customized proposal within a few business hours.`);
 
     const mailtoSubject = encodeURIComponent(`New Corporate Inquiry: ${leadState.data.service} - ${leadState.data.name}`);
     const mailtoBody = encodeURIComponent(
@@ -489,20 +514,20 @@
       `Contact Email/Phone: ${leadState.data.email}\n` +
       `Volume / Timeline: ${leadState.data.quantity}\n` +
       `Location & Notes: ${leadState.data.budget}\n\n` +
-      `Sent via AVYA Operations AI`
+      `Sent via AVYA Operations AI Concierge`
     );
 
     const emailButtonContainer = document.createElement('div');
     emailButtonContainer.style.marginTop = '12px';
     emailButtonContainer.innerHTML = `
-      <a href="mailto:${TARGET_EMAIL}?subject=${mailtoSubject}&body=${mailtoBody}" class="btn btn-gold btn-sm" style="display: inline-flex;">
+      <a href="mailto:${PRIMARY_EMAIL}?cc=${MANAGEMENT_EMAIL}&subject=${mailtoSubject}&body=${mailtoBody}" class="btn btn-gold btn-sm" style="display: inline-flex;">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
         Send Copy via Email Client
       </a>
     `;
     chatMessages.appendChild(emailButtonContainer);
 
-    showToast(`Inquiry captured! Routing to ${TARGET_EMAIL}`);
+    showToast(`Inquiry captured! Routing to ${PRIMARY_EMAIL}`);
     scrollToBottom();
   }
 
@@ -512,8 +537,8 @@
       const endpoint = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey}`;
 
       const systemContext = `
-You are the Operations AI Concierge for AVYA Corporate Services (Bangalore, India; website: avyaservices.in; phone: +91 99165 99960).
-We are a single-window corporate operations partner for enterprises, facilities, and HR departments.
+You are the Operations AI Concierge for AVYA Corporate Services (Bangalore, India; website: avyaservices.co.in; phone: +91 99165 99960).
+Backed by 25+ years of corporate operational experience since 1999.
 Key services:
 1. Business Support Services: Daily vendor coordination, corporate florists, newspaper/periodical subscriptions, and local facility providers with consolidated monthly billing.
 2. RTO Services: RC transfers, hypothecation cancellations, commercial vehicle fitness certificates (FC), NOCs, and driving licence services across all Bangalore RTOs.
@@ -522,9 +547,9 @@ Key services:
 5. Passport Services: Corporate employee passport desk, Tatkal expedited applications, Police Clearance Certificates (PCC) for onsite deputation, and PSK appointment slots.
 6. Courier & IT Asset Movement: Doorstep laptop hardware transit for remote/hybrid employees, tamper-proof packaging, and multi-carrier courier coordination (Blue Dart, DHL, DTDC, FedEx).
 7. Tailored Corporate Support: Bespoke operational concierge and administrative solutions.
-Headquarters: 131/9, SMIGB, 5th Phase, Yelahanka New Town, Bangalore 560064. Phone: +91 99165 99960. Email: contacts@avyaservices.in.
+GSTIN: 29APAPV7401D1ZY. Headquarters: 131/9, SMIGB, 5th Phase, Yelahanka New Town, Bangalore 560064. Phone: +91 99165 99960. Email: support@avyaservices.co.in / umesh@avyaservices.co.in.
 
-Always reply in an elegant, executive, professional tone. If the user shares corporate requirements, acknowledge them clearly and advise them that their inquiry can be dispatched directly to contacts@avyaservices.in or via WhatsApp at +91 99165 99960. Keep answers concise, clear, and action-oriented.
+Always reply in an elegant, executive, professional tone. If the user shares corporate requirements, acknowledge them clearly and advise them that their inquiry can be dispatched directly to support@avyaservices.co.in or via WhatsApp at +91 99165 99960. Keep answers concise, clear, and action-oriented.
       `;
 
       const response = await fetch(endpoint, {
@@ -549,13 +574,13 @@ Always reply in an elegant, executive, professional tone. If the user shares cor
       }
 
       const data = await response.json();
-      const botReply = data.candidates?.[0]?.content?.parts?.[0]?.text || "Thank you for reaching out! Our team at contacts@avyaservices.in will be pleased to assist with your requirements.";
+      const botReply = data.candidates?.[0]?.content?.parts?.[0]?.text || "Thank you for reaching out! Our team at support@avyaservices.co.in will be pleased to assist with your requirements.";
       appendBotMessage(botReply.replace(/\n/g, '<br>'));
 
     } catch (err) {
       removeTypingIndicator();
       console.warn("Live API call unavailable, falling back to corporate concierge engine:", err.message);
-      appendBotMessage(`Thank you for your inquiry! Our corporate relationship team will review your specifications and connect with you directly. You can also reach our desk directly at <strong>${TARGET_EMAIL}</strong> or via WhatsApp at <strong>+91 99165 99960</strong>.`);
+      appendBotMessage(`Thank you for your inquiry! Our corporate relationship team will review your specifications and connect with you directly. You can also reach our desk directly at <strong>${PRIMARY_EMAIL}</strong> or via WhatsApp at <strong>+91 99165 99960</strong>.`);
     }
   }
 

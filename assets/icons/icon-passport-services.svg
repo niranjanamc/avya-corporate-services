@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="100%" height="100%" fill="none">
+  <defs>
+    <linearGradient id="goldGradPass" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F3D899"/>
+      <stop offset="50%" stop-color="#C5A059"/>
+      <stop offset="100%" stop-color="#9E7B35"/>
+    </linearGradient>
+    <radialGradient id="discGlowPass" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#C5A059" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#0B0C10" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Dark Obsidian Base with subtle border -->
+  <rect width="120" height="120" rx="24" fill="#0E1017"/>
+  <rect width="120" height="120" rx="24" fill="url(#discGlowPass)"/>
+  <rect x="1" y="1" width="118" height="118" rx="23" stroke="#252A38" stroke-width="1.5"/>
+
+  <!-- Avya Signature Architectural Gold Offset Frame -->
+  <path d="M 52 18 L 102 18 L 102 102 L 52 102 L 52 92" stroke="url(#goldGradPass)" stroke-width="3.5" fill="none" stroke-linecap="square"/>
+  <path d="M 104 20 L 107 20 L 107 104 L 104 104 Z" fill="#111111"/>
+
+  <!-- Passport Booklet -->
+  <rect x="30" y="32" width="46" height="64" rx="4" fill="#161922" stroke="url(#goldGradPass)" stroke-width="2.5"/>
+  <path d="M 30 32 L 36 32 L 36 96 L 30 96 Z" fill="url(#goldGradPass)" fill-opacity="0.3"/>
+  <line x1="36" y1="32" x2="36" y2="96" stroke="url(#goldGradPass)" stroke-width="1.5"/>
+
+  <!-- Emblem / Globe on Passport Cover -->
+  <circle cx="55" cy="56" r="11" stroke="url(#goldGradPass)" stroke-width="1.8"/>
+  <ellipse cx="55" cy="56" rx="5" ry="11" stroke="url(#goldGradPass)" stroke-width="1.2"/>
+  <line x1="44" y1="56" x2="66" y2="56" stroke="url(#goldGradPass)" stroke-width="1.2"/>
+  <line x1="47" y1="50" x2="63" y2="50" stroke="url(#goldGradPass)" stroke-width="1"/>
+  <line x1="47" y1="62" x2="63" y2="62" stroke="url(#goldGradPass)" stroke-width="1"/>
+
+  <!-- Passport Header & Lines -->
+  <rect x="42" y="40" width="26" height="4" rx="1" fill="url(#goldGradPass)"/>
+  <rect x="44" y="74" width="22" height="3" rx="1" fill="url(#goldGradPass)"/>
+  <rect x="47" y="80" width="16" height="2.5" rx="1" fill="url(#goldGradPass)"/>
+
+  <!-- Executive Travel Aircraft Flight Arc -->
+  <path d="M 68 84 C 84 80 92 64 90 44" stroke="url(#goldGradPass)" stroke-width="2" stroke-dasharray="3 3"/>
+  <!-- Modern Jet Silhouette -->
+  <path d="M 90 40 L 93 45 L 98 46 L 93 48 L 92 53 L 90 50 L 86 52 L 88 47 L 84 45 L 89 44 Z" fill="url(#goldGradPass)"/>
+</svg>

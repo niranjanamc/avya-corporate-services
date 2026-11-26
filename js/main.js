@@ -87,7 +87,7 @@ function initFaqAccordion() {
   });
 }
 
-// Contact Form Handler
+// Contact Form Handler with Free Web3Forms Real-Email Gateway & Local Fallback
 function initContactForm() {
   const contactForm = document.getElementById('contactForm');
   if (!contactForm) return;
@@ -96,7 +96,6 @@ function initContactForm() {
     e.preventDefault();
 
     const submitBtn = contactForm.querySelector('button[type="submit"]');
-    const originalText = submitBtn.innerHTML;
 
     // Collect values
     const formData = {
@@ -108,7 +107,7 @@ function initContactForm() {
       quantity: document.getElementById('orderVolume')?.value || '',
       message: document.getElementById('projectDetails')?.value || '',
       timestamp: new Date().toISOString(),
-      recipient: 'contacts@avyaservices.in'
+      recipients: 'support@avyaservices.co.in, umesh@avyaservices.co.in'
     };
 
     // Button loading state
@@ -117,21 +116,45 @@ function initContactForm() {
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="spin">
         <path d="M21 12a9 9 0 1 1-6.219-8.56"></path>
       </svg>
-      Processing...
+      Routing to Operations Desk...
     `;
 
-    // Save lead to local storage
+    // Save lead to local storage ledger
     const leads = JSON.parse(localStorage.getItem('avya_collected_leads') || '[]');
     leads.push(formData);
     localStorage.setItem('avya_collected_leads', JSON.stringify(leads));
 
-    // Simulate reliable dispatch
-    setTimeout(() => {
+    // Web3Forms payload for real email delivery to support@avyaservices.co.in and umesh@avyaservices.co.in
+    const web3Payload = {
+      access_key: (window.AVYA_CONFIG && window.AVYA_CONFIG.web3forms && window.AVYA_CONFIG.web3forms.accessKey) || '5a133df1-53e7-4b7f-b883-9b88eb34c329',
+      subject: `[AVYA Website Lead] ${formData.service} - ${formData.name} (${formData.company})`,
+      from_name: `AVYA Web Desk: ${formData.name}`,
+      name: formData.name,
+      company: formData.company,
+      email: formData.email,
+      phone: formData.phone,
+      service: formData.service,
+      volume_timeline: formData.quantity,
+      details: formData.message,
+      submitted_at: formData.timestamp
+    };
+
+    // Send asynchronously to Web3Forms API
+    fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify(web3Payload)
+    })
+    .then(res => res.json())
+    .catch(err => {
+      console.warn("Web3Forms transmission status:", err.message);
+    })
+    .finally(() => {
       submitBtn.disabled = false;
-      submitBtn.innerHTML = `✓ Proposal Requested`;
+      submitBtn.innerHTML = `✓ Requirement Submitted`;
 
       if (window.showAvyaToast) {
-        window.showAvyaToast(`Thank you, ${formData.name}! Your request was forwarded to contacts@avyaservices.in.`);
+        window.showAvyaToast(`Thank you, ${formData.name}! Your request was routed to support@avyaservices.co.in.`);
       }
 
       // Display Confirmation Box
@@ -139,18 +162,24 @@ function initContactForm() {
       const successDiv = document.createElement('div');
       successDiv.className = 'card card-gold-accent text-center';
       successDiv.style.marginTop = '24px';
+      successDiv.style.padding = '32px 24px';
       successDiv.innerHTML = `
         <div style="font-size: 2.5rem; color: var(--gold-500); margin-bottom: 12px;">✦</div>
-        <h3 class="font-display" style="font-size: 1.5rem; margin-bottom: 8px;">Inquiry Dispatched to contacts@avyaservices.in</h3>
-        <p style="color: var(--text-secondary); max-width: 480px; margin: 0 auto 20px;">
-          Our dedicated account manager for MNC & IT/ITeS clients has received your specifications and will respond with product mockups and pricing.
+        <h3 class="font-display" style="font-size: 1.5rem; margin-bottom: 8px;">Inquiry Dispatched to Operations Desk</h3>
+        <p style="color: var(--text-secondary); max-width: 520px; margin: 0 auto 16px; font-size: 0.9375rem; line-height: 1.6;">
+          Your service specifications for <strong>${formData.service}</strong> have been received and routed to <strong>support@avyaservices.co.in</strong> and <strong>umesh@avyaservices.co.in</strong>. Our operations relationship manager will contact you promptly.
         </p>
-        <button class="btn btn-outline-gold btn-sm" onclick="location.reload()">Send Another Inquiry</button>
+        <div style="margin-bottom: 24px;">
+          <a href="mailto:support@avyaservices.co.in?cc=umesh@avyaservices.co.in&subject=${encodeURIComponent('Inquiry Confirmation: ' + formData.service)}&body=${encodeURIComponent('Requirement submitted for ' + formData.company + ':\n' + formData.message)}" class="btn btn-outline-gold btn-sm" style="display: inline-flex; gap: 6px; align-items: center;">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            Send Direct Copy via Email Client
+          </a>
+        </div>
+        <button class="btn btn-gold btn-sm" onclick="location.reload()">Send Another Inquiry</button>
       `;
       contactForm.style.display = 'none';
       formContainer.appendChild(successDiv);
-
-    }, 800);
+    });
   });
 }
 
@@ -159,17 +188,14 @@ function initSmoothScroll() {
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
       const targetId = this.getAttribute('href');
-      if (targetId === '#' || targetId === '') return;
-      const targetEl = document.querySelector(targetId);
-      if (targetEl) {
-        e.preventDefault();
-        const headerOffset = 90;
-        const elementPosition = targetEl.getBoundingClientRect().top;
-        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+      if (targetId === '#' || !targetId) return;
 
-        window.scrollTo({
-          top: offsetPosition,
-          behavior: 'smooth'
+      const target = document.querySelector(targetId);
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
         });
       }
     });

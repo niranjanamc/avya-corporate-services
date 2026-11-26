@@ -3,7 +3,7 @@
 > **Bengaluru's Trusted Corporate Operations, Statutory Liaison, Facilities Coordination & Logistics Partner**  
 > Serving leading IT / ITeS Enterprises, Multinational Corporations, Fleet Operators & Institutions.  
 > Primary Coordinates: 131/9, SMIGB, 5th Phase, Yelahanka New Town, Bangalore - 560064  
-> Direct Desk / WhatsApp: `+91 99165 99960` | Email: `contacts@avyaservices.in`
+> Direct Desk / WhatsApp: `+91 99165 99960` | Email: `support@avyaservices.co.in`
 
 ---
 
@@ -96,7 +96,7 @@ Any modification to `js/config.js` automatically hydrates across the homepage an
      ```
 2. **In GitHub Repository Settings:**
    - Go to **Settings** > **Pages**.
-   - Under **Custom domain**, enter your domain (e.g., `avyaservices.in`).
+   - Under **Custom domain**, enter your domain (e.g., `avyaservices.co.in`).
    - Check **Enforce HTTPS**.
    - Your site is live with a free SSL certificate within minutes!
 

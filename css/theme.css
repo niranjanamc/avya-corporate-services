@@ -1,6 +1,7 @@
 /* ===================================================================
-   Avya Corporate Services - Theme Design Tokens
-   Matching Brand Logo: Warm Champagne Gold, Deep Obsidian, Crisp Ivory
+   AVYA Corporate Services - Theme Design Tokens
+   Matching Official Brand Logo: Rich Gold, Deep Obsidian, Crisp Ivory
+   Default Theme: Day / Light Mode
    =================================================================== */
 
 :root {
@@ -10,24 +11,25 @@
   --gold-200: #E6CE93;
   --gold-300: #D8B55E;
   --gold-400: #CCA03E;
-  --gold-500: #C5A059; /* Core Brand Gold from Logo */
-  --gold-600: #A88237;
-  --gold-700: #886524;
-  --gold-800: #654A18;
-  --gold-900: #42300D;
+  --gold-500: #8C671C; /* High-contrast accessible deep gold for light mode (WCAG AA compliant) */
+  --gold-600: #735313;
+  --gold-700: #5C410D;
+  --gold-800: #463108;
+  --gold-900: #2E2004;
 
-  --gold-gradient: linear-gradient(135deg, #F0D999 0%, #C5A059 45%, #9E7B35 100%);
-  --gold-gradient-subtle: linear-gradient(135deg, rgba(197, 160, 89, 0.14) 0%, rgba(197, 160, 89, 0.03) 100%);
-  --gold-glow: 0 0 35px rgba(197, 160, 89, 0.22);
-  --gold-border-glow: 0 0 0 1px rgba(197, 160, 89, 0.4), 0 8px 24px -4px rgba(197, 160, 89, 0.25);
+  --gold-gradient: linear-gradient(135deg, #B38226 0%, #8C671C 45%, #6E4E0E 100%);
+  --gold-gradient-subtle: linear-gradient(135deg, rgba(140, 103, 28, 0.12) 0%, rgba(140, 103, 28, 0.02) 100%);
+  --gold-glow: 0 0 35px rgba(140, 103, 28, 0.22);
+  --gold-border-glow: 0 0 0 1px rgba(140, 103, 28, 0.4), 0 8px 24px -4px rgba(140, 103, 28, 0.25);
 
-  /* Typography */
-  --font-display: 'Cinzel', 'Playfair Display', Georgia, serif;
-  --font-body: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  /* Typography - Customer Preferred 'Aptos' Font Stack */
+  --font-display: 'Cinzel', 'Aptos', 'Playfair Display', Georgia, serif;
+  --font-body: 'Aptos', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Plus Jakarta Sans', Roboto, Helvetica, Arial, sans-serif;
+  --font-sans: 'Aptos', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Plus Jakarta Sans', Roboto, Helvetica, Arial, sans-serif;
 
   /* Layout */
   --max-width: 1280px;
-  --header-height: 84px;
+  --header-height: 88px;
   --radius-sm: 8px;
   --radius-md: 14px;
   --radius-lg: 22px;
@@ -40,7 +42,7 @@
   --transition-smooth: 400ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* Light Theme (Default or explicit [data-theme="light"]) */
+/* Light Theme (Default) */
 :root,
 [data-theme="light"] {
   --bg-primary: #FFFFFF;
@@ -48,7 +50,7 @@
   --bg-tertiary: #EEF0F5;
   --bg-surface: #FFFFFF;
   --bg-surface-elevated: #FFFFFF;
-  --bg-surface-glass: rgba(255, 255, 255, 0.85);
+  --bg-surface-glass: rgba(255, 255, 255, 0.92);
 
   --text-primary: #0F172A;
   --text-secondary: #334155;
@@ -57,24 +59,33 @@
 
   --border-subtle: #E2E8F0;
   --border-medium: #CBD5E1;
-  --border-accent: rgba(197, 160, 89, 0.45);
+  --border-accent: rgba(140, 103, 28, 0.45);
 
   --card-bg: #FFFFFF;
   --card-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.06), 0 2px 6px -1px rgba(15, 23, 42, 0.04);
-  --card-shadow-hover: 0 20px 40px -10px rgba(197, 160, 89, 0.18), 0 8px 16px -4px rgba(15, 23, 42, 0.06);
+  --card-shadow-hover: 0 20px 40px -10px rgba(140, 103, 28, 0.18), 0 8px 16px -4px rgba(15, 23, 42, 0.06);
 
-  --nav-bg: rgba(255, 255, 255, 0.92);
-  --badge-bg: rgba(197, 160, 89, 0.12);
-  --badge-text: #886524;
+  --nav-bg: rgba(255, 255, 255, 0.96);
+  --badge-bg: rgba(140, 103, 28, 0.12);
+  --badge-text: #6E4E0E; /* Deep burnished gold with high contrast */
 
   --input-bg: #F8F9FA;
   --input-border: #E2E8F0;
 
-  --logo-text: #111111;
-  --logo-edge: #111111;
+  --logo-text: #2B2A29;
+  --logo-edge: #2B2A29;
+
+  /* Dedicated High-Contrast Gold Tokens for Light Theme */
+  --gold-500: #8C671C;
+  --gold-600: #735313;
+  --gold-700: #5C410D;
+  --gold-gradient: linear-gradient(135deg, #B38226 0%, #8C671C 45%, #6E4E0E 100%);
+  --text-gold-gradient: linear-gradient(135deg, #8C671C 0%, #B38226 50%, #6E4E0E 100%);
+  --hero-overlay: linear-gradient(180deg, rgba(255, 255, 255, 0.92) 0%, rgba(248, 249, 251, 0.96) 100%);
+  --hero-title-color: #0F172A;
 }
 
-/* Dark Theme (explicit [data-theme="dark"] or auto media query) */
+/* Dark Theme (User Toggleable) */
 [data-theme="dark"] {
   --bg-primary: #0B0C10;
   --bg-secondary: #111319;
@@ -96,7 +107,7 @@
   --card-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.55);
   --card-shadow-hover: 0 22px 45px -8px rgba(197, 160, 89, 0.28), 0 0 20px rgba(197, 160, 89, 0.12);
 
-  --nav-bg: rgba(11, 12, 16, 0.92);
+  --nav-bg: rgba(11, 12, 16, 0.94);
   --badge-bg: rgba(197, 160, 89, 0.18);
   --badge-text: #E6CE93;
 
@@ -105,33 +116,53 @@
 
   --logo-text: #F8FAFC;
   --logo-edge: #F8FAFC;
+
+  --gold-500: #C5A059;
+  --gold-600: #A88237;
+  --gold-700: #886524;
+  --gold-gradient: linear-gradient(135deg, #F0D999 0%, #C5A059 45%, #9E7B35 100%);
+  --text-gold-gradient: linear-gradient(135deg, #F0D999 0%, #C5A059 50%, #A57F36 100%);
+  --hero-overlay: linear-gradient(180deg, rgba(11, 12, 16, 0.88) 0%, rgba(17, 19, 25, 0.95) 100%);
+  --hero-title-color: #F8FAFC;
 }
 
-/* Base Body Styles */
-* {
+/* Global Font & Resets */
+*, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
 html {
+  font-family: var(--font-body);
   scroll-behavior: smooth;
-  font-size: 16px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  scrollbar-gutter: stable;
 }
 
 body {
-  font-family: var(--font-body);
   background-color: var(--bg-primary);
   color: var(--text-primary);
+  font-size: 1rem;
   line-height: 1.6;
-  transition: background-color var(--transition-base), color var(--transition-base);
   overflow-x: hidden;
+  transition: background-color var(--transition-base), color var(--transition-base);
 }
 
-::selection {
-  background: rgba(197, 160, 89, 0.3);
-  color: var(--gold-500);
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--text-primary);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+img, svg {
+  display: block;
+  max-width: 100%;
 }

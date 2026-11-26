@@ -7,18 +7,21 @@ const AVYA_DATA = {
   company: {
     name: "AVYA Corporate Services",
     tagline: "Comprehensive Business Support, Statutory Liaison, Facilities Coordination & Logistics",
-    founded: 2015,
+    experience: "25+ Years of Industry Leadership",
+    founded: 1999,
+    gstin: "29APAPV7401D1ZY",
     headquarters: "Bangalore, Karnataka, India",
-    domain: "avyaservices.in",
-    contactEmail: "contacts@avyaservices.in",
+    domain: "avyaservices.co.in",
+    contactEmail: "support@avyaservices.co.in",
+    managementEmail: "umesh@avyaservices.co.in",
     phone: "+91 99165 99960",
     address: "131/9, SMIGB, 5th Phase, Yelahanka New Town, Bangalore, Karnataka 560064, India"
   },
 
   stats: [
+    { value: "25+ Years", label: "Industry Experience", sub: "Serving corporate leaders since 1999" },
     { value: "100%", label: "Statutory & SLA Compliance", sub: "Strict legal & regulatory adherence" },
     { value: "5,000+", label: "Tasks & Deliveries Completed", sub: "RTO, e-stamps, CSR kits & assets" },
-    { value: "50+", label: "Corporate & Institutional Clients", sub: "Trusted corporate support partner" },
     { value: "Single SPOC", label: "Single Point of Contact", sub: "Consolidated monthly billing" }
   ],
 
@@ -144,7 +147,7 @@ const AVYA_DATA = {
     {
       title: "Corporate Fleet RTO Compliance Management",
       desc: "Comprehensive renewal of fitness certificates, hypothecation removals, and inter-state NOCs for corporate transport cabs and staff buses.",
-      tag: "Admin & Transport"
+      tag: "Transport & Admin"
     },
     {
       title: "Bulk E-Stamp Procurement & Legal Agreement Drafting",
@@ -191,24 +194,25 @@ const AVYA_DATA = {
     }
   ],
 
+  // Anonymous Corporate Testimonials (Per Review Comment 9)
   testimonials: [
     {
       quote: "AVYA Corporate Services transformed our remote IT hardware logistics. Managing the dispatch and retrieval of over 400 laptops across Bangalore was seamless, with zero transit damage.",
-      author: "Siddharth Rao",
-      role: "Head of IT Infrastructure, Enterprise Cloud Solutions",
-      location: "Bangalore"
+      author: "Director of IT Operations",
+      role: "Global SaaS Platform, Outer Ring Road Tech Park",
+      location: "Bengaluru"
     },
     {
       quote: "Handling RTO compliance and fitness certificates for our 35-bus corporate fleet used to take weeks. AVYA’s liaison team completed the inspections and paperwork in record time without a hitch.",
-      author: "Manjunath Swamy",
-      role: "Senior Manager - Employee Transportation & Admin",
-      location: "Yelahanka, Bangalore"
+      author: "Senior Facilities & Transport Manager",
+      role: "Enterprise Transportation Fleet Operator",
+      location: "Yelahanka, Bengaluru"
     },
     {
       quote: "From procuring ₹500 e-stamps within hours to drafting commercial vendor agreements with registered notary attestations, AVYA is our go-to legal operations partner.",
-      author: "Deepika Krishnan",
-      role: "Corporate Legal Counsel, FinTech Enterprise",
-      location: "Bangalore"
+      author: "Corporate Legal Counsel & Compliance Lead",
+      role: "FinTech Enterprise",
+      location: "Bengaluru"
     }
   ],
 
@@ -238,8 +242,8 @@ const AVYA_DATA = {
       a: "We use specialized anti-static bubble packaging, rigid shock-resistant boxes, and tamper-evident security tape. All movements are handled via express logistics networks with real-time consignment tracking, insurance, and signed proof of delivery."
     },
     {
-      q: "Where is AVYA Corporate Services located and how can we get started?",
-      a: "Our headquarters is located at 131/9, SMIGB, 5th Phase, Yelahanka New Town, Bangalore 560064. You can reach us directly at +91 99165 99960, WhatsApp us, or email contacts@avyaservices.in. We will assign a dedicated SPOC to discuss your requirements immediately."
+      q: "What is AVYA's GST registration number and billing address?",
+      a: "Our registered GSTIN is 29APAPV7401D1ZY. Our headquarters is located at 131/9, SMIGB, 5th Phase, Yelahanka New Town, Bangalore 560064. You can reach us directly at +91 99165 99960, WhatsApp us, or email support@avyaservices.co.in / umesh@avyaservices.co.in."
     }
   ]
 };

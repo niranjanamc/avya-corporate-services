@@ -16,10 +16,19 @@
 }
 
 .text-gold-gradient {
-  background: var(--gold-gradient);
+  background: var(--text-gold-gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   display: inline-block;
+  font-weight: 800;
+}
+
+[data-theme="light"] .text-gold-gradient {
+  background: linear-gradient(135deg, #7A550B 0%, #996B12 50%, #5E4105 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #7A550B;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.08);
 }
 
 .section-label {

@@ -60,7 +60,7 @@
           el.textContent = web.primaryDomain;
           break;
         case 'domains':
-          el.textContent = `${web.primaryDomain} | ${web.secondaryDomain}`;
+          el.textContent = web.secondaryDomain ? `${web.primaryDomain} | ${web.secondaryDomain}` : web.primaryDomain;
           break;
         case 'gstin':
           el.textContent = company.gstin;

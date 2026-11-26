@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="100%" height="100%" fill="none">
+  <defs>
+    <linearGradient id="goldGradBiz" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F3D899"/>
+      <stop offset="50%" stop-color="#C5A059"/>
+      <stop offset="100%" stop-color="#9E7B35"/>
+    </linearGradient>
+    <radialGradient id="discGlowBiz" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#C5A059" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#0B0C10" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Dark Obsidian Base with subtle border -->
+  <rect width="120" height="120" rx="24" fill="#0E1017"/>
+  <rect width="120" height="120" rx="24" fill="url(#discGlowBiz)"/>
+  <rect x="1" y="1" width="118" height="118" rx="23" stroke="#252A38" stroke-width="1.5"/>
+
+  <!-- Avya Signature Architectural Gold Offset Frame -->
+  <path d="M 52 18 L 102 18 L 102 102 L 52 102 L 52 92" stroke="url(#goldGradBiz)" stroke-width="3.5" fill="none" stroke-linecap="square"/>
+  <path d="M 104 20 L 107 20 L 107 104 L 104 104 Z" fill="#111111"/>
+
+  <!-- Corporate Building & Micro-Vendor Support Iconography -->
+  <!-- Corporate Office Building -->
+  <rect x="26" y="44" width="32" height="50" rx="3" fill="#161922" stroke="url(#goldGradBiz)" stroke-width="2.5"/>
+  <!-- Windows Grid -->
+  <rect x="32" y="50" width="6" height="6" rx="1" fill="url(#goldGradBiz)"/>
+  <rect x="42" y="50" width="6" height="6" rx="1" fill="url(#goldGradBiz)"/>
+  <rect x="32" y="60" width="6" height="6" rx="1" fill="url(#goldGradBiz)"/>
+  <rect x="42" y="60" width="6" height="6" rx="1" fill="url(#goldGradBiz)"/>
+  <rect x="32" y="70" width="6" height="6" rx="1" fill="url(#goldGradBiz)"/>
+  <rect x="42" y="70" width="6" height="6" rx="1" fill="url(#goldGradBiz)"/>
+  <rect x="37" y="82" width="10" height="12" fill="url(#goldGradBiz)"/>
+
+  <!-- Secondary Facility / Local Support Building -->
+  <rect x="58" y="56" width="34" height="38" rx="3" fill="#1E2330" stroke="url(#goldGradBiz)" stroke-width="2.5"/>
+  <rect x="64" y="62" width="6" height="5" rx="1" fill="url(#goldGradBiz)"/>
+  <rect x="74" y="62" width="6" height="5" rx="1" fill="url(#goldGradBiz)"/>
+  <rect x="64" y="72" width="6" height="5" rx="1" fill="url(#goldGradBiz)"/>
+  <rect x="74" y="72" width="6" height="5" rx="1" fill="url(#goldGradBiz)"/>
+
+  <!-- Floral / Service Coordination Accent (Stylized Flower & Handshake) -->
+  <circle cx="75" cy="40" r="7" fill="#161922" stroke="url(#goldGradBiz)" stroke-width="2"/>
+  <path d="M 75 30 L 75 36 M 75 44 L 75 50 M 65 40 L 71 40 M 79 40 L 85 40" stroke="url(#goldGradBiz)" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="75" cy="40" r="3" fill="url(#goldGradBiz)"/>
+
+  <!-- Sparkles / Star -->
+  <path d="M 28 30 L 30 22 L 32 30 L 40 32 L 32 34 L 30 42 L 28 34 L 20 32 Z" fill="url(#goldGradBiz)"/>
+</svg>

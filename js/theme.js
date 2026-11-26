@@ -1,6 +1,6 @@
 /**
- * Avya Corporate Services - Theme Management
- * Automatically defaults to browser / system preference.
+ * AVYA Corporate Services - Theme Management
+ * Defaults to Day / Light mode per customer preference.
  * Supports manual toggle with persistence in localStorage.
  */
 
@@ -8,14 +8,14 @@
   const THEME_STORAGE_KEY = 'avya-theme-preference';
   const htmlElement = document.documentElement;
 
-  // Determine initial theme: saved preference -> system preference -> fallback to dark
+  // Determine initial theme: saved preference -> fallback to day / light theme
   function getPreferredTheme() {
     const savedTheme = localStorage.getItem(THEME_STORAGE_KEY);
     if (savedTheme === 'light' || savedTheme === 'dark') {
       return savedTheme;
     }
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    return prefersDark ? 'dark' : 'light';
+    // Default to light / day theme as explicitly preferred by customer
+    return 'light';
   }
 
   // Apply theme to DOM and update icons/logos
@@ -50,27 +50,15 @@
     });
   }
 
-  // Toggle theme explicitly on user click
+  // Toggle between light and dark modes
   window.toggleTheme = function () {
-    const currentTheme = htmlElement.getAttribute('data-theme') || getPreferredTheme();
+    const currentTheme = htmlElement.getAttribute('data-theme') || 'light';
     const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
     localStorage.setItem(THEME_STORAGE_KEY, newTheme);
     applyTheme(newTheme);
   };
 
-  // Initialize immediately to prevent flash of wrong theme
+  // Immediate execution before DOM paint to prevent white/dark flash
   const initialTheme = getPreferredTheme();
   applyTheme(initialTheme);
-
-  // Listen for OS system theme changes if user hasn't explicitly locked a preference
-  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
-    if (!localStorage.getItem(THEME_STORAGE_KEY)) {
-      applyTheme(e.matches ? 'dark' : 'light');
-    }
-  });
-
-  // Re-verify once DOM is loaded
-  document.addEventListener('DOMContentLoaded', () => {
-    applyTheme(getPreferredTheme());
-  });
 })();

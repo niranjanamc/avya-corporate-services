@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="100%" height="100%" fill="none">
+  <defs>
+    <linearGradient id="bgGradRTO" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0C1017"/>
+      <stop offset="50%" stop-color="#121722"/>
+      <stop offset="100%" stop-color="#182030"/>
+    </linearGradient>
+    <radialGradient id="glowRTO" cx="75%" cy="35%" r="55%">
+      <stop offset="0%" stop-color="#C5A059" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#0C1017" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1920" height="1080" fill="url(#bgGradRTO)"/>
+  <rect width="1920" height="1080" fill="url(#glowRTO)"/>
+
+  <!-- Highway & Fleet Transit Perspective Lines -->
+  <g opacity="0.2" stroke="#C5A059" stroke-width="1.5">
+    <line x1="1450" y1="0" x2="1000" y2="1080"/>
+    <line x1="1500" y1="0" x2="1350" y2="1080"/>
+    <line x1="1550" y1="0" x2="1700" y2="1080"/>
+    <line x1="1600" y1="0" x2="1920" y2="900"/>
+  </g>
+
+  <!-- Corporate Fleet Transport Silhouette -->
+  <g opacity="0.28">
+    <!-- Corporate Commute Bus Silhouette -->
+    <path d="M 1200 480 L 1650 480 C 1680 480 1700 500 1700 530 L 1700 700 C 1700 720 1680 740 1660 740 L 1220 740 C 1200 740 1180 720 1180 700 L 1180 500 Z" fill="#182030" stroke="#C5A059" stroke-width="2.5"/>
+    <!-- Windows -->
+    <rect x="1220" y="520" width="80" height="60" rx="4" fill="#C5A059" fill-opacity="0.3"/>
+    <rect x="1330" y="520" width="80" height="60" rx="4" fill="#C5A059" fill-opacity="0.3"/>
+    <rect x="1440" y="520" width="80" height="60" rx="4" fill="#C5A059" fill-opacity="0.3"/>
+    <rect x="1550" y="520" width="110" height="60" rx="4" fill="#C5A059" fill-opacity="0.3"/>
+    <!-- Wheels -->
+    <circle cx="1280" cy="740" r="32" fill="#0E121B" stroke="#C5A059" stroke-width="3"/>
+    <circle cx="1580" cy="740" r="32" fill="#0E121B" stroke="#C5A059" stroke-width="3"/>
+
+    <!-- Certified RTO Badge Seal -->
+    <circle cx="1680" cy="360" r="48" fill="#1B2335" stroke="#C5A059" stroke-width="3"/>
+    <path d="M 1660 360 L 1675 375 L 1705 345" stroke="#C5A059" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>

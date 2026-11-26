@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="100%" height="100%" fill="none">
+  <defs>
+    <linearGradient id="bgGradHome" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0E1118"/>
+      <stop offset="50%" stop-color="#151923"/>
+      <stop offset="100%" stop-color="#1A202E"/>
+    </linearGradient>
+    <linearGradient id="goldBeamHome" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8C671C" stop-opacity="0.3"/>
+      <stop offset="50%" stop-color="#C5A059" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#E2C275" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="glowPointHome" cx="80%" cy="30%" r="50%">
+      <stop offset="0%" stop-color="#C5A059" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#0E1118" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1920" height="1080" fill="url(#bgGradHome)"/>
+  <rect width="1920" height="1080" fill="url(#glowPointHome)"/>
+
+  <!-- Bengaluru Tech Corridor Architectural Grid -->
+  <g opacity="0.15" stroke="#C5A059" stroke-width="1.2">
+    <line x1="0" y1="200" x2="1920" y2="200"/>
+    <line x1="0" y1="400" x2="1920" y2="400"/>
+    <line x1="0" y1="600" x2="1920" y2="600"/>
+    <line x1="0" y1="800" x2="1920" y2="800"/>
+    <line x1="300" y1="0" x2="300" y2="1080"/>
+    <line x1="600" y1="0" x2="600" y2="1080"/>
+    <line x1="900" y1="0" x2="900" y2="1080"/>
+    <line x1="1200" y1="0" x2="1200" y2="1080"/>
+    <line x1="1500" y1="0" x2="1500" y2="1080"/>
+    <line x1="1800" y1="0" x2="1800" y2="1080"/>
+  </g>
+
+  <!-- Modern Geometric Glass Tech Park Silhouettes -->
+  <g opacity="0.25">
+    <polygon points="1200,1080 1200,320 1380,260 1380,1080" fill="#1C2333" stroke="#C5A059" stroke-width="1.5"/>
+    <polygon points="1380,1080 1380,180 1620,120 1620,1080" fill="#222B3D" stroke="#C5A059" stroke-width="2"/>
+    <polygon points="1620,1080 1620,380 1850,300 1850,1080" fill="#1E2638" stroke="#C5A059" stroke-width="1.5"/>
+    <polygon points="980,1080 980,480 1180,420 1180,1080" fill="#161D2C" stroke="#C5A059" stroke-width="1.5"/>
+  </g>
+
+  <!-- Glowing Architectural Perspective Lines -->
+  <path d="M 0 980 L 1920 680" stroke="url(#goldBeamHome)" stroke-width="3"/>
+  <path d="M 0 1040 L 1920 840" stroke="url(#goldBeamHome)" stroke-width="2"/>
+  <circle cx="1620" cy="120" r="6" fill="#C5A059"/>
+  <circle cx="1380" cy="180" r="5" fill="#E2C275"/>
+</svg>

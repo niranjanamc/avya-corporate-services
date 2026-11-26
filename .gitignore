@@ -15,3 +15,10 @@ package-lock.json
 dist/
 build/
 .cache/
+
+# Explicitly unignore all project assets & icons (overriding any ~/.gitignore_global rules)
+!assets/
+!assets/icons/
+!assets/icons/*.svg
+!assets/images/
+!assets/images/*

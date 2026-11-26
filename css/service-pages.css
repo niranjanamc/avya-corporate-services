@@ -3,12 +3,12 @@
    Inspired by Luxury Corporate Concierge Standards (Voyage Monk style)
    =================================================================== */
 
-/* Service Page Hero - Full HD Cinematic Photography */
+/* Service Page Hero - Full HD Standardized Area */
 .service-hero {
   position: relative;
-  min-height: 520px;
-  padding-top: calc(var(--header-height) + 50px);
-  padding-bottom: 80px;
+  min-height: 480px;
+  padding-top: calc(var(--header-height) + 36px);
+  padding-bottom: 64px;
   display: flex;
   align-items: center;
   background-size: cover;
@@ -26,19 +26,19 @@
   right: 0;
   bottom: 0;
   background: linear-gradient(90deg, 
-    rgba(11, 12, 16, 0.75) 0%, 
-    rgba(11, 12, 16, 0.65) 48%, 
-    rgba(11, 12, 16, 0.20) 100%),
+    rgba(11, 12, 16, 0.88) 0%, 
+    rgba(11, 12, 16, 0.78) 55%, 
+    rgba(11, 12, 16, 0.45) 100%),
     radial-gradient(circle at 80% 30%, rgba(197, 160, 89, 0.16) 0%, transparent 60%);
   z-index: 1;
 }
 
 [data-theme="light"] .service-hero::before {
   background: linear-gradient(90deg, 
-    rgba(255, 255, 255, 0.76) 0%, 
-    rgba(255, 255, 255, 0.68) 48%, 
-    rgba(255, 255, 255, 0.15) 100%),
-    radial-gradient(circle at 80% 30%, rgba(197, 160, 89, 0.14) 0%, transparent 60%);
+    rgba(255, 255, 255, 0.95) 0%, 
+    rgba(255, 255, 255, 0.90) 55%, 
+    rgba(255, 255, 255, 0.75) 100%),
+    radial-gradient(circle at 80% 30%, rgba(140, 103, 28, 0.08) 0%, transparent 60%);
 }
 
 .service-hero-content {
